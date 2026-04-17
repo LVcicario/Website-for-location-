@@ -12,12 +12,17 @@ export type MaterialCopy = {
   image: string;
 };
 
+export type Transport = "foot" | "boat" | "car";
+
 export type PoiCopy = {
   name: string;
   kind: string;
   distance: string;
   access: string;
   activities: string;
+  transport: Transport;
+  mapX: number;
+  mapY: number;
 };
 
 export type SeasonCopy = {
@@ -105,7 +110,13 @@ export type ChapterCopy = {
     eyebrow: string;
     title: string;
     intro: string;
-    labels: { access: string; activities: string };
+    labels: {
+      access: string;
+      activities: string;
+      by_foot: string;
+      by_boat: string;
+      by_car: string;
+    };
     pois: PoiCopy[];
   };
   amenities: {
@@ -117,10 +128,16 @@ export type ChapterCopy = {
       rooms: string;
       guests: string;
       beds: string;
+      baths: string;
+      min_stay: string;
     };
+    stat_bar: { value: string; label: string }[];
     included: AmenityCopy[];
+    services_included_label: string;
+    services_on_demand_label: string;
     services_included: string[];
     services_on_demand: string[];
+    equipment_label: string;
   };
   seasons: {
     index: string;
@@ -238,8 +255,14 @@ const fr: ChapterCopy = {
     eyebrow: "Chapitre VI — L'art de vivre",
     title: "À pied, en bateau, en voiture",
     intro:
-      "La vie de Sainte-Maxime à quelques pas, Saint-Tropez à un quart d'heure de bateau, l'arrière-pays à vingt minutes. Cliquez chaque adresse pour savoir comment y aller, quoi y faire.",
-    labels: { access: "Comment y aller", activities: "Quoi y faire" },
+      "La vie de Sainte-Maxime à quelques pas, Saint-Tropez à un quart d'heure de bateau, l'arrière-pays à vingt minutes. Cliquez chaque adresse — sur la carte ou dans la liste — pour savoir comment y aller, quoi y faire.",
+    labels: {
+      access: "Comment y aller",
+      activities: "Quoi y faire",
+      by_foot: "À pied",
+      by_boat: "En bateau",
+      by_car: "En voiture",
+    },
     pois: [
       {
         name: "La Croisette",
@@ -247,6 +270,9 @@ const fr: ChapterCopy = {
         distance: "2 min à pied",
         access: "À la sortie de L'Arbois, tournez à gauche sur le front de mer ombragé.",
         activities: "Promenade sous les pins parasols, port de plaisance, terrasses de café, glaciers artisanaux, bars à cocktails au crépuscule.",
+        transport: "foot",
+        mapX: 170,
+        mapY: 172,
       },
       {
         name: "Plage de la Nartelle",
@@ -254,6 +280,9 @@ const fr: ChapterCopy = {
         distance: "7 min à pied",
         access: "Suivez le front de mer à l'est, puis le sentier littoral. Navette gratuite en été.",
         activities: "Sable fin, eau calme (idéale enfants), paillotes de plage (Mahi Plage, La Gaillarde), paddle, transats, déjeuner les pieds dans le sable.",
+        transport: "foot",
+        mapX: 295,
+        mapY: 163,
       },
       {
         name: "Marché couvert",
@@ -261,6 +290,9 @@ const fr: ChapterCopy = {
         distance: "5 min à pied",
         access: "Par la rue Gabriel Péri, derrière l'église. Mardi et samedi matin, 7h–13h.",
         activities: "Fromages fermiers, poissons du matin, fruits de saison, fleurs, huile d'olive du Var, tapenades, rosé local.",
+        transport: "foot",
+        mapX: 155,
+        mapY: 108,
       },
       {
         name: "Le Sémaphore",
@@ -268,6 +300,9 @@ const fr: ChapterCopy = {
         distance: "20 min à pied",
         access: "Montée par le sentier du littoral, derrière la Nartelle. Prévoir des chaussures fermées.",
         activities: "Panorama complet sur le golfe de Saint-Tropez, les meilleurs couchers de soleil, aire de pique-nique.",
+        transport: "foot",
+        mapX: 320,
+        mapY: 90,
       },
       {
         name: "Sénéquier · Saint-Tropez",
@@ -275,6 +310,9 @@ const fr: ChapterCopy = {
         distance: "15 min en bateau",
         access: "Navettes Bateaux Verts depuis la jetée de Sainte-Maxime (200 m à pied de L'Arbois). Toutes les 30 min en haute saison. Ou taxi-boat privé sur demande de la conciergerie.",
         activities: "Institution depuis 1887. Terrasse rouge vif sur le port, petit-déjeuner matinal, apéritif au coucher du soleil, le meilleur poste d'observation des yachts.",
+        transport: "boat",
+        mapX: 210,
+        mapY: 365,
       },
       {
         name: "Place des Lices",
@@ -282,6 +320,9 @@ const fr: ChapterCopy = {
         distance: "15 min bateau + 3 min à pied",
         access: "Descendez des Bateaux Verts au port, remontez la rue Gambetta sur 300 m. Marché mardi & samedi.",
         activities: "Pétanque sous les platanes centenaires, marché provençal, terrasses à l'ombre, Le Café (brasserie historique), boutiques de créateurs.",
+        transport: "boat",
+        mapX: 195,
+        mapY: 395,
       },
       {
         name: "Plage de Pampelonne",
@@ -289,6 +330,9 @@ const fr: ChapterCopy = {
         distance: "25 min bateau ou 40 min voiture",
         access: "Taxi-boat privé jusqu'au ponton Club 55 ou Loulou (réservation conciergerie). Ou voiture par la route des plages via Ramatuelle.",
         activities: "Déjeuners longs au Club 55, bains de soleil Loulou, cocktails Nikki Beach. Eau turquoise, sortie en annexe, ski nautique.",
+        transport: "boat",
+        mapX: 360,
+        mapY: 430,
       },
       {
         name: "Ramatuelle & Gassin",
@@ -296,6 +340,9 @@ const fr: ChapterCopy = {
         distance: "30 min en voiture",
         access: "Voiture par la D61 via Port Grimaud et La Foux. Parking en bas des villages.",
         activities: "Villages médiévaux, ruelles ombragées, vignobles (Château Minuty, Domaines Ott), restaurants avec vue. Dégustations sur réservation.",
+        transport: "car",
+        mapX: 305,
+        mapY: 455,
       },
     ],
   },
@@ -308,7 +355,18 @@ const fr: ChapterCopy = {
       rooms: "3 chambres",
       guests: "6 voyageurs",
       beds: "1 king-size · 2 lits jumeaux · 2 lits jumeaux",
+      baths: "2 salles de bain",
+      min_stay: "7 nuits minimum",
     },
+    stat_bar: [
+      { value: "3", label: "chambres" },
+      { value: "6", label: "voyageurs" },
+      { value: "2", label: "salles de bain" },
+      { value: "7", label: "nuits min" },
+    ],
+    equipment_label: "Équipements",
+    services_included_label: "Inclus",
+    services_on_demand_label: "Sur demande · Conciergerie",
     included: [
       { label: "WiFi fibre haut débit", icon: "wifi" },
       { label: "Climatisation réversible", icon: "climate" },
@@ -470,17 +528,23 @@ const en: ChapterCopy = {
     eyebrow: "Chapter VI — Art of living",
     title: "On foot, by boat, by car",
     intro:
-      "Life in Sainte-Maxime a few steps away, Saint-Tropez fifteen minutes by boat, the hinterland twenty minutes inland. Click each address for how to get there and what to do.",
-    labels: { access: "Getting there", activities: "What to do" },
+      "Life in Sainte-Maxime a few steps away, Saint-Tropez fifteen minutes by boat, the hinterland twenty minutes inland. Click each address — on the map or in the list — for how to get there and what to do.",
+    labels: {
+      access: "Getting there",
+      activities: "What to do",
+      by_foot: "On foot",
+      by_boat: "By boat",
+      by_car: "By car",
+    },
     pois: [
-      { name: "La Croisette", kind: "Seafront promenade, port, yachts", distance: "2 min walk", access: "Step out of L'Arbois, turn left along the shaded seafront.", activities: "Promenade under umbrella pines, marina, café terraces, artisanal ice cream, sunset cocktail bars." },
-      { name: "Nartelle beach", kind: "White sand, steps from the water", distance: "7 min walk", access: "Walk east along the seafront then the coastal path. Free shuttle in summer.", activities: "Fine sand, calm water (ideal for children), beach clubs (Mahi Plage, La Gaillarde), paddle, loungers, lunch on the sand." },
-      { name: "Covered market", kind: "Provence produce · Tue & Sat", distance: "5 min walk", access: "Via Rue Gabriel Péri, behind the church. Tuesday & Saturday mornings, 7–13h.", activities: "Farm cheeses, morning-catch fish, seasonal fruit, flowers, local olive oil, tapenades, rosé." },
-      { name: "Le Sémaphore", kind: "Viewpoint over the entire gulf", distance: "20 min walk", access: "Coastal path above Nartelle. Wear closed shoes.", activities: "Full panorama of the gulf, the finest sunsets, picnic area." },
-      { name: "Sénéquier · Saint-Tropez", kind: "Iconic café on the port", distance: "15 min by boat", access: "Bateaux Verts from the Sainte-Maxime jetty (200 m walk from L'Arbois). Every 30 min in high season. Or private taxi-boat through the concierge.", activities: "Institution since 1887. Vivid red terrace on the port, early breakfast, sunset apéritif, the finest yacht-watching seat." },
-      { name: "Place des Lices", kind: "Pétanque, plane trees, market", distance: "15 min boat + 3 min walk", access: "Off the Bateaux Verts at the port, 300 m up Rue Gambetta. Market Tuesday & Saturday.", activities: "Pétanque under centennial plane trees, Provence market, shaded terraces, Le Café (historic brasserie), designer shops." },
-      { name: "Pampelonne beach", kind: "Club 55, Loulou, La Réserve, Nikki Beach", distance: "25 min boat or 40 min drive", access: "Private taxi-boat to Club 55 or Loulou pontoon (concierge booking). Or by car via Ramatuelle.", activities: "Long lunches at Club 55, loungers at Loulou, cocktails at Nikki Beach. Turquoise water, tender rides, water-skiing." },
-      { name: "Ramatuelle & Gassin", kind: "Hilltop villages, vineyards", distance: "30 min drive", access: "Car via D61 through Port Grimaud and La Foux. Parking at village entrance.", activities: "Medieval villages, shaded lanes, vineyards (Château Minuty, Domaines Ott), restaurants with view. Tastings by appointment." },
+      { name: "La Croisette", kind: "Seafront promenade, port, yachts", distance: "2 min walk", access: "Step out of L'Arbois, turn left along the shaded seafront.", activities: "Promenade under umbrella pines, marina, café terraces, artisanal ice cream, sunset cocktail bars.", transport: "foot", mapX: 170, mapY: 172 },
+      { name: "Nartelle beach", kind: "White sand, steps from the water", distance: "7 min walk", access: "Walk east along the seafront then the coastal path. Free shuttle in summer.", activities: "Fine sand, calm water (ideal for children), beach clubs (Mahi Plage, La Gaillarde), paddle, loungers, lunch on the sand.", transport: "foot", mapX: 295, mapY: 163 },
+      { name: "Covered market", kind: "Provence produce · Tue & Sat", distance: "5 min walk", access: "Via Rue Gabriel Péri, behind the church. Tuesday & Saturday mornings, 7–13h.", activities: "Farm cheeses, morning-catch fish, seasonal fruit, flowers, local olive oil, tapenades, rosé.", transport: "foot", mapX: 155, mapY: 108 },
+      { name: "Le Sémaphore", kind: "Viewpoint over the entire gulf", distance: "20 min walk", access: "Coastal path above Nartelle. Wear closed shoes.", activities: "Full panorama of the gulf, the finest sunsets, picnic area.", transport: "foot", mapX: 320, mapY: 90 },
+      { name: "Sénéquier · Saint-Tropez", kind: "Iconic café on the port", distance: "15 min by boat", access: "Bateaux Verts from the Sainte-Maxime jetty (200 m walk from L'Arbois). Every 30 min in high season. Or private taxi-boat through the concierge.", activities: "Institution since 1887. Vivid red terrace on the port, early breakfast, sunset apéritif, the finest yacht-watching seat.", transport: "boat", mapX: 210, mapY: 365 },
+      { name: "Place des Lices", kind: "Pétanque, plane trees, market", distance: "15 min boat + 3 min walk", access: "Off the Bateaux Verts at the port, 300 m up Rue Gambetta. Market Tuesday & Saturday.", activities: "Pétanque under centennial plane trees, Provence market, shaded terraces, Le Café (historic brasserie), designer shops.", transport: "boat", mapX: 195, mapY: 395 },
+      { name: "Pampelonne beach", kind: "Club 55, Loulou, La Réserve, Nikki Beach", distance: "25 min boat or 40 min drive", access: "Private taxi-boat to Club 55 or Loulou pontoon (concierge booking). Or by car via Ramatuelle.", activities: "Long lunches at Club 55, loungers at Loulou, cocktails at Nikki Beach. Turquoise water, tender rides, water-skiing.", transport: "boat", mapX: 360, mapY: 430 },
+      { name: "Ramatuelle & Gassin", kind: "Hilltop villages, vineyards", distance: "30 min drive", access: "Car via D61 through Port Grimaud and La Foux. Parking at village entrance.", activities: "Medieval villages, shaded lanes, vineyards (Château Minuty, Domaines Ott), restaurants with view. Tastings by appointment.", transport: "car", mapX: 305, mapY: 455 },
     ],
   },
   amenities: {
@@ -492,7 +556,18 @@ const en: ChapterCopy = {
       rooms: "3 bedrooms",
       guests: "6 guests",
       beds: "1 king · 2 twin · 2 twin",
+      baths: "2 bathrooms",
+      min_stay: "7 nights minimum",
     },
+    stat_bar: [
+      { value: "3", label: "bedrooms" },
+      { value: "6", label: "guests" },
+      { value: "2", label: "bathrooms" },
+      { value: "7", label: "nights min" },
+    ],
+    equipment_label: "Equipment",
+    services_included_label: "Included",
+    services_on_demand_label: "On request · Concierge",
     included: [
       { label: "Fibre WiFi", icon: "wifi" },
       { label: "Reversible air conditioning", icon: "climate" },

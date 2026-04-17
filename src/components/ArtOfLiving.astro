@@ -1,6 +1,6 @@
 ---
 import ChapterReveal from "./ChapterReveal";
-import POIList from "./POIList";
+import ArtOfLivingInteractive from "./ArtOfLivingInteractive";
 import { getCopy } from "~/content/copy";
 import type { Locale } from "~/i18n/config";
 
@@ -13,7 +13,7 @@ const { art_of_living, signature } = getCopy(locale);
 
 <section id="art-of-living" class="chapter">
   <div class="chapter__inner">
-    <ChapterReveal client:visible stagger as="header" className="mb-10 max-w-[64ch]">
+    <ChapterReveal client:visible stagger as="header" className="mb-10 max-w-[66ch]">
       <p data-reveal-child class="eyebrow">
         <span class="chapter-index mr-4">{art_of_living.index}</span>
         {art_of_living.eyebrow}
@@ -23,8 +23,12 @@ const { art_of_living, signature } = getCopy(locale);
       <p data-reveal-child class="lede">{art_of_living.intro}</p>
     </ChapterReveal>
 
-    <POIList client:visible pois={art_of_living.pois} labels={art_of_living.labels} />
+    <ArtOfLivingInteractive
+      client:visible
+      pois={art_of_living.pois}
+      labels={art_of_living.labels}
+    />
 
-    <p class="signature mt-10 text-right">{signature}</p>
+    <p class="signature mt-12 text-right">{signature}</p>
   </div>
 </section>
