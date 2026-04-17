@@ -1,0 +1,13 @@
+---
+interface Props {
+  text: string;
+  variant?: "dark" | "light";
+}
+
+const { text, variant = "dark" } = Astro.props;
+const className = variant === "light" ? "breath-moment breath-moment--light" : "breath-moment";
+---
+
+<section class={className} aria-hidden="true">
+  <p class="breath-moment__text" set:html={text}></p>
+</section>

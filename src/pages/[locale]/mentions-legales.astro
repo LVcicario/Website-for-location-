@@ -1,0 +1,28 @@
+---
+import Base from "~/layouts/Base.astro";
+import Nav from "~/components/Nav.astro";
+import Footer from "~/components/Footer.astro";
+import { LOCALES, type Locale } from "~/i18n/config";
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+---
+
+<Base locale={locale} title="Mentions légales — Villa Azur" description="Informations légales.">
+  <Nav locale={locale} />
+  <main id="main" class="mx-auto max-w-[64ch] px-[var(--gutter)] pt-40 pb-24">
+    <p class="eyebrow">Legal</p>
+    <h1 class="display mt-6">Mentions légales</h1>
+    <hr class="rule-gold" />
+    <div class="mt-10 space-y-6 text-[var(--color-bone-soft)] leading-relaxed">
+      <p>Éditeur du site : [à compléter].</p>
+      <p>Hébergement : [à compléter].</p>
+      <p>Photographies et textes © Villa Azur. Reproduction interdite sans autorisation.</p>
+      <p>Données personnelles : les informations collectées via le formulaire de conciergerie sont utilisées uniquement pour répondre à votre demande. Elles ne sont ni cédées ni revendues.</p>
+    </div>
+  </main>
+  <Footer locale={locale} />
+</Base>

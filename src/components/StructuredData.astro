@@ -1,0 +1,55 @@
+---
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const descriptions: Record<Locale, string> = {
+  fr: "Un appartement privé à Sainte-Maxime, face à Saint-Tropez. Trois chambres, vue baie, pour quelques semaines choisies.",
+  en: "A private apartment in Sainte-Maxime, facing Saint-Tropez. Three bedrooms, bay view, for a few chosen weeks.",
+  it: "Un appartamento privato a Sainte-Maxime, di fronte a Saint-Tropez.",
+  de: "Ein privates Apartment in Sainte-Maxime, gegenüber Saint-Tropez.",
+  es: "Un apartamento privado en Sainte-Maxime, frente a Saint-Tropez.",
+  ru: "Частные апартаменты в Сент-Максим, напротив Сен-Тропе.",
+  ar: "شقة خاصة في سانت ماكسيم، مقابل سان تروبيه.",
+};
+
+const data = {
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "Villa Azur",
+  "description": descriptions[locale],
+  "url": Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : Astro.url.toString(),
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sainte-Maxime",
+    "addressRegion": "Var",
+    "postalCode": "83120",
+    "addressCountry": "FR",
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.31,
+    "longitude": 6.64,
+  },
+  "numberOfRooms": 3,
+  "maximumAttendeeCapacity": 6,
+  "priceRange": "€€€€",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "WiFi" },
+    { "@type": "LocationFeatureSpecification", "name": "Air conditioning" },
+    { "@type": "LocationFeatureSpecification", "name": "Terrace" },
+    { "@type": "LocationFeatureSpecification", "name": "Sea view" },
+    { "@type": "LocationFeatureSpecification", "name": "Parking" },
+    { "@type": "LocationFeatureSpecification", "name": "Washer" },
+    { "@type": "LocationFeatureSpecification", "name": "Dishwasher" },
+    { "@type": "LocationFeatureSpecification", "name": "Kitchen" },
+  ],
+  "image": Astro.site ? [new URL("/og.jpg", Astro.site).toString()] : [],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(data)} is:inline></script>

@@ -1,0 +1,25 @@
+---
+import ChapterReveal from "./ChapterReveal";
+import { getCopy } from "~/content/copy";
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const { prologue } = getCopy(locale);
+---
+
+<section id="prologue" class="chapter chapter--dense">
+  <div class="chapter__inner">
+    <ChapterReveal client:load stagger as="div" className="max-w-[64ch] mx-auto text-center">
+      <p data-reveal-child class="eyebrow">
+        <span class="chapter-index mr-4">{prologue.index}</span>
+        {prologue.eyebrow}
+      </p>
+      <hr data-reveal-child class="rule-gold mx-auto" />
+      <p data-reveal-child class="text-left lede mx-auto text-[var(--color-bone)] drop-cap" set:html={prologue.text}></p>
+      <p data-reveal-child class="signature mt-10 text-center">— {prologue.signature}</p>
+    </ChapterReveal>
+  </div>
+</section>

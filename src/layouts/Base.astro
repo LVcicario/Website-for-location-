@@ -1,0 +1,75 @@
+---
+import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
+import { getDir, LOCALES, type Locale } from "~/i18n/config";
+import StructuredData from "~/components/StructuredData.astro";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { locale, title, description, ogImage = "/og.jpg" } = Astro.props;
+const dir = getDir(locale);
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+function altFor(loc: Locale): string {
+  const parts = Astro.url.pathname.split("/").filter(Boolean);
+  if (parts.length && (LOCALES as readonly string[]).includes(parts[0])) {
+    parts[0] = loc;
+  } else {
+    parts.unshift(loc);
+  }
+  const path = "/" + parts.join("/") + "/";
+  return new URL(path, Astro.site).toString();
+}
+---
+
+<!doctype html>
+<html lang={locale} dir={dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={locale} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {LOCALES.map((loc) => (
+      <link rel="alternate" hreflang={loc} href={altFor(loc)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={altFor("fr" as Locale)} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/Gambarino-Regular.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/Satoshi-Variable.woff2" crossorigin />
+
+    <StructuredData locale={locale} />
+    <ClientRouter />
+  </head>
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-[var(--color-gold)] focus:text-[var(--color-ink)] focus:px-4 focus:py-2">
+      Skip to content
+    </a>
+    <slot />
+
+    <script>
+      import { initMagnetic } from "~/lib/magnetic";
+      initMagnetic();
+      document.addEventListener("astro:page-load", initMagnetic);
+    </script>
+  </body>
+</html>

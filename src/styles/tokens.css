@@ -1,0 +1,33 @@
+@theme {
+  --color-bone: #f7f5f0;
+  --color-bone-soft: #ede9df;
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #1a1a1a;
+  --color-gold: #b8935a;
+  --color-gold-soft: #c9a97a;
+  --color-gold-deep: #8a6a3e;
+  --color-navy: #0e1e33;
+  --color-navy-soft: #1a2d4a;
+  --color-oak: #c9a97a;
+
+  --font-display: "Gambarino", "Noto Serif Display", "Canela", Georgia, serif;
+  --font-body: "Satoshi", "Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+
+  --letter-spacing-display: -0.02em;
+  --letter-spacing-caps: 0.22em;
+
+  --ease-cinematic: cubic-bezier(0.2, 0.65, 0.2, 1);
+  --ease-gentle: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --duration-chapter: 1600ms;
+  --duration-reveal: 1200ms;
+  --duration-hover: 320ms;
+
+  --content-max: 72rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+}
+
+:root {
+  color-scheme: dark;
+}

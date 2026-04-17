@@ -1,0 +1,39 @@
+---
+import Chapter from "./Chapter.astro";
+import ChapterReveal from "./ChapterReveal";
+import { getCopy } from "~/content/copy";
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const { voices } = getCopy(locale);
+---
+
+<Chapter id="voices" index={voices.index} eyebrow={voices.eyebrow}>
+  <ChapterReveal client:visible stagger as="header" className="mb-14 max-w-[60ch]">
+    <h2 data-reveal-child class="display">{voices.title}</h2>
+    <hr data-reveal-child class="rule-gold" />
+    <p data-reveal-child class="lede">{voices.intro}</p>
+  </ChapterReveal>
+
+  <ul class="grid gap-10 md:grid-cols-3">
+    {voices.testimonials.map((t, i) => (
+      <li class="testimonial relative pl-6 border-l border-[var(--color-gold)]/30">
+        <span class="absolute -left-1 top-0 text-[var(--color-gold)] font-[family-name:var(--font-display)] text-4xl leading-none select-none" aria-hidden="true">«</span>
+        <p class="font-[family-name:var(--font-display)] italic text-xl leading-snug text-[var(--color-bone)]">{t.quote}</p>
+        <p class="eyebrow mt-6 text-[var(--color-gold)]">{t.author}</p>
+      </li>
+    ))}
+  </ul>
+
+  <div class="mt-20 pt-10 border-t border-[var(--color-gold)]/15">
+    <p class="eyebrow text-center mb-6">{voices.press_label}</p>
+    <ul class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60">
+      {voices.press_items.map((p) => (
+        <li class="font-[family-name:var(--font-display)] italic text-lg md:text-xl tracking-wide">{p}</li>
+      ))}
+    </ul>
+  </div>
+</Chapter>

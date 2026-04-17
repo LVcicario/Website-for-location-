@@ -1,0 +1,62 @@
+---
+import Picture from "./Picture.astro";
+
+interface Props {
+  src: string;
+  alt: string;
+  eyebrow?: string;
+  quote?: string;
+  author?: string;
+  height?: string;
+  tint?: "light" | "medium" | "heavy" | "none";
+  align?: "left" | "center" | "right";
+}
+
+const {
+  src,
+  alt,
+  eyebrow,
+  quote,
+  author,
+  height = "80vh",
+  tint = "medium",
+  align = "left",
+} = Astro.props;
+
+const tintClass = {
+  light: "bg-gradient-to-t from-black/35 via-black/5 to-transparent",
+  medium: "bg-gradient-to-t from-black/70 via-black/20 to-transparent",
+  heavy: "bg-gradient-to-t from-black/85 via-black/40 to-black/20",
+  none: "",
+}[tint];
+
+const alignClass = {
+  left: "items-end justify-start",
+  center: "items-end justify-center text-center",
+  right: "items-end justify-end text-right",
+}[align];
+---
+
+<section
+  class="full-bleed relative overflow-hidden w-full"
+  style={`height: ${height};`}
+  aria-label={alt}
+>
+  <div class="absolute inset-0">
+    <Picture src={src} alt={alt} sizes="100vw" />
+  </div>
+  <div class={`absolute inset-0 ${tintClass}`}></div>
+  {(eyebrow || quote) && (
+    <div class={`absolute inset-0 flex ${alignClass} px-[var(--gutter)] pb-16`}>
+      <div class="max-w-[48ch]">
+        {eyebrow && <p class="eyebrow mb-4">{eyebrow}</p>}
+        {quote && (
+          <p class="font-[family-name:var(--font-display)] text-3xl md:text-5xl font-normal italic leading-tight text-[var(--color-bone)]">
+            {quote}
+          </p>
+        )}
+        {author && <p class="eyebrow mt-6 text-[var(--color-gold)]">{author}</p>}
+      </div>
+    </div>
+  )}
+</section>

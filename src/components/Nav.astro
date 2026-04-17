@@ -1,0 +1,78 @@
+---
+import { t } from "~/i18n/ui";
+import type { Locale } from "~/i18n/config";
+import LanguageSwitcher from "./LanguageSwitcher";
+import MobileNav from "./MobileNav";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const strings = t(locale);
+const prefix = `/${locale}`;
+---
+
+<nav
+  id="site-nav"
+  class="site-nav fixed inset-x-0 top-0 z-40 transition-all duration-500"
+  aria-label="Principal"
+  data-solid="0"
+>
+  <div class="site-nav__inner mx-auto flex max-w-[var(--content-max)] items-center justify-between px-[var(--gutter)] py-4 md:py-5">
+    <a href={`${prefix}/`} class="monogram group flex items-center gap-2 font-[family-name:var(--font-display)] tracking-[0.04em] hover:text-[var(--color-gold)] transition-colors">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="none" aria-hidden="true" class="monogram__mark">
+        <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-opacity="0.3" stroke-width="1" />
+        <text x="20" y="26" text-anchor="middle" font-family="Gambarino, Fraunces, serif" font-size="18" font-style="italic" fill="currentColor">V<tspan dx="-1" fill="#b8935a">·</tspan>A</text>
+      </svg>
+      <span class="text-[0.95rem]">Villa<span class="text-[var(--color-gold)]"> · </span>Azur</span>
+    </a>
+
+    <ul class="hidden gap-9 md:flex">
+      <li><a href={`${prefix}/#the-place`} class="eyebrow hover:text-[var(--color-bone)] transition-colors">{strings.nav.the_place}</a></li>
+      <li><a href={`${prefix}/#the-apartment`} class="eyebrow hover:text-[var(--color-bone)] transition-colors">{strings.nav.the_apartment}</a></li>
+      <li><a href={`${prefix}/#art-of-living`} class="eyebrow hover:text-[var(--color-bone)] transition-colors">{strings.nav.art_of_living}</a></li>
+      <li><a href={`${prefix}/#reserve`} class="eyebrow hover:text-[var(--color-bone)] transition-colors">{strings.nav.reserve}</a></li>
+    </ul>
+
+    <div class="hidden md:block">
+      <LanguageSwitcher client:load locale={locale} />
+    </div>
+
+    <MobileNav client:load locale={locale} />
+  </div>
+</nav>
+
+<style>
+  .site-nav {
+    background: transparent;
+    backdrop-filter: blur(0);
+  }
+  .site-nav[data-solid="1"] {
+    background: rgba(10, 10, 10, 0.82);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgb(from var(--color-gold) r g b / 0.15);
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    const nav = document.getElementById("site-nav");
+    if (!nav) return;
+    const threshold = Math.max(window.innerHeight * 0.7, 400);
+    let ticking = false;
+    function update() {
+      const scrolled = window.scrollY;
+      nav.setAttribute("data-solid", scrolled > threshold ? "1" : "0");
+      ticking = false;
+    }
+    function onScroll() {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    update();
+  })();
+</script>

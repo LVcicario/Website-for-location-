@@ -1,0 +1,27 @@
+---
+import { t } from "~/i18n/ui";
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+  variant?: "primary" | "ghost";
+  class?: string;
+}
+
+const { locale, variant = "primary", class: className = "" } = Astro.props;
+const strings = t(locale);
+const url = import.meta.env.PUBLIC_AIRBNB_URL || "https://www.airbnb.com/";
+const btnClass = variant === "primary" ? "btn btn--primary" : "btn";
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={strings.cta.book_airbnb_aria}
+  class:list={[btnClass, className]}
+  data-magnetic
+>
+  <span>{strings.cta.book_airbnb}</span>
+  <span aria-hidden="true" class="btn__arrow">→</span>
+</a>

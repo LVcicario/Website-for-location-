@@ -1,0 +1,53 @@
+---
+import ChapterReveal from "./ChapterReveal";
+import BookingCTA from "./BookingCTA.astro";
+import Picture from "./Picture.astro";
+import { getCopy } from "~/content/copy";
+import { t } from "~/i18n/ui";
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const { reserve } = getCopy(locale);
+const strings = t(locale);
+---
+
+<section id="reserve" class="reserve relative overflow-hidden min-h-[92vh] flex items-center">
+  <div class="absolute inset-0" aria-hidden="true">
+    <Picture src="terrace-view" alt="" sizes="100vw" />
+    <div class="absolute inset-0 bg-gradient-to-b from-[var(--color-ink)]/80 via-[var(--color-ink)]/60 to-[var(--color-ink)]/90"></div>
+  </div>
+
+  <div class="relative z-10 w-full px-[var(--gutter)] py-24">
+    <div class="mx-auto max-w-[var(--content-max)]">
+      <ChapterReveal client:visible stagger as="div" className="mx-auto max-w-[56ch] text-center">
+        <p data-reveal-child class="eyebrow">
+          <span class="chapter-index mr-4">{reserve.index}</span>
+          {reserve.eyebrow}
+        </p>
+        <h2 data-reveal-child class="display mt-4">{reserve.title}</h2>
+        <hr data-reveal-child class="rule-gold mx-auto" />
+        <p data-reveal-child class="lede mx-auto">{reserve.body}</p>
+      </ChapterReveal>
+
+      <ChapterReveal client:visible stagger as="ul" className="mt-10 md:mt-16 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-12 max-w-[var(--content-max)] mx-auto">
+        {reserve.stats.map((s) => (
+          <li data-reveal-child class="text-center border-t border-[var(--color-gold)]/30 pt-5 md:pt-6">
+            <p class="font-[family-name:var(--font-display)] text-4xl md:text-6xl text-[var(--color-gold)]">{s.value}</p>
+            <p class="eyebrow mt-2 md:mt-3 text-[var(--color-bone-soft)]">{s.label}</p>
+          </li>
+        ))}
+      </ChapterReveal>
+
+      <div class="mt-12 md:mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <BookingCTA locale={locale} variant="primary" />
+        <a href={`/${locale}/#concierge`} class="btn w-full sm:w-auto justify-center" data-magnetic>
+          <span>{strings.cta.concierge}</span>
+          <span aria-hidden="true" class="btn__arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

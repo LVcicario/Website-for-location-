@@ -1,0 +1,44 @@
+---
+import ChapterReveal from "./ChapterReveal";
+import Picture from "./Picture.astro";
+import { getCopy } from "~/content/copy";
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const { materials } = getCopy(locale);
+---
+
+<section id="materials" class="chapter chapter--inverted">
+  <div class="chapter__inner">
+    <ChapterReveal client:visible stagger as="header" className="mb-16 max-w-[64ch]">
+      <p data-reveal-child class="eyebrow">
+        <span class="chapter-index mr-4">{materials.index}</span>
+        {materials.eyebrow}
+      </p>
+      <h2 data-reveal-child class="display mt-4">{materials.title}</h2>
+      <hr data-reveal-child class="rule-gold" />
+      <p data-reveal-child class="lede">{materials.intro}</p>
+    </ChapterReveal>
+
+    <ul class="grid gap-3 md:grid-cols-3 md:gap-4">
+      {materials.items.map((item, i) => (
+        <li class="material-card group relative aspect-[3/4] overflow-hidden bg-[var(--color-ink)]">
+          <div class="absolute inset-0">
+            <Picture src={item.image} alt={item.label} sizes="(min-width: 768px) 30vw, 90vw" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+            <p class="chapter-index text-[var(--color-gold-soft)] mb-2">{String(i + 1).padStart(2, "0")}</p>
+            <p class="font-[family-name:var(--font-display)] text-xl md:text-2xl font-normal leading-tight text-[var(--color-bone)]">{item.label}</p>
+            <p class="mt-2 text-sm leading-relaxed text-[var(--color-bone-soft)] max-w-[30ch]">{item.note}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <p class="mt-10 signature text-[var(--color-gold-deep)] text-right">— Villa Azur</p>
+  </div>
+</section>

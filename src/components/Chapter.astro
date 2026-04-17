@@ -1,0 +1,24 @@
+---
+interface Props {
+  id: string;
+  index?: string;
+  eyebrow?: string;
+  tone?: "dark" | "deep";
+  class?: string;
+}
+
+const { id, index, eyebrow, tone = "dark", class: className = "" } = Astro.props;
+const bg = tone === "deep" ? "bg-[var(--color-navy)]" : "bg-[var(--color-ink)]";
+---
+
+<section id={id} class:list={["chapter", bg, className]}>
+  <div class="chapter__inner">
+    {(index || eyebrow) && (
+      <header class="mb-10 flex items-baseline gap-5">
+        {index && <span class="chapter-index">{index}</span>}
+        {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      </header>
+    )}
+    <slot />
+  </div>
+</section>

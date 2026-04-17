@@ -1,0 +1,201 @@
+---
+import ChapterReveal from "./ChapterReveal";
+import ClipReveal from "./ClipReveal";
+import { getCopy } from "~/content/copy";
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const { the_place } = getCopy(locale);
+---
+
+<section id="the-place" class="chapter">
+  <div class="chapter__inner">
+    <div class="grid gap-10 md:grid-cols-[1fr_1fr] md:gap-16 items-center">
+      <ChapterReveal client:visible stagger as="div">
+        <p data-reveal-child class="eyebrow">
+          <span class="chapter-index mr-4">{the_place.index}</span>
+          {the_place.eyebrow}
+        </p>
+        <h2 data-reveal-child class="display mt-4 max-w-[16ch]">{the_place.title}</h2>
+        <hr data-reveal-child class="rule-gold" />
+        <p data-reveal-child class="lede max-w-[44ch]">{the_place.body}</p>
+        <p data-reveal-child class="eyebrow mt-6">{the_place.coordinates}</p>
+
+        <ul data-reveal-child class="mt-8 space-y-3 text-sm">
+          <li class="flex items-center gap-3">
+            <span class="inline-block h-2 w-2 rounded-full bg-[var(--color-gold)] ring-4 ring-[var(--color-gold)]/20"></span>
+            <span class="text-[var(--color-bone-soft)]">{the_place.landmarks.villa}</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="inline-block h-2 w-2 rounded-full bg-[var(--color-gold-soft)]/70"></span>
+            <span class="text-[var(--color-bone-soft)]">{the_place.landmarks.dock}</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="inline-block h-2 w-2 rounded-full border border-[var(--color-gold)]"></span>
+            <span class="text-[var(--color-bone-soft)]">{the_place.landmarks.twin}</span>
+          </li>
+        </ul>
+      </ChapterReveal>
+
+      <ClipReveal client:visible direction="left" className="place-map">
+        <div class="relative w-full aspect-[4/5] max-w-[36rem] mx-auto">
+          <svg viewBox="0 0 400 500" class="w-full h-full block" role="img" aria-label="Carte du Golfe de Saint-Tropez : Sainte-Maxime et L'Arbois au nord, Latitude 43 et Saint-Tropez au sud">
+            <defs>
+              <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0e1e33" />
+                <stop offset="100%" stop-color="#050a14" />
+              </linearGradient>
+              <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#c9a97a" stop-opacity="0.32" />
+                <stop offset="100%" stop-color="#b8935a" stop-opacity="0.08" />
+              </linearGradient>
+              <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0%" stop-color="#b8935a" stop-opacity="0.6" />
+                <stop offset="60%" stop-color="#b8935a" stop-opacity="0.1" />
+                <stop offset="100%" stop-color="#b8935a" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+
+            <!-- Sea -->
+            <rect width="400" height="500" fill="url(#sea)" />
+
+            <!-- Subtle water ripples -->
+            <g stroke="#b8935a" stroke-opacity="0.06" stroke-width="0.4" fill="none">
+              <path d="M0,220 Q100,215 200,220 T400,220" />
+              <path d="M0,260 Q100,255 200,260 T400,260" />
+              <path d="M0,300 Q100,295 200,300 T400,300" />
+            </g>
+
+            <!-- Ste-Maxime land (top) -->
+            <path
+              d="M0,0 L400,0 L400,130 C340,135 290,175 230,185 C170,195 110,170 40,185 L0,185 Z"
+              fill="url(#land)"
+              stroke="#b8935a"
+              stroke-opacity="0.55"
+              stroke-width="0.7"
+            />
+            <text x="60" y="40" fill="#c9a97a" font-size="10" letter-spacing="5" font-family="Satoshi, sans-serif" opacity="0.5">SAINTE-MAXIME</text>
+
+            <!-- St-Tropez peninsula (bottom) -->
+            <path
+              d="M0,500 L400,500 L400,385 C360,372 320,350 280,345 C240,340 200,360 160,370 C120,380 80,372 40,385 L0,390 Z"
+              fill="url(#land)"
+              stroke="#b8935a"
+              stroke-opacity="0.55"
+              stroke-width="0.7"
+            />
+            <text x="220" y="475" fill="#c9a97a" font-size="10" letter-spacing="5" font-family="Satoshi, sans-serif" opacity="0.5">SAINT-TROPEZ</text>
+
+            <!-- Boat route animated -->
+            <path
+              class="boat-path"
+              d="M200,155 Q220,200 228,260 Q232,315 235,355"
+              stroke="#b8935a"
+              stroke-opacity="0.7"
+              stroke-width="1"
+              fill="none"
+              stroke-dasharray="3 5"
+            />
+
+            <!-- Villa Azur — main marker with pulse -->
+            <g class="marker marker--primary">
+              <circle class="marker__ring-far" cx="200" cy="150" r="36" fill="none" stroke="#b8935a" stroke-opacity="0.15" />
+              <circle class="marker__ring-mid" cx="200" cy="150" r="20" fill="none" stroke="#b8935a" stroke-opacity="0.35" />
+              <circle class="marker__pulse" cx="200" cy="150" r="8" fill="url(#glow)" />
+              <circle cx="200" cy="150" r="5" fill="#b8935a" />
+              <circle cx="200" cy="150" r="2" fill="#f7f5f0" />
+            </g>
+            <text x="212" y="146" fill="#c9a97a" font-size="11" letter-spacing="3" font-family="Gambarino, Fraunces, serif" font-style="italic">Villa Azur</text>
+            <text x="212" y="160" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.7">L'ARBOIS · 1933</text>
+
+            <!-- Bateaux Verts dock -->
+            <g class="marker marker--dock">
+              <line x1="180" y1="177" x2="180" y2="192" stroke="#c9a97a" stroke-opacity="0.7" stroke-width="1" />
+              <circle cx="180" cy="192" r="2.5" fill="#c9a97a" opacity="0.75" />
+            </g>
+            <text x="88" y="206" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.7">JETÉE · BATEAUX VERTS · 200 M</text>
+
+            <!-- Latitude 43 marker (the twin) across the bay -->
+            <g class="marker marker--twin">
+              <circle cx="235" cy="360" r="4" fill="none" stroke="#c9a97a" stroke-width="1.2" />
+              <circle cx="235" cy="360" r="1.5" fill="#c9a97a" opacity="0.8" />
+            </g>
+            <text x="245" y="356" fill="#c9a97a" font-size="9" letter-spacing="3" font-family="Gambarino, Fraunces, serif" font-style="italic" opacity="0.9">Latitude 43</text>
+            <text x="245" y="368" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.6">PINGUSSON · 1932</text>
+
+            <!-- Boat travel time -->
+            <g transform="translate(244, 250)">
+              <line x1="0" y1="0" x2="0" y2="50" stroke="#b8935a" stroke-opacity="0.3" stroke-width="0.4" stroke-dasharray="1 2" />
+              <text x="6" y="28" fill="#c9a97a" font-size="7" letter-spacing="4" font-family="Satoshi, sans-serif" opacity="0.7">15′ · BATEAU</text>
+            </g>
+
+            <!-- Compass -->
+            <g transform="translate(365, 45)">
+              <line x1="0" y1="-18" x2="0" y2="18" stroke="#b8935a" stroke-width="0.6" stroke-opacity="0.6" />
+              <polygon points="0,-22 -4,-12 4,-12" fill="#b8935a" opacity="0.8" />
+              <text x="0" y="-26" fill="#c9a97a" font-size="9" text-anchor="middle" letter-spacing="2">N</text>
+            </g>
+
+            <!-- Bottom caption -->
+            <text x="200" y="492" fill="#f7f5f0" opacity="0.3" font-size="7" text-anchor="middle" letter-spacing="4" font-family="Satoshi, sans-serif">GOLFE DE SAINT-TROPEZ · 43.31°N</text>
+
+            <!-- Subtle grid -->
+            <g stroke="#f7f5f0" stroke-opacity="0.04" stroke-width="0.4">
+              <line x1="0" y1="250" x2="400" y2="250" />
+              <line x1="200" y1="0" x2="200" y2="500" />
+            </g>
+          </svg>
+        </div>
+      </ClipReveal>
+    </div>
+  </div>
+</section>
+
+<style>
+  .place-map {
+    transform-origin: center center;
+  }
+  .marker__ring-far {
+    animation: ring-pulse 4s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .marker__ring-mid {
+    animation: ring-pulse 4s ease-in-out infinite;
+    animation-delay: 0.6s;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .marker__pulse {
+    animation: pulse-glow 3.5s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  @keyframes ring-pulse {
+    0% { transform: scale(0.55); opacity: 0.7; }
+    100% { transform: scale(1.1); opacity: 0; }
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.45; transform: scale(0.85); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+  .boat-path {
+    stroke-dasharray: 3 5;
+    animation: boat-flow 6s linear infinite;
+  }
+  @keyframes boat-flow {
+    from { stroke-dashoffset: 0; }
+    to { stroke-dashoffset: -64; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marker__ring-far,
+    .marker__ring-mid,
+    .marker__pulse,
+    .boat-path {
+      animation: none !important;
+    }
+  }
+</style>

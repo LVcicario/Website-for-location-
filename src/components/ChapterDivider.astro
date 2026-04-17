@@ -1,0 +1,15 @@
+---
+interface Props {
+  roman: string;
+  tone?: "dark" | "light";
+}
+
+const { roman, tone = "dark" } = Astro.props;
+const bgClass = tone === "light" ? "bg-[var(--color-bone)]" : "bg-[var(--color-ink)]";
+---
+
+<div class:list={["chapter-divider", bgClass]} aria-hidden="true">
+  <span class="chapter-divider__line"></span>
+  <span class="chapter-divider__roman">{roman}</span>
+  <span class="chapter-divider__line"></span>
+</div>

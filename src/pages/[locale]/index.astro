@@ -1,0 +1,100 @@
+---
+import Base from "~/layouts/Base.astro";
+import Nav from "~/components/Nav.astro";
+import ScrollProgress from "~/components/ScrollProgress.astro";
+import Hero from "~/components/Hero.astro";
+import Prologue from "~/components/Prologue.astro";
+import ThePlace from "~/components/ThePlace.astro";
+import TheBuilding from "~/components/TheBuilding.astro";
+import TheApartment from "~/components/TheApartment.astro";
+import Materials from "~/components/Materials.astro";
+import ArtOfLiving from "~/components/ArtOfLiving.astro";
+import Amenities from "~/components/Amenities.astro";
+import Seasons from "~/components/Seasons.astro";
+import Testimonials from "~/components/Testimonials.astro";
+import Reserve from "~/components/Reserve.astro";
+import Concierge from "~/components/Concierge.astro";
+import Footer from "~/components/Footer.astro";
+import FullBleedPhoto from "~/components/FullBleedPhoto.astro";
+import BreathMoment from "~/components/BreathMoment.astro";
+import ChapterDivider from "~/components/ChapterDivider.astro";
+import SmoothScrollProvider from "~/components/SmoothScrollProvider";
+import { LOCALES, type Locale } from "~/i18n/config";
+import { getCopy } from "~/content/copy";
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const copy = getCopy(locale);
+
+const titles: Record<Locale, string> = {
+  fr: "Villa Azur — Un appartement privé à Sainte-Maxime, face à la baie de Saint-Tropez",
+  en: "Villa Azur — A private apartment in Sainte-Maxime, facing the bay of Saint-Tropez",
+  it: "Villa Azur — Un appartamento privato a Sainte-Maxime, di fronte alla baia di Saint-Tropez",
+  de: "Villa Azur — Ein privates Apartment in Sainte-Maxime, gegenüber der Bucht von Saint-Tropez",
+  es: "Villa Azur — Un apartamento privado en Sainte-Maxime, frente a la bahía de Saint-Tropez",
+  ru: "Villa Azur — Частные апартаменты в Сент-Максим, напротив бухты Сен-Тропе",
+  ar: "Villa Azur — شقة خاصة في سانت ماكسيم، مقابل خليج سان تروبيه",
+};
+
+const descriptions: Record<Locale, string> = {
+  fr: "Un appartement d'exception à Sainte-Maxime, face à Saint-Tropez. Trois chambres, vue baie, pour quelques semaines choisies.",
+  en: "An exceptional apartment in Sainte-Maxime, facing Saint-Tropez. Three bedrooms, bay view, for a few chosen weeks.",
+  it: "Un appartamento eccezionale a Sainte-Maxime, di fronte a Saint-Tropez. Tre camere, vista sulla baia.",
+  de: "Ein außergewöhnliches Apartment in Sainte-Maxime, gegenüber von Saint-Tropez. Drei Schlafzimmer, Blick auf die Bucht.",
+  es: "Un apartamento excepcional en Sainte-Maxime, frente a Saint-Tropez. Tres habitaciones, vista a la bahía.",
+  ru: "Исключительные апартаменты в Сент-Максим, напротив Сен-Тропе. Три спальни, вид на бухту.",
+  ar: "شقة استثنائية في سانت ماكسيم، مقابل سان تروبيه. ثلاث غرف نوم، إطلالة على الخليج.",
+};
+---
+
+<Base locale={locale} title={titles[locale]} description={descriptions[locale]}>
+  <SmoothScrollProvider client:load />
+  <ScrollProgress />
+  <Nav locale={locale} />
+
+  <main id="main">
+    <Hero locale={locale} />
+    <Prologue locale={locale} />
+
+    <FullBleedPhoto
+      src="terrace-view"
+      alt="La terrasse, golden hour"
+      eyebrow="Sainte-Maxime · face à Saint-Tropez"
+      quote="Elle brille aussi quand on ne la regarde pas."
+      height="70vh"
+      tint="medium"
+      align="left"
+    />
+
+    <ThePlace locale={locale} />
+    <ChapterDivider roman="III" />
+    <TheBuilding locale={locale} />
+    <TheApartment locale={locale} />
+
+    <BreathMoment text={copy.breath_2} variant="dark" />
+
+    <Materials locale={locale} />
+
+    <FullBleedPhoto
+      src="building-facade"
+      alt="L'Arbois, façade Art Déco"
+      eyebrow="L'immeuble"
+      quote="Un dessin des années 30, tenu jusque dans ses courbes."
+      height="60vh"
+      tint="heavy"
+      align="center"
+    />
+
+    <ArtOfLiving locale={locale} />
+    <Amenities locale={locale} />
+    <Seasons locale={locale} />
+    <Testimonials locale={locale} />
+    <Reserve locale={locale} />
+    <Concierge locale={locale} />
+  </main>
+
+  <Footer locale={locale} />
+</Base>

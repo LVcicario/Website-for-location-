@@ -1,0 +1,36 @@
+---
+import { t } from "~/i18n/ui";
+import type { Locale } from "~/i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const strings = t(locale);
+const prefix = `/${locale}`;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-[var(--color-gold)]/20 bg-[var(--color-ink)] px-[var(--gutter)] py-10 md:py-16">
+  <div class="mx-auto max-w-[var(--content-max)] grid gap-8 md:gap-10 md:grid-cols-3">
+    <div>
+      <p class="font-[family-name:var(--font-display)] text-2xl tracking-[0.04em]">Villa<span class="text-[var(--color-gold)]"> · </span>Azur</p>
+      <p class="mt-4 text-sm leading-relaxed text-[var(--color-bone-soft)] max-w-[28ch]">{strings.footer.tagline}</p>
+    </div>
+
+    <div class="text-sm leading-relaxed text-[var(--color-bone-soft)]">
+      <p class="eyebrow mb-3">{strings.footer.contact}</p>
+      <p>Saint-Tropez, France</p>
+      <p class="mt-1 text-[var(--color-bone-soft)]/70">concierge@villa-azur.example</p>
+    </div>
+
+    <div class="text-sm leading-relaxed md:text-right">
+      <ul class="space-y-1 text-[var(--color-bone-soft)]">
+        <li><a class="hover:text-[var(--color-gold)] transition-colors" href={`${prefix}/mentions-legales/`}>{strings.footer.legal}</a></li>
+        <li><a class="hover:text-[var(--color-gold)] transition-colors" href={`${prefix}/galerie/`}>Galerie</a></li>
+      </ul>
+      <p class="mt-6 text-xs tracking-[0.2em] uppercase text-[var(--color-bone-soft)]/60">{strings.footer.credits} · {year}</p>
+    </div>
+  </div>
+</footer>
