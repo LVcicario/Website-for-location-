@@ -444,8 +444,8 @@ const fr: ChapterCopy = {
   voices: {
     index: "IX",
     eyebrow: "Chapitre IX — Voix",
-    title: "Ce que disent ceux qui sont venus",
-    intro: "Quelques mots, laissés avec pudeur, après un séjour.",
+    title: "Saint-Tropez en quelques mots",
+    intro: "Trois citations de Brigitte Bardot, qui depuis La Madrague raconte la baie depuis soixante ans.",
     testimonials: [
       { quote: "Saint-Tropez est mon enfance, ma jeunesse, ma liberté.", author: "Brigitte Bardot" },
       { quote: "Je vis à Saint-Tropez parce que c’est le seul endroit au monde où je peux respirer.", author: "Brigitte Bardot" },
@@ -459,7 +459,7 @@ const fr: ChapterCopy = {
     eyebrow: "Chapitre X — Réserver",
     title: "Votre séjour, à votre rythme",
     body:
-      "La réservation se fait directement sur Airbnb.",
+      "La réservation se fait sur Airbnb — paiement sécurisé, calendrier en temps réel.",
     stats: [
       { value: "2", label: "chambres" },
       { value: "4", label: "voyageurs" },
@@ -640,8 +640,8 @@ const en: ChapterCopy = {
   voices: {
     index: "IX",
     eyebrow: "Chapter IX — Voices",
-    title: "A few words from those who stayed",
-    intro: "Left with restraint, after a week.",
+    title: "Saint-Tropez in a few words",
+    intro: "Three quotes from Brigitte Bardot, who has chronicled the bay from La Madrague for sixty years.",
     testimonials: [
       { quote: "Saint-Tropez is my childhood, my youth, my freedom.", author: "Brigitte Bardot" },
       { quote: "I live in Saint-Tropez because it is the only place in the world where I can breathe.", author: "Brigitte Bardot" },
@@ -655,7 +655,7 @@ const en: ChapterCopy = {
     eyebrow: "Chapter X — Reserve",
     title: "Your stay, at your own pace",
     body:
-      "Book directly on Airbnb.",
+      "Booking via Airbnb — secure payment, real-time availability.",
     stats: [
       { value: "2", label: "bedrooms" },
       { value: "4", label: "guests" },
