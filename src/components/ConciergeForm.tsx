@@ -29,7 +29,7 @@ export default function ConciergeForm({ locale }: Props) {
     };
 
     if (!endpoint) {
-      const subject = encodeURIComponent(`L'Arbois — ${payload.name}`);
+      const subject = encodeURIComponent(`L’Arbois — ${payload.name}`);
       const body = encodeURIComponent(
         `Name: ${payload.name}\nEmail: ${payload.email}\nDates: ${payload.dates}\n\n${payload.message}`,
       );

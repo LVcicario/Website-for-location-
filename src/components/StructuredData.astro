@@ -8,21 +8,26 @@ interface Props {
 const { locale } = Astro.props;
 
 const descriptions: Record<Locale, string> = {
-  fr: "Location de l'appartement L'Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
-  en: "Rent L'Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
-  it: "Affitto dell'appartamento L'Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
-  de: "Mieten Sie L'Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
-  es: "Alquila L'Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
-  ru: "Аренда апартамента L'Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
-  ar: "إيجار شقة L'Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
+  fr: "Location de l’appartement L’Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
+  en: "Rent L’Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
+  it: "Affitto dell’appartamento L’Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
+  de: "Mieten Sie L’Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
+  es: "Alquila L’Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
+  ru: "Аренда апартамента L’Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
+  ar: "إيجار شقة L’Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
 };
+
+const AIRBNB_URL = "https://www.airbnb.fr/rooms/1162242524645326844";
+const ogImage = Astro.site ? new URL("/og.svg", Astro.site).toString() : "/og.svg";
 
 const data = {
   "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "name": "L'Arbois",
+  "@type": ["VacationRental", "LodgingBusiness"],
+  "name": "L’Arbois",
+  "alternateName": "L’Arbois Sainte-Maxime",
   "description": descriptions[locale],
   "url": Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : Astro.url.toString(),
+  "image": [ogImage],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Sainte-Maxime",
@@ -35,28 +40,80 @@ const data = {
     "latitude": 43.31,
     "longitude": 6.64,
   },
+  "containedInPlace": {
+    "@type": "Place",
+    "name": "Golfe de Saint-Tropez, Côte d’Azur",
+  },
   "numberOfRooms": 2,
   "numberOfBedrooms": 2,
   "numberOfBathroomsTotal": 2,
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 4,
+    "unitCode": "C62",
+  },
   "maximumAttendeeCapacity": 4,
   "petsAllowed": false,
   "smokingAllowed": false,
+  "checkinTime": "16:00:00+02:00",
+  "checkoutTime": "11:00:00+02:00",
+  "currenciesAccepted": "EUR",
+  "availableLanguage": ["fr", "en", "it", "de", "es", "ru", "ar"],
   "priceRange": "€€€€",
-  "containedInPlace": {
-    "@type": "Place",
-    "name": "Golfe de Saint-Tropez, Côte d'Azur",
-  },
   "amenityFeature": [
-    { "@type": "LocationFeatureSpecification", "name": "WiFi" },
-    { "@type": "LocationFeatureSpecification", "name": "Air conditioning" },
-    { "@type": "LocationFeatureSpecification", "name": "Terrace" },
-    { "@type": "LocationFeatureSpecification", "name": "Sea view" },
-    { "@type": "LocationFeatureSpecification", "name": "Parking" },
-    { "@type": "LocationFeatureSpecification", "name": "Washer" },
-    { "@type": "LocationFeatureSpecification", "name": "Dishwasher" },
-    { "@type": "LocationFeatureSpecification", "name": "Kitchen" },
+    { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Terrace", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Sea view", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Elevator", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Washer", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Dryer", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Dishwasher", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Coffee machine", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Safe", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Hair dryer", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Premium linen", "value": true },
   ],
-  "image": Astro.site ? [new URL("/og.svg", Astro.site).toString()] : [],
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Location à la nuit · 7 nuits minimum",
+    "url": AIRBNB_URL,
+    "price": 348,
+    "priceCurrency": "EUR",
+    "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": 348,
+      "priceCurrency": "EUR",
+      "unitCode": "DAY",
+      "unitText": "per night",
+      "valueAddedTaxIncluded": true,
+    },
+    "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "minValue": 7,
+      "unitCode": "DAY",
+    },
+    "availability": "https://schema.org/InStock",
+    "businessFunction": "https://purl.org/goodrelations/v1#LeaseOut",
+  },
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Réserver sur Airbnb",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": AIRBNB_URL,
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform",
+      ],
+    },
+    "result": {
+      "@type": "LodgingReservation",
+      "name": "Séjour à L’Arbois",
+    },
+  },
 };
 ---
 

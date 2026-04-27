@@ -83,7 +83,7 @@ export default function ChapterReveal({
 
   const Component = Tag as keyof JSX.IntrinsicElements;
   return (
-    // @ts-expect-error — Tag is dynamic (keyof JSX.IntrinsicElements), TS can't narrow ref type
+    // @ts-expect-error — Tag is dynamic (keyof JSX.IntrinsicElements), TS can’t narrow ref type
     <Component ref={ref} className={className}>
       {children}
     </Component>

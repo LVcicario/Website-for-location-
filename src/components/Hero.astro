@@ -17,8 +17,8 @@ const strings = t(locale);
 <section class="hero relative flex min-h-[100svh] flex-col justify-between overflow-hidden" aria-label={hero.title_line_1}>
   <div class="hero__media absolute inset-0" aria-hidden="true">
     <div class="hero__bg absolute inset-0 overflow-hidden">
-      <ParallaxLayer client:load speed={0.88} className="absolute inset-[-8%]">
-        <Picture src="dining-view" alt="" aspect="3/2" eager sizes="100vw" class="hero__image" />
+      <ParallaxLayer client:idle speed={0.88} className="absolute inset-[-8%]">
+        <Picture src="dining-view" alt="L’Arbois — salle à manger avec vue sur le golfe de Saint-Tropez" aspect="3/2" eager sizes="100vw" class="hero__image" />
       </ParallaxLayer>
     </div>
     <div class="hero__tint"></div>

@@ -22,7 +22,7 @@ const {
   eager = false,
   class: className,
   sizes = "(min-width: 1024px) 1600px, 100vw",
-  widths = [640, 1024, 1600, 2400],
+  widths = [640, 1280, 1920],
   fit = "cover",
   position,
 } = Astro.props;
@@ -58,6 +58,7 @@ const style = styleParts.join("; ");
     sizes={sizes}
     formats={["avif", "webp"]}
     loading={eager ? "eager" : "lazy"}
+    fetchpriority={eager ? "high" : "auto"}
     decoding="async"
     class={className}
     style={style}

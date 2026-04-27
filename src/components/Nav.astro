@@ -36,10 +36,10 @@ const prefix = `/${locale}`;
     </ul>
 
     <div class="hidden md:block">
-      <LanguageSwitcher client:load locale={locale} />
+      <LanguageSwitcher client:idle locale={locale} />
     </div>
 
-    <MobileNav client:load locale={locale} />
+    <MobileNav client:idle locale={locale} />
   </div>
 </nav>
 

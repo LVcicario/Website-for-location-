@@ -97,7 +97,7 @@ export default function RoomScroller({ rooms, images }: Props) {
                     <source srcSet={img.webp} type="image/webp" />
                     <img
                       src={img.fallback}
-                      alt=""
+                      alt={`L’Arbois — ${room.title}`}
                       width={img.width}
                       height={img.height}
                       loading={i < 2 ? "eager" : "lazy"}

@@ -179,34 +179,34 @@ const fr: ChapterCopy = {
     index: "I",
     eyebrow: "Prologue",
     text:
-      "On vient ici pour regarder Saint-Tropez changer d'heure en heure, depuis Sainte-Maxime. Un silence de pierre blanche, la lumière de cinq heures, l'air qui sent le pin et l'iode. Sainte-Maxime tient la meilleure place de la baie.",
-    signature: "L'Arbois",
+      "On vient ici pour regarder Saint-Tropez changer d’heure en heure, depuis Sainte-Maxime. Un silence de pierre blanche, la lumière de cinq heures, l’air qui sent le pin et l’iode. Sainte-Maxime tient la meilleure place de la baie.",
+    signature: "L’Arbois",
   },
   the_place: {
     index: "II",
     eyebrow: "Chapitre II — Le lieu",
     title: "Face à Saint-Tropez, la meilleure place",
     body:
-      "Sainte-Maxime, rive nord du golfe. L'appartement ouvre ses terrasses plein sud, face à Saint-Tropez qui tient la lumière du matin au soir. Les navettes Bateaux Verts partent à deux cents mètres à pied — quinze minutes de traversée, la baie franchie.",
+      "Sainte-Maxime, rive nord du golfe. L’appartement ouvre ses terrasses plein sud, face à Saint-Tropez qui tient la lumière du matin au soir. Les navettes Bateaux Verts partent à deux cents mètres à pied — quinze minutes de traversée, la baie franchie.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
-      villa: "L'Arbois",
-      dock: "Jetée · Bateaux Verts · 200 m à pied",
+      villa: "L’Arbois",
+      dock: "Jetée · Bateaux Verts · 200 m à pied",
       twin: "Latitude 43 · le jumeau paquebot",
-      boat: "15 min · bateau",
+      boat: "15 min · bateau",
     },
   },
   the_building: {
     index: "III",
-    eyebrow: "Chapitre III — L'immeuble",
-    title: "L'Arbois, côté nord. Latitude 43, côté sud.",
+    eyebrow: "Chapitre III — L’immeuble",
+    title: "L’Arbois, côté nord. Latitude 43, côté sud.",
     subtitle: "Un dialogue de paquebots, depuis 1933.",
     body_1:
-      "Sainte-Maxime, janvier 1933. Jean Gianotti, Parisien, commande à René Darde — architecte-urbaniste de la ville — un hôtel d'une autre espèce. L'Arbois ouvre en 1935 : façade courbe, balcons filants, verticalité d'un seul trait de béton. Le Grand Hôtel et son restaurant, La Tartane, deviennent une adresse.",
+      "Sainte-Maxime, janvier 1933. Jean Gianotti, Parisien, commande à René Darde — architecte-urbaniste de la ville — un hôtel d’une autre espèce. L’Arbois ouvre en 1935 : façade courbe, balcons filants, verticalité d’un seul trait de béton. Le Grand Hôtel et son restaurant, La Tartane, deviennent une adresse.",
     body_2:
-      "En face, Saint-Tropez, 1932. Georges-Henri Pingusson a livré un an plus tôt le Latitude 43 — un paquebot échoué de cent mètres, cent chambres, un casino, une piscine. L'Arbois a probablement été dessiné en écho : plus compact, plus retenu, mais du même mouvement moderne. L'un a inspiré l'autre ; ils se regardent.",
+      "En face, Saint-Tropez, 1932. Georges-Henri Pingusson a livré un an plus tôt le Latitude 43 — un paquebot échoué de cent mètres, cent chambres, un casino, une piscine. L’Arbois a probablement été dessiné en écho : plus compact, plus retenu, mais du même mouvement moderne. L’un a inspiré l’autre ; ils se regardent.",
     body_3:
-      "Après la guerre, les deux paquebots deviennent des résidences. Ils continuent à se faire face à travers le golfe, témoins d'une Côte d'Azur qui n'a jamais fini de se rêver. L'Arbois est aujourd'hui labellisé Architecture Contemporaine Remarquable.",
+      "Après la guerre, les deux paquebots deviennent des résidences. Ils continuent à se faire face à travers le golfe, témoins d’une Côte d’Azur qui n’a jamais fini de se rêver. L’Arbois est aujourd’hui labellisé Architecture Contemporaine Remarquable.",
     quote: "Elles se regardent depuis un siècle.",
     labels: {
       architect: "Architecte · René Darde (1933)",
@@ -215,24 +215,24 @@ const fr: ChapterCopy = {
     },
     timeline: [
       { year: "1930–32", label: "Latitude 43", detail: "Pingusson livre son paquebot moderniste à Saint-Tropez" },
-      { year: "Janv. 1933", label: "Chantier L'Arbois", detail: "Jean Gianotti commande à René Darde l'hôtel face au golfe" },
-      { year: "1935", label: "Inauguration", detail: "Grand Hôtel L'Arbois · restaurant La Tartane" },
-      { year: "1945 →", label: "Résidences", detail: "Les deux paquebots deviennent des appartements ; ils se regardent toujours" },
+      { year: "Janv. 1933", label: "Chantier L’Arbois", detail: "Jean Gianotti commande à René Darde l’hôtel face au golfe" },
+      { year: "1935", label: "Inauguration", detail: "Grand Hôtel L’Arbois · restaurant La Tartane" },
+      { year: "1945 →", label: "Résidences", detail: "Les deux paquebots deviennent des appartements ; ils se regardent toujours" },
     ],
   },
   the_apartment: {
     index: "IV",
-    eyebrow: "Chapitre IV — L'appartement",
+    eyebrow: "Chapitre IV — L’appartement",
     title: "Deux chambres, un salon, une vue",
     intro:
       "Murs blancs, parquet bois chaud, meubles bleu marine, éclairages dorés. Une écriture contemporaine, retenue, tenue par les matières.",
     rooms: [
-      { label: "Entrée", title: "Le seuil", body: "Un couloir clair, une console de laiton, une sculpture discrète. Le ton est donné avant même d'avoir posé ses bagages." },
-      { label: "Salon", title: "Le grand volume", body: "Des canapés bleu marine faits sur mesure, un tapis de laine écrue, une cheminée de marbre. La baie est toujours au fond, comme un tableau qui change d'heure en heure." },
+      { label: "Entrée", title: "Le seuil", body: "Un couloir clair, une console de laiton, une sculpture discrète. Le ton est donné avant même d’avoir posé ses bagages." },
+      { label: "Salon", title: "Le grand volume", body: "Des canapés bleu marine faits sur mesure, un tapis de laine écrue, une cheminée de marbre. La baie est toujours au fond, comme un tableau qui change d’heure en heure." },
       { label: "Cuisine", title: "La table de famille", body: "Marbre blanc veiné, robinetterie dorée, four professionnel. De quoi recevoir comme on reçoit à la maison — avec simplicité." },
-      { label: "Chambre principale", title: "La chambre d'honneur", body: "Lit king-size, tête de lit capitonnée bleu nuit, dressing attenant, salle de bain en marbre. Les volets s'ouvrent plein sud, sur la baie." },
-      { label: "Chambre d'hôtes", title: "Une chambre d'hôtes", body: "Sa salle de bain privative, son linge de maison en lin lavé, son calme. Pour ceux qu'on aime, rien de moins." },
-      { label: "Terrasse", title: "La terrasse sud", body: "Une grande table en teck, des bains de soleil, un coin d'ombre. Saint-Tropez en filigrane toute la journée, ses lampes qui s'allument à la nuit. Les soirées s'éternisent." },
+      { label: "Chambre principale", title: "La chambre d’honneur", body: "Lit king-size, tête de lit capitonnée bleu nuit, dressing attenant, salle de bain en marbre. Les volets s’ouvrent plein sud, sur la baie." },
+      { label: "Chambre d’hôtes", title: "Une chambre d’hôtes", body: "Sa salle de bain privative, son linge de maison en lin lavé, son calme. Pour ceux qu’on aime, rien de moins." },
+      { label: "Terrasse", title: "La terrasse sud", body: "Une grande table en teck, des bains de soleil, un coin d’ombre. Saint-Tropez en filigrane toute la journée, ses lampes qui s’allument à la nuit. Les soirées s’éternisent." },
     ],
   },
   materials: {
@@ -240,22 +240,22 @@ const fr: ChapterCopy = {
     eyebrow: "Chapitre V — Matières",
     title: "La grammaire du lieu",
     intro:
-      "Quatre matières, tenues par une palette : blanc, or, bleu marine, bois. Rien de plus, rien de moins.",
+      "Quatre matières, tenues par une palette : blanc, or, bleu marine, bois. Rien de plus, rien de moins.",
     items: [
       { label: "Marbre blanc veiné", note: "Cuisine, salles de bain, cheminée.", image: "primary-bathroom" },
       { label: "Laiton brossé doré", note: "Robinetterie, luminaires, patines mates.", image: "bathroom-gold" },
       { label: "Parquet chêne massif", note: "Lames larges, chevrons, huile naturelle.", image: "salon-window" },
       { label: "Velours bleu marine", note: "Canapés, têtes de lit — sur mesure.", image: "guest-bedroom-b" },
       { label: "Chaux blanche", note: "Murs qui respirent la lumière de la côte.", image: "salon-view" },
-      { label: "Granit & damier", note: "Le hall Art Déco de l'immeuble.", image: "building-stairs" },
+      { label: "Granit & damier", note: "Le hall Art Déco de l’immeuble.", image: "building-stairs" },
     ],
   },
   art_of_living: {
     index: "VI",
-    eyebrow: "Chapitre VI — L'art de vivre",
+    eyebrow: "Chapitre VI — L’art de vivre",
     title: "À pied, en bateau, en voiture",
     intro:
-      "La vie de Sainte-Maxime à quelques pas, Saint-Tropez à un quart d'heure de bateau, l'arrière-pays à vingt minutes. Cliquez chaque adresse — sur la carte ou dans la liste — pour savoir comment y aller, quoi y faire.",
+      "La vie de Sainte-Maxime à quelques pas, Saint-Tropez à un quart d’heure de bateau, l’arrière-pays à vingt minutes. Cliquez chaque adresse — sur la carte ou dans la liste — pour savoir comment y aller, quoi y faire.",
     labels: {
       access: "Comment y aller",
       activities: "Quoi y faire",
@@ -267,8 +267,8 @@ const fr: ChapterCopy = {
       {
         name: "La Croisette",
         kind: "Promenade, port, yachts",
-        distance: "2 min à pied",
-        access: "À la sortie de L'Arbois, tournez à gauche sur le front de mer ombragé.",
+        distance: "2 min à pied",
+        access: "À la sortie de L’Arbois, tournez à gauche sur le front de mer ombragé.",
         activities: "Promenade sous les pins parasols, port de plaisance, terrasses de café, glaciers artisanaux, bars à cocktails au crépuscule.",
         transport: "foot",
         mapX: 170,
@@ -276,9 +276,9 @@ const fr: ChapterCopy = {
       },
       {
         name: "Plage de la Nartelle",
-        kind: "Sable blanc, pieds dans l'eau",
-        distance: "7 min à pied",
-        access: "Suivez le front de mer à l'est, puis le sentier littoral. Navette gratuite en été.",
+        kind: "Sable blanc, pieds dans l’eau",
+        distance: "7 min à pied",
+        access: "Suivez le front de mer à l’est, puis le sentier littoral. Navette gratuite en été.",
         activities: "Sable fin, eau calme (idéale enfants), paillotes de plage (Mahi Plage, La Gaillarde), paddle, transats, déjeuner les pieds dans le sable.",
         transport: "foot",
         mapX: 295,
@@ -287,9 +287,9 @@ const fr: ChapterCopy = {
       {
         name: "Marché couvert",
         kind: "Produits de Provence · mardi & samedi",
-        distance: "5 min à pied",
-        access: "Par la rue Gabriel Péri, derrière l'église. Mardi et samedi matin, 7h–13h.",
-        activities: "Fromages fermiers, poissons du matin, fruits de saison, fleurs, huile d'olive du Var, tapenades, rosé local.",
+        distance: "5 min à pied",
+        access: "Par la rue Gabriel Péri, derrière l’église. Mardi et samedi matin, 7h–13h.",
+        activities: "Fromages fermiers, poissons du matin, fruits de saison, fleurs, huile d’olive du Var, tapenades, rosé local.",
         transport: "foot",
         mapX: 155,
         mapY: 108,
@@ -297,7 +297,7 @@ const fr: ChapterCopy = {
       {
         name: "Le Sémaphore",
         kind: "Point de vue sur tout le golfe",
-        distance: "20 min à pied",
+        distance: "20 min à pied",
         access: "Montée par le sentier du littoral, derrière la Nartelle. Prévoir des chaussures fermées.",
         activities: "Panorama complet sur le golfe de Saint-Tropez, les meilleurs couchers de soleil, aire de pique-nique.",
         transport: "foot",
@@ -307,9 +307,9 @@ const fr: ChapterCopy = {
       {
         name: "Sénéquier · Saint-Tropez",
         kind: "Café iconique du port",
-        distance: "15 min en bateau",
-        access: "Navettes Bateaux Verts depuis la jetée de Sainte-Maxime (200 m à pied de L'Arbois) — horaires saisonniers. Ou taxi-boat privé sur demande de la conciergerie.",
-        activities: "Institution depuis 1887. Terrasse rouge vif sur le port, petit-déjeuner matinal, apéritif au coucher du soleil, le meilleur poste d'observation des yachts.",
+        distance: "15 min en bateau",
+        access: "Navettes Bateaux Verts depuis la jetée de Sainte-Maxime (200 m à pied de L’Arbois) — horaires saisonniers. Ou taxi-boat privé sur demande de la conciergerie.",
+        activities: "Institution depuis 1887. Terrasse rouge vif sur le port, petit-déjeuner matinal, apéritif au coucher du soleil, le meilleur poste d’observation des yachts.",
         transport: "boat",
         mapX: 210,
         mapY: 365,
@@ -317,9 +317,9 @@ const fr: ChapterCopy = {
       {
         name: "Place des Lices",
         kind: "Pétanque, platanes, marché",
-        distance: "15 min bateau + 3 min à pied",
-        access: "Descendez des Bateaux Verts au port, remontez la rue Gambetta sur 300 m. Marché mardi & samedi.",
-        activities: "Pétanque sous les platanes centenaires, marché provençal, terrasses à l'ombre, Le Café (brasserie historique), boutiques de créateurs.",
+        distance: "15 min bateau + 3 min à pied",
+        access: "Descendez des Bateaux Verts au port, remontez la rue Gambetta sur 300 m. Marché mardi & samedi.",
+        activities: "Pétanque sous les platanes centenaires, marché provençal, terrasses à l’ombre, Le Café (brasserie historique), boutiques de créateurs.",
         transport: "boat",
         mapX: 195,
         mapY: 395,
@@ -327,8 +327,8 @@ const fr: ChapterCopy = {
       {
         name: "Plage de Pampelonne",
         kind: "Club 55, Loulou, La Réserve, Nikki Beach",
-        distance: "25 min bateau ou 40 min voiture",
-        access: "Taxi-boat privé jusqu'au ponton Club 55 ou Loulou (réservation conciergerie). Ou voiture par la route des plages via Ramatuelle.",
+        distance: "25 min bateau ou 40 min voiture",
+        access: "Taxi-boat privé jusqu’au ponton Club 55 ou Loulou (réservation conciergerie). Ou voiture par la route des plages via Ramatuelle.",
         activities: "Déjeuners longs au Club 55, bains de soleil Loulou, cocktails Nikki Beach. Eau turquoise, sortie en annexe, ski nautique.",
         transport: "boat",
         mapX: 360,
@@ -337,7 +337,7 @@ const fr: ChapterCopy = {
       {
         name: "Ramatuelle & Gassin",
         kind: "Villages perchés, vignobles",
-        distance: "30 min en voiture",
+        distance: "30 min en voiture",
         access: "Voiture par la D61 via Port Grimaud et La Foux. Parking en bas des villages.",
         activities: "Villages médiévaux, ruelles ombragées, vignobles (Château Minuty, Domaines Ott), restaurants avec vue. Dégustations sur réservation.",
         transport: "car",
@@ -350,13 +350,13 @@ const fr: ChapterCopy = {
     index: "VII",
     eyebrow: "Chapitre VII — Équipements & services",
     title: "Ce qui est compris, ce qui se demande",
-    intro: "Deux chambres, quatre voyageurs, ce qu'il faut pour recevoir — et ce qui se dit à l'oreille de la conciergerie.",
+    intro: "Deux chambres, quatre voyageurs, ce qu’il faut pour recevoir — et ce qui se dit à l’oreille de la conciergerie.",
     capacity: {
-      rooms: "2 chambres",
-      guests: "4 voyageurs",
+      rooms: "2 chambres",
+      guests: "4 voyageurs",
       beds: "1 king-size · 2 lits simples",
       baths: "2 salles de bain + WC séparé",
-      min_stay: "7 nuits minimum",
+      min_stay: "7 nuits minimum",
     },
     stat_bar: [
       { value: "2", label: "chambres" },
@@ -382,9 +382,9 @@ const fr: ChapterCopy = {
       { label: "Linge de maison premium", icon: "linen" },
     ],
     services_included: [
-      "Ménage à l'arrivée et au départ",
+      "Ménage à l’arrivée et au départ",
       "Linge de maison et de bain",
-      "Kit d'accueil (huile d'olive, confiture, vin local)",
+      "Kit d’accueil (huile d’olive, confiture, vin local)",
       "Assistance check-in personnalisée",
     ],
     services_on_demand: [
@@ -402,7 +402,7 @@ const fr: ChapterCopy = {
     title: "Quatre saisons, quatre atmosphères",
     intro:
       "La haute saison brille, les entre-saisons appartiennent aux initiés. Tarifs indicatifs, sur la base de la semaine.",
-    minimum_stay: "Séjour minimum : 7 nuits. — 20 % de réduction au-delà de 7 nuits.",
+    minimum_stay: "Séjour minimum : 7 nuits. — 20 % de réduction au-delà de 7 nuits.",
     items: [
       { label: "Printemps", window: "Avril — Juin", note: "Mimosa, mistral doux, village encore calme.", price: "À partir de 348 € / nuit (frais Airbnb inclus)", image: "terrace-view" },
       { label: "Été", window: "Juillet — Août", note: "Haute saison, yachts dans la baie, Pampelonne à son apogée.", price: "Sur demande", image: "dining-view" },
@@ -416,9 +416,9 @@ const fr: ChapterCopy = {
     title: "Ce que disent ceux qui sont venus",
     intro: "Quelques mots, laissés avec pudeur, après un séjour.",
     testimonials: [
-      { quote: "Un silence qu'on n'imagine plus — et pourtant, Saint-Tropez en face. Le genre de semaine qui recadre une année.", author: "L., juin 2025" },
-      { quote: "La lumière change d'heure en heure. On ne bouge pas de la terrasse. Les enfants se sont endormis au son des cigales.", author: "M. & P., août 2024" },
-      { quote: "Le bateau jusqu'au Sénéquier : quinze minutes, pas de foule. On revient dîner à la maison. Rare.", author: "C., septembre 2025" },
+      { quote: "Un silence qu’on n’imagine plus — et pourtant, Saint-Tropez en face. Le genre de semaine qui recadre une année.", author: "L., juin 2025" },
+      { quote: "La lumière change d’heure en heure. On ne bouge pas de la terrasse. Les enfants se sont endormis au son des cigales.", author: "M. & P., août 2024" },
+      { quote: "Le bateau jusqu’au Sénéquier : quinze minutes, pas de foule. On revient dîner à la maison. Rare.", author: "C., septembre 2025" },
     ],
     press_label: "Tel que vu dans",
     press_items: ["AD France", "Vogue Living", "The Socialite Family", "Cabana Magazine"],
@@ -437,8 +437,8 @@ const fr: ChapterCopy = {
     ],
   },
   breath_1: "Elle brille aussi,<br/><em>quand on ne la regarde pas.</em>",
-  breath_2: "Ici, on <em>regarde</em>.<br/>On n'est pas regardé.",
-  signature: "— L'Arbois",
+  breath_2: "Ici, on <em>regarde</em>.<br/>On n’est pas regardé.",
+  signature: "— L’Arbois",
 };
 
 const en: ChapterCopy = {
@@ -452,34 +452,34 @@ const en: ChapterCopy = {
     index: "I",
     eyebrow: "Prologue",
     text:
-      "One comes here to watch Saint-Tropez change hour by hour, from Sainte-Maxime. The silence of white stone, the slow five o'clock light, air scented with pine and salt. Sainte-Maxime holds the finest seat in the bay.",
-    signature: "L'Arbois",
+      "One comes here to watch Saint-Tropez change hour by hour, from Sainte-Maxime. The silence of white stone, the slow five o’clock light, air scented with pine and salt. Sainte-Maxime holds the finest seat in the bay.",
+    signature: "L’Arbois",
   },
   the_place: {
     index: "II",
     eyebrow: "Chapter II — The place",
     title: "Facing Saint-Tropez, the finest seat",
     body:
-      "Sainte-Maxime, northern shore of the gulf. The apartment's terraces face due south, towards Saint-Tropez, which catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, two hundred metres on foot — a fifteen-minute crossing.",
+      "Sainte-Maxime, northern shore of the gulf. The apartment’s terraces face due south, towards Saint-Tropez, which catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, two hundred metres on foot — a fifteen-minute crossing.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
-      villa: "L'Arbois",
-      dock: "Jetty · Bateaux Verts · 200 m walk",
+      villa: "L’Arbois",
+      dock: "Jetty · Bateaux Verts · 200 m walk",
       twin: "Latitude 43 · the ocean-liner twin",
-      boat: "15 min · by boat",
+      boat: "15 min · by boat",
     },
   },
   the_building: {
     index: "III",
     eyebrow: "Chapter III — The building",
-    title: "L'Arbois, north side. Latitude 43, south side.",
+    title: "L’Arbois, north side. Latitude 43, south side.",
     subtitle: "A dialogue of ocean-liners since 1933.",
     body_1:
-      "Sainte-Maxime, January 1933. Jean Gianotti, a Parisian patron, commissions from René Darde — the town's architect-urbanist — a hotel of another kind. L'Arbois opens in 1935: curved façade, ribbon balconies, the whole vertical held by a single stroke of concrete. The Grand Hôtel and its restaurant, La Tartane, become an address.",
+      "Sainte-Maxime, January 1933. Jean Gianotti, a Parisian patron, commissions from René Darde — the town’s architect-urbanist — a hotel of another kind. L’Arbois opens in 1935: curved façade, ribbon balconies, the whole vertical held by a single stroke of concrete. The Grand Hôtel and its restaurant, La Tartane, become an address.",
     body_2:
-      "Across the water, Saint-Tropez, 1932. Georges-Henri Pingusson had delivered, a year earlier, the Latitude 43 — a beached ocean-liner of a hundred metres, a hundred rooms, a casino, a pool. L'Arbois was very likely drawn in reply: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
+      "Across the water, Saint-Tropez, 1932. Georges-Henri Pingusson had delivered, a year earlier, the Latitude 43 — a beached ocean-liner of a hundred metres, a hundred rooms, a casino, a pool. L’Arbois was very likely drawn in reply: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
     body_3:
-      "After the war, the two ocean-liners became residences. They still face each other across the bay, witnesses to a Riviera that has never finished dreaming itself. L'Arbois is today listed as Architecture Contemporaine Remarquable.",
+      "After the war, the two ocean-liners became residences. They still face each other across the bay, witnesses to a Riviera that has never finished dreaming itself. L’Arbois is today listed as Architecture Contemporaine Remarquable.",
     quote: "They have been looking at each other for a century.",
     labels: {
       architect: "Architect · René Darde (1933)",
@@ -488,8 +488,8 @@ const en: ChapterCopy = {
     },
     timeline: [
       { year: "1930–32", label: "Latitude 43", detail: "Pingusson delivers his modernist liner in Saint-Tropez" },
-      { year: "Jan 1933", label: "L'Arbois begins", detail: "Jean Gianotti commissions René Darde with the hotel facing the gulf" },
-      { year: "1935", label: "Inauguration", detail: "Grand Hôtel L'Arbois · restaurant La Tartane" },
+      { year: "Jan 1933", label: "L’Arbois begins", detail: "Jean Gianotti commissions René Darde with the hotel facing the gulf" },
+      { year: "1935", label: "Inauguration", detail: "Grand Hôtel L’Arbois · restaurant La Tartane" },
       { year: "1945 →", label: "Residences", detail: "Both liners become apartments; they still face each other" },
     ],
   },
@@ -537,27 +537,27 @@ const en: ChapterCopy = {
       by_car: "By car",
     },
     pois: [
-      { name: "La Croisette", kind: "Seafront promenade, port, yachts", distance: "2 min walk", access: "Step out of L'Arbois, turn left along the shaded seafront.", activities: "Promenade under umbrella pines, marina, café terraces, artisanal ice cream, sunset cocktail bars.", transport: "foot", mapX: 170, mapY: 172 },
-      { name: "Nartelle beach", kind: "White sand, steps from the water", distance: "7 min walk", access: "Walk east along the seafront then the coastal path. Free shuttle in summer.", activities: "Fine sand, calm water (ideal for children), beach clubs (Mahi Plage, La Gaillarde), paddle, loungers, lunch on the sand.", transport: "foot", mapX: 295, mapY: 163 },
-      { name: "Covered market", kind: "Provence produce · Tue & Sat", distance: "5 min walk", access: "Via Rue Gabriel Péri, behind the church. Tuesday & Saturday mornings, 7–13h.", activities: "Farm cheeses, morning-catch fish, seasonal fruit, flowers, local olive oil, tapenades, rosé.", transport: "foot", mapX: 155, mapY: 108 },
-      { name: "Le Sémaphore", kind: "Viewpoint over the entire gulf", distance: "20 min walk", access: "Coastal path above Nartelle. Wear closed shoes.", activities: "Full panorama of the gulf, the finest sunsets, picnic area.", transport: "foot", mapX: 320, mapY: 90 },
-      { name: "Sénéquier · Saint-Tropez", kind: "Iconic café on the port", distance: "15 min by boat", access: "Bateaux Verts from the Sainte-Maxime jetty (200 m walk from L'Arbois) — seasonal schedule. Or private taxi-boat through the concierge.", activities: "Institution since 1887. Vivid red terrace on the port, early breakfast, sunset apéritif, the finest yacht-watching seat.", transport: "boat", mapX: 210, mapY: 365 },
-      { name: "Place des Lices", kind: "Pétanque, plane trees, market", distance: "15 min boat + 3 min walk", access: "Off the Bateaux Verts at the port, 300 m up Rue Gambetta. Market Tuesday & Saturday.", activities: "Pétanque under centennial plane trees, Provence market, shaded terraces, Le Café (historic brasserie), designer shops.", transport: "boat", mapX: 195, mapY: 395 },
-      { name: "Pampelonne beach", kind: "Club 55, Loulou, La Réserve, Nikki Beach", distance: "25 min boat or 40 min drive", access: "Private taxi-boat to Club 55 or Loulou pontoon (concierge booking). Or by car via Ramatuelle.", activities: "Long lunches at Club 55, loungers at Loulou, cocktails at Nikki Beach. Turquoise water, tender rides, water-skiing.", transport: "boat", mapX: 360, mapY: 430 },
-      { name: "Ramatuelle & Gassin", kind: "Hilltop villages, vineyards", distance: "30 min drive", access: "Car via D61 through Port Grimaud and La Foux. Parking at village entrance.", activities: "Medieval villages, shaded lanes, vineyards (Château Minuty, Domaines Ott), restaurants with view. Tastings by appointment.", transport: "car", mapX: 305, mapY: 455 },
+      { name: "La Croisette", kind: "Seafront promenade, port, yachts", distance: "2 min walk", access: "Step out of L’Arbois, turn left along the shaded seafront.", activities: "Promenade under umbrella pines, marina, café terraces, artisanal ice cream, sunset cocktail bars.", transport: "foot", mapX: 170, mapY: 172 },
+      { name: "Nartelle beach", kind: "White sand, steps from the water", distance: "7 min walk", access: "Walk east along the seafront then the coastal path. Free shuttle in summer.", activities: "Fine sand, calm water (ideal for children), beach clubs (Mahi Plage, La Gaillarde), paddle, loungers, lunch on the sand.", transport: "foot", mapX: 295, mapY: 163 },
+      { name: "Covered market", kind: "Provence produce · Tue & Sat", distance: "5 min walk", access: "Via Rue Gabriel Péri, behind the church. Tuesday & Saturday mornings, 7–13h.", activities: "Farm cheeses, morning-catch fish, seasonal fruit, flowers, local olive oil, tapenades, rosé.", transport: "foot", mapX: 155, mapY: 108 },
+      { name: "Le Sémaphore", kind: "Viewpoint over the entire gulf", distance: "20 min walk", access: "Coastal path above Nartelle. Wear closed shoes.", activities: "Full panorama of the gulf, the finest sunsets, picnic area.", transport: "foot", mapX: 320, mapY: 90 },
+      { name: "Sénéquier · Saint-Tropez", kind: "Iconic café on the port", distance: "15 min by boat", access: "Bateaux Verts from the Sainte-Maxime jetty (200 m walk from L’Arbois) — seasonal schedule. Or private taxi-boat through the concierge.", activities: "Institution since 1887. Vivid red terrace on the port, early breakfast, sunset apéritif, the finest yacht-watching seat.", transport: "boat", mapX: 210, mapY: 365 },
+      { name: "Place des Lices", kind: "Pétanque, plane trees, market", distance: "15 min boat + 3 min walk", access: "Off the Bateaux Verts at the port, 300 m up Rue Gambetta. Market Tuesday & Saturday.", activities: "Pétanque under centennial plane trees, Provence market, shaded terraces, Le Café (historic brasserie), designer shops.", transport: "boat", mapX: 195, mapY: 395 },
+      { name: "Pampelonne beach", kind: "Club 55, Loulou, La Réserve, Nikki Beach", distance: "25 min boat or 40 min drive", access: "Private taxi-boat to Club 55 or Loulou pontoon (concierge booking). Or by car via Ramatuelle.", activities: "Long lunches at Club 55, loungers at Loulou, cocktails at Nikki Beach. Turquoise water, tender rides, water-skiing.", transport: "boat", mapX: 360, mapY: 430 },
+      { name: "Ramatuelle & Gassin", kind: "Hilltop villages, vineyards", distance: "30 min drive", access: "Car via D61 through Port Grimaud and La Foux. Parking at village entrance.", activities: "Medieval villages, shaded lanes, vineyards (Château Minuty, Domaines Ott), restaurants with view. Tastings by appointment.", transport: "car", mapX: 305, mapY: 455 },
     ],
   },
   amenities: {
     index: "VII",
     eyebrow: "Chapter VII — Amenities & services",
-    title: "What's included, what's on request",
+    title: "What’s included, what’s on request",
     intro: "Two bedrooms, four guests, everything needed to host — and what can be whispered to the concierge.",
     capacity: {
-      rooms: "2 bedrooms",
-      guests: "4 guests",
+      rooms: "2 bedrooms",
+      guests: "4 guests",
       beds: "1 king · 2 singles",
       baths: "2 bathrooms + separate WC",
-      min_stay: "7 nights minimum",
+      min_stay: "7 nights minimum",
     },
     stat_bar: [
       { value: "2", label: "bedrooms" },
@@ -603,7 +603,7 @@ const en: ChapterCopy = {
     title: "Four seasons, four atmospheres",
     intro:
       "The high season shines, the shoulder seasons belong to those in the know. Indicative rates, per week.",
-    minimum_stay: "Minimum stay: 7 nights. — 20% off beyond 7 nights.",
+    minimum_stay: "Minimum stay: 7 nights. — 20% off beyond 7 nights.",
     items: [
       { label: "Spring", window: "April — June", note: "Mimosa, gentle mistral, the village still quiet.", price: "From €348 / night (Airbnb fees included)", image: "terrace-view" },
       { label: "Summer", window: "July — August", note: "High season, yachts in the bay, Pampelonne at its peak.", price: "On request", image: "dining-view" },
@@ -639,7 +639,7 @@ const en: ChapterCopy = {
   },
   breath_1: "She shines also,<br/><em>when no one is looking.</em>",
   breath_2: "Here, you <em>look</em>.<br/>You are not looked at.",
-  signature: "— L'Arbois",
+  signature: "— L’Arbois",
 };
 
 export const copy: Record<Locale, ChapterCopy> = {

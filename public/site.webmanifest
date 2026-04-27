@@ -1,0 +1,26 @@
+{
+  "name": "L'Arbois — Sainte-Maxime",
+  "short_name": "L'Arbois",
+  "description": "Location appartement de luxe à Sainte-Maxime, face à Saint-Tropez.",
+  "start_url": "/fr/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "lang": "fr",
+  "dir": "ltr",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

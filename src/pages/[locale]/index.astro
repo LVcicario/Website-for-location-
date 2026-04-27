@@ -30,28 +30,28 @@ const locale = Astro.params.locale as Locale;
 const copy = getCopy(locale);
 
 const titles: Record<Locale, string> = {
-  fr: "L'Arbois · Location appartement de luxe à Sainte-Maxime, face à Saint-Tropez",
-  en: "L'Arbois · Luxury apartment rental in Sainte-Maxime, facing Saint-Tropez",
-  it: "L'Arbois · Affitto appartamento di lusso a Sainte-Maxime, di fronte a Saint-Tropez",
-  de: "L'Arbois · Luxus-Ferienwohnung in Sainte-Maxime, gegenüber Saint-Tropez",
-  es: "L'Arbois · Alquiler de apartamento de lujo en Sainte-Maxime, frente a Saint-Tropez",
-  ru: "L'Arbois · Аренда люкс-апартамента в Сент-Максим, напротив Сен-Тропе",
-  ar: "L'Arbois · إيجار شقة فاخرة في سانت ماكسيم، مقابل سان تروبيه",
+  fr: "L’Arbois · Location appartement de luxe à Sainte-Maxime, face à Saint-Tropez",
+  en: "L’Arbois · Luxury apartment rental in Sainte-Maxime, facing Saint-Tropez",
+  it: "L’Arbois · Affitto appartamento di lusso a Sainte-Maxime, di fronte a Saint-Tropez",
+  de: "L’Arbois · Luxus-Ferienwohnung in Sainte-Maxime, gegenüber Saint-Tropez",
+  es: "L’Arbois · Alquiler de apartamento de lujo en Sainte-Maxime, frente a Saint-Tropez",
+  ru: "L’Arbois · Аренда люкс-апартамента в Сент-Максим, напротив Сен-Тропе",
+  ar: "L’Arbois · إيجار شقة فاخرة في سانت ماكسيم، مقابل سان تروبيه",
 };
 
 const descriptions: Record<Locale, string> = {
-  fr: "Location de l'appartement L'Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
-  en: "Rent L'Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
-  it: "Affitto dell'appartamento L'Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
-  de: "Mieten Sie L'Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
-  es: "Alquila L'Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
-  ru: "Аренда апартамента L'Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
-  ar: "إيجار شقة L'Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
+  fr: "Location de l’appartement L’Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
+  en: "Rent L’Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
+  it: "Affitto dell’appartamento L’Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
+  de: "Mieten Sie L’Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
+  es: "Alquila L’Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
+  ru: "Аренда апартамента L’Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
+  ar: "إيجار شقة L’Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
 };
 ---
 
 <Base locale={locale} title={titles[locale]} description={descriptions[locale]}>
-  <SmoothScrollProvider client:load />
+  <SmoothScrollProvider client:idle />
   <ScrollProgress />
   <Nav locale={locale} />
 
@@ -80,8 +80,8 @@ const descriptions: Record<Locale, string> = {
 
     <FullBleedPhoto
       src="building-facade"
-      alt="L'Arbois, façade Art Déco"
-      eyebrow="L'immeuble"
+      alt="L’Arbois, façade Art Déco"
+      eyebrow="L’immeuble"
       quote="Un dessin des années 30, tenu jusque dans ses courbes."
       height="60vh"
       tint="heavy"

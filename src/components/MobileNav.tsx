@@ -43,7 +43,7 @@ export default function MobileNav({ locale }: Props) {
 
   const links = [
     { href: `${prefix}/#the-place`, label: strings.nav.the_place },
-    { href: `${prefix}/#the-building`, label: "L'immeuble" },
+    { href: `${prefix}/#the-building`, label: "L’immeuble" },
     { href: `${prefix}/#the-apartment`, label: strings.nav.the_apartment },
     { href: `${prefix}/#art-of-living`, label: strings.nav.art_of_living },
     { href: `${prefix}/#seasons`, label: "Saisons & tarifs" },

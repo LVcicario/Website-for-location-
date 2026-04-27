@@ -47,8 +47,8 @@ type UIStrings = {
 const fr: UIStrings = {
   nav: {
     the_place: "Le lieu",
-    the_apartment: "L'appartement",
-    art_of_living: "L'art de vivre",
+    the_apartment: "L’appartement",
+    art_of_living: "L’art de vivre",
     reserve: "Réserver",
   },
   cta: {
@@ -62,7 +62,7 @@ const fr: UIStrings = {
     tagline: "Sainte-Maxime · face à Saint-Tropez — une adresse confidentielle.",
     legal: "Mentions légales",
     contact: "Contact",
-    credits: "© L'Arbois",
+    credits: "© L’Arbois",
   },
   concierge: {
     title: "Conciergerie privée",
@@ -80,9 +80,9 @@ const fr: UIStrings = {
     opening: "Ouverture",
     prologue: "Prologue",
     the_place: "Le lieu",
-    the_apartment: "L'appartement",
+    the_apartment: "L’appartement",
     materials: "Matières",
-    art_of_living: "L'art de vivre",
+    art_of_living: "L’art de vivre",
     seasons: "Saisons",
     reserve: "Réserver",
   },
@@ -106,7 +106,7 @@ const en: UIStrings = {
     tagline: "Sainte-Maxime · facing Saint-Tropez — a private address.",
     legal: "Legal",
     contact: "Contact",
-    credits: "© L'Arbois",
+    credits: "© L’Arbois",
   },
   concierge: {
     title: "Private concierge",

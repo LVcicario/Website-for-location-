@@ -11,22 +11,22 @@ export function getStaticPaths() {
 const locale = Astro.params.locale as Locale;
 
 const legalTitles: Record<Locale, string> = {
-  fr: "Mentions légales · L'Arbois",
-  en: "Legal notice · L'Arbois",
-  it: "Note legali · L'Arbois",
-  de: "Impressum · L'Arbois",
-  es: "Aviso legal · L'Arbois",
-  ru: "Юридическая информация · L'Arbois",
-  ar: "إشعار قانوني · L'Arbois",
+  fr: "Mentions légales · L’Arbois",
+  en: "Legal notice · L’Arbois",
+  it: "Note legali · L’Arbois",
+  de: "Impressum · L’Arbois",
+  es: "Aviso legal · L’Arbois",
+  ru: "Юридическая информация · L’Arbois",
+  ar: "إشعار قانوني · L’Arbois",
 };
 const legalDescs: Record<Locale, string> = {
-  fr: "Mentions légales du site L'Arbois — éditeur, hébergement, données personnelles.",
-  en: "Legal notice for L'Arbois — publisher, hosting, personal data.",
-  it: "Note legali del sito L'Arbois — editore, hosting, dati personali.",
-  de: "Impressum von L'Arbois — Herausgeber, Hosting, personenbezogene Daten.",
-  es: "Aviso legal del sitio L'Arbois — editor, alojamiento, datos personales.",
-  ru: "Юридическая информация L'Arbois — издатель, хостинг, персональные данные.",
-  ar: "إشعار قانوني لموقع L'Arbois — الناشر والاستضافة والبيانات الشخصية.",
+  fr: "Mentions légales du site L’Arbois — éditeur, hébergement, données personnelles.",
+  en: "Legal notice for L’Arbois — publisher, hosting, personal data.",
+  it: "Note legali del sito L’Arbois — editore, hosting, dati personali.",
+  de: "Impressum von L’Arbois — Herausgeber, Hosting, personenbezogene Daten.",
+  es: "Aviso legal del sitio L’Arbois — editor, alojamiento, datos personales.",
+  ru: "Юридическая информация L’Arbois — издатель, хостинг, персональные данные.",
+  ar: "إشعار قانوني لموقع L’Arbois — الناشر والاستضافة والبيانات الشخصية.",
 };
 ---
 
@@ -39,7 +39,7 @@ const legalDescs: Record<Locale, string> = {
     <div class="mt-10 space-y-6 text-[var(--color-bone-soft)] leading-relaxed">
       <p>Éditeur du site : [à compléter].</p>
       <p>Hébergement : [à compléter].</p>
-      <p>Photographies et textes © L'Arbois. Reproduction interdite sans autorisation.</p>
+      <p>Photographies et textes © L’Arbois. Reproduction interdite sans autorisation.</p>
       <p>Données personnelles : les informations collectées via le formulaire de conciergerie sont utilisées uniquement pour répondre à votre demande. Elles ne sont ni cédées ni revendues.</p>
     </div>
   </main>

@@ -68,7 +68,7 @@ const roomImages: (RoomImage | null)[] = await Promise.all(
     {the_apartment.rooms.map((room, i) => (
       <li class="relative min-h-[70vh] overflow-hidden border border-[var(--color-gold)]/20 bg-[var(--color-ink)]">
         <div class="absolute inset-0">
-          <Picture src={roomImageKeys[i]} alt="" sizes="100vw" />
+          <Picture src={roomImageKeys[i]} alt={`L’Arbois — ${room.title}`} sizes="100vw" />
         </div>
         <div class="absolute inset-0 bg-gradient-to-t from-[var(--color-ink)]/90 via-[var(--color-ink)]/20 to-transparent"></div>
         <div class="relative z-10 flex h-full flex-col justify-end p-7">

@@ -15,30 +15,30 @@ const locale = Astro.params.locale as Locale;
 
 const labelsByLocale: Record<Locale, Record<string, string>> = {
   fr: {
-    "dining-view": "Salle à manger · vue baie · L'Arbois Sainte-Maxime",
-    "salon-view": "Salon · L'Arbois Sainte-Maxime",
+    "dining-view": "Salle à manger · vue baie · L’Arbois Sainte-Maxime",
+    "salon-view": "Salon · L’Arbois Sainte-Maxime",
     "salon-window": "Salon vue mer · face à Saint-Tropez",
     "salon-art": "Salon · détails décoration",
-    "kitchen-navy": "Cuisine équipée bleu marine · L'Arbois",
+    "kitchen-navy": "Cuisine équipée bleu marine · L’Arbois",
     "terrace-view": "Terrasse vue baie · face à Saint-Tropez",
     "primary-bedroom": "Chambre principale · lit king-size",
     "primary-bathroom": "Salle de bain en marbre",
     "bathroom-gold": "Salle de bain · laiton brossé",
-    "guest-bedroom-a": "Chambre d'hôtes · 2 lits simples",
-    "guest-bedroom-b": "Chambre d'hôtes · vue cour",
-    "guest-bedroom-c": "Chambre d'hôtes · prête",
+    "guest-bedroom-a": "Chambre d’hôtes · 2 lits simples",
+    "guest-bedroom-b": "Chambre d’hôtes · vue cour",
+    "guest-bedroom-c": "Chambre d’hôtes · prête",
     "powder-room": "WC séparé",
     "dresser-mirror": "Détail · console laiton",
-    "building-exterior": "L'Arbois · immeuble Art Déco 1933",
+    "building-exterior": "L’Arbois · immeuble Art Déco 1933",
     "building-facade": "Façade Art Déco · René Darde 1933",
     "building-stairs": "Entrée Art Déco · hall historique",
   },
   en: {
-    "dining-view": "Dining room · bay view · L'Arbois Sainte-Maxime",
-    "salon-view": "Living room · L'Arbois Sainte-Maxime",
+    "dining-view": "Dining room · bay view · L’Arbois Sainte-Maxime",
+    "salon-view": "Living room · L’Arbois Sainte-Maxime",
     "salon-window": "Living room sea view · facing Saint-Tropez",
     "salon-art": "Living room · décor details",
-    "kitchen-navy": "Navy blue fitted kitchen · L'Arbois",
+    "kitchen-navy": "Navy blue fitted kitchen · L’Arbois",
     "terrace-view": "Bay-view terrace · facing Saint-Tropez",
     "primary-bedroom": "Primary bedroom · king-size bed",
     "primary-bathroom": "Marble bathroom",
@@ -48,7 +48,7 @@ const labelsByLocale: Record<Locale, Record<string, string>> = {
     "guest-bedroom-c": "Guest bedroom · ready",
     "powder-room": "Separate WC",
     "dresser-mirror": "Detail · brass console",
-    "building-exterior": "L'Arbois · 1933 Art Déco building",
+    "building-exterior": "L’Arbois · 1933 Art Déco building",
     "building-facade": "Art Déco façade · René Darde 1933",
     "building-stairs": "Art Déco entrance · historical hall",
   },
@@ -100,22 +100,22 @@ const items: LightboxImage[] = (
 ).filter((x): x is LightboxImage => x !== null);
 
 const galleryTitles: Record<Locale, string> = {
-  fr: "Galerie photos · L'Arbois, appartement Sainte-Maxime face à Saint-Tropez",
-  en: "Photo gallery · L'Arbois, apartment in Sainte-Maxime facing Saint-Tropez",
-  it: "Galleria foto · L'Arbois, appartamento a Sainte-Maxime di fronte a Saint-Tropez",
-  de: "Bildergalerie · L'Arbois, Apartment in Sainte-Maxime gegenüber Saint-Tropez",
-  es: "Galería de fotos · L'Arbois, apartamento en Sainte-Maxime frente a Saint-Tropez",
-  ru: "Фотогалерея · L'Arbois, апартамент в Сент-Максим напротив Сен-Тропе",
-  ar: "معرض الصور · L'Arbois، شقة في سانت ماكسيم مقابل سان تروبيه",
+  fr: "Galerie photos · L’Arbois, appartement Sainte-Maxime face à Saint-Tropez",
+  en: "Photo gallery · L’Arbois, apartment in Sainte-Maxime facing Saint-Tropez",
+  it: "Galleria foto · L’Arbois, appartamento a Sainte-Maxime di fronte a Saint-Tropez",
+  de: "Bildergalerie · L’Arbois, Apartment in Sainte-Maxime gegenüber Saint-Tropez",
+  es: "Galería de fotos · L’Arbois, apartamento en Sainte-Maxime frente a Saint-Tropez",
+  ru: "Фотогалерея · L’Arbois, апартамент в Сент-Максим напротив Сен-Тропе",
+  ar: "معرض الصور · L’Arbois، شقة في سانت ماكسيم مقابل سان تروبيه",
 };
 const galleryDescs: Record<Locale, string> = {
-  fr: "Découvrez en images L'Arbois : salon, cuisine, chambres, terrasse vue baie. Appartement Art Déco de 1933 à Sainte-Maxime, face à Saint-Tropez.",
-  en: "Discover L'Arbois in pictures: living room, kitchen, bedrooms, bay-view terrace. 1933 Art Déco apartment in Sainte-Maxime, facing Saint-Tropez.",
-  it: "Scopri L'Arbois in immagini: salone, cucina, camere, terrazza vista baia. Appartamento Art Déco del 1933 a Sainte-Maxime, di fronte a Saint-Tropez.",
-  de: "Entdecken Sie L'Arbois in Bildern: Wohnzimmer, Küche, Schlafzimmer, Terrasse mit Buchtblick. Art-Déco-Apartment von 1933 in Sainte-Maxime.",
-  es: "Descubra L'Arbois en imágenes: salón, cocina, dormitorios, terraza con vista a la bahía. Apartamento Art Déco de 1933 en Sainte-Maxime.",
-  ru: "L'Arbois в фотографиях: гостиная, кухня, спальни, терраса с видом на бухту. Ар-деко апартамент 1933 года в Сент-Максим.",
-  ar: "اكتشف L'Arbois بالصور: الصالون والمطبخ وغرف النوم والشرفة المطلة على الخليج. شقة آرت ديكو من 1933 في سانت ماكسيم.",
+  fr: "Découvrez en images L’Arbois : salon, cuisine, chambres, terrasse vue baie. Appartement Art Déco de 1933 à Sainte-Maxime, face à Saint-Tropez.",
+  en: "Discover L’Arbois in pictures: living room, kitchen, bedrooms, bay-view terrace. 1933 Art Déco apartment in Sainte-Maxime, facing Saint-Tropez.",
+  it: "Scopri L’Arbois in immagini: salone, cucina, camere, terrazza vista baia. Appartamento Art Déco del 1933 a Sainte-Maxime, di fronte a Saint-Tropez.",
+  de: "Entdecken Sie L’Arbois in Bildern: Wohnzimmer, Küche, Schlafzimmer, Terrasse mit Buchtblick. Art-Déco-Apartment von 1933 in Sainte-Maxime.",
+  es: "Descubra L’Arbois en imágenes: salón, cocina, dormitorios, terraza con vista a la bahía. Apartamento Art Déco de 1933 en Sainte-Maxime.",
+  ru: "L’Arbois в фотографиях: гостиная, кухня, спальни, терраса с видом на бухту. Ар-деко апартамент 1933 года в Сент-Максим.",
+  ar: "اكتشف L’Arbois بالصور: الصالون والمطبخ وغرف النوم والشرفة المطلة على الخليج. شقة آرت ديكو من 1933 في سانت ماكسيم.",
 };
 ---
 
@@ -126,7 +126,7 @@ const galleryDescs: Record<Locale, string> = {
       <p class="eyebrow">Galerie</p>
       <h1 class="display mt-4">Promenade</h1>
       <hr class="rule-gold" />
-      <p class="lede max-w-[44ch]">Un premier aperçu de l'appartement, en attendant le shooting pro.</p>
+      <p class="lede max-w-[44ch]">Un premier aperçu de l’appartement, en attendant le shooting pro.</p>
       <p class="mt-6 text-xs tracking-[0.22em] uppercase text-[var(--color-bone-soft)]/60">Cliquez une image · ← → pour naviguer · Esc pour fermer</p>
     </header>
 

@@ -10,6 +10,9 @@ export default defineConfig({
   site: "https://larbois.example",
   output: "static",
   adapter: vercel(),
+  redirects: {
+    "/": "/fr/",
+  },
   integrations: [
     react(),
     sitemap({
