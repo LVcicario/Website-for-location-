@@ -8,13 +8,13 @@ interface Props {
 const { locale } = Astro.props;
 
 const descriptions: Record<Locale, string> = {
-  fr: "Location de l’appartement L’Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
-  en: "Rent L’Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
-  it: "Affitto dell’appartamento L’Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
-  de: "Mieten Sie L’Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
-  es: "Alquila L’Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
-  ru: "Аренда апартамента L’Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
-  ar: "إيجار شقة L’Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
+  fr: "Location de l’appartement L’Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 3 nuits.",
+  en: "Rent L’Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 3 nights.",
+  it: "Affitto dell’appartamento L’Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 3 notti.",
+  de: "Mieten Sie L’Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 3 Nächten.",
+  es: "Alquila L’Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 3 noches.",
+  ru: "Аренда апартамента L’Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 3 ночей.",
+  ar: "إيجار شقة L’Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 3 ليالٍ.",
 };
 
 const AIRBNB_URL = "https://www.airbnb.fr/rooms/1162242524645326844";
@@ -65,20 +65,18 @@ const data = {
     { "@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Terrace", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Sea view", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Elevator", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Washer", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Dryer", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Dishwasher", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Kitchen", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Coffee machine", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Safe", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Hair dryer", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Premium linen", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Linen", "value": true },
   ],
   "makesOffer": {
     "@type": "Offer",
-    "name": "Location à la nuit · 7 nuits minimum",
+    "name": "Location à la nuit · 3 nuits minimum",
     "url": AIRBNB_URL,
     "price": 348,
     "priceCurrency": "EUR",
@@ -92,7 +90,7 @@ const data = {
     },
     "eligibleQuantity": {
       "@type": "QuantitativeValue",
-      "minValue": 7,
+      "minValue": 3,
       "unitCode": "DAY",
     },
     "availability": "https://schema.org/InStock",

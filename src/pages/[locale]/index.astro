@@ -13,7 +13,6 @@ import Amenities from "~/components/Amenities.astro";
 import Seasons from "~/components/Seasons.astro";
 import Testimonials from "~/components/Testimonials.astro";
 import Reserve from "~/components/Reserve.astro";
-import Concierge from "~/components/Concierge.astro";
 import Footer from "~/components/Footer.astro";
 import FullBleedPhoto from "~/components/FullBleedPhoto.astro";
 import BreathMoment from "~/components/BreathMoment.astro";
@@ -40,13 +39,13 @@ const titles: Record<Locale, string> = {
 };
 
 const descriptions: Record<Locale, string> = {
-  fr: "Location de l’appartement L’Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
-  en: "Rent L’Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
-  it: "Affitto dell’appartamento L’Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
-  de: "Mieten Sie L’Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
-  es: "Alquila L’Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
-  ru: "Аренда апартамента L’Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
-  ar: "إيجار شقة L’Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
+  fr: "Location de l’appartement L’Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 3 nuits.",
+  en: "Rent L’Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 3 nights.",
+  it: "Affitto dell’appartamento L’Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 3 notti.",
+  de: "Mieten Sie L’Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 3 Nächten.",
+  es: "Alquila L’Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 3 noches.",
+  ru: "Аренда апартамента L’Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 3 ночей.",
+  ar: "إيجار شقة L’Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 3 ليالٍ.",
 };
 ---
 
@@ -93,7 +92,6 @@ const descriptions: Record<Locale, string> = {
     <Seasons locale={locale} />
     <Testimonials locale={locale} />
     <Reserve locale={locale} />
-    <Concierge locale={locale} />
   </main>
 
   <Footer locale={locale} />

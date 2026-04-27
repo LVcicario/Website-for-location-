@@ -50,29 +50,14 @@ const { amenities, signature } = getCopy(locale);
       </ChapterReveal>
     </div>
 
-    <!-- Services: 2 cards -->
-    <ChapterReveal client:visible stagger as="div" className="services-cards grid gap-6 md:grid-cols-2 md:gap-8">
-      <div data-reveal-child class="service-card relative p-8 md:p-10 bg-[var(--color-ink-soft)] border border-[var(--color-gold)]/15">
+    <!-- Services: included card (single, full width) -->
+    <ChapterReveal client:visible stagger as="div" className="services-cards mx-auto max-w-[var(--content-max)]">
+      <div data-reveal-child class="service-card relative p-8 md:p-12 bg-[var(--color-ink-soft)] border border-[var(--color-gold)]/15">
         <p class="eyebrow text-[var(--color-bone-soft)]">Inclus</p>
         <p class="mt-1 font-[family-name:var(--font-display)] text-2xl md:text-3xl leading-tight">{amenities.services_included_label}</p>
         <hr class="rule-gold" />
-        <ul class="space-y-3">
+        <ul class="grid gap-3 md:grid-cols-2 md:gap-x-12">
           {amenities.services_included.map((s) => (
-            <li class="flex items-start gap-3 text-sm md:text-base leading-relaxed text-[var(--color-bone-soft)]">
-              <span class="text-[var(--color-gold)] mt-0.5 flex-shrink-0" aria-hidden="true">·</span>
-              <span>{s}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div data-reveal-child class="service-card service-card--premium relative p-8 md:p-10 bg-[var(--color-navy)] border border-[var(--color-gold)]/40">
-        <span class="absolute top-6 right-6 eyebrow text-[var(--color-gold)]" aria-hidden="true">Premium</span>
-        <p class="eyebrow text-[var(--color-gold)]">Conciergerie privée</p>
-        <p class="mt-1 font-[family-name:var(--font-display)] text-2xl md:text-3xl leading-tight">{amenities.services_on_demand_label.split(" · ")[0]}</p>
-        <hr class="rule-gold" />
-        <ul class="space-y-3">
-          {amenities.services_on_demand.map((s) => (
             <li class="flex items-start gap-3 text-sm md:text-base leading-relaxed text-[var(--color-bone-soft)]">
               <span class="text-[var(--color-gold)] mt-0.5 flex-shrink-0" aria-hidden="true">·</span>
               <span>{s}</span>

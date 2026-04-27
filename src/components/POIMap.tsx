@@ -93,6 +93,10 @@ export default function POIMap({ pois, active, onSelect }: Props) {
           />
         )}
 
+        {/* Walking radius zones around L’Arbois (visual hint of pedestrian range) */}
+        <circle cx={VILLA_X} cy={VILLA_Y} r="32" fill="none" stroke="#c9a97a" strokeOpacity="0.18" strokeWidth="0.5" strokeDasharray="2 4" />
+        <circle cx={VILLA_X} cy={VILLA_Y} r="55" fill="none" stroke="#c9a97a" strokeOpacity="0.1" strokeWidth="0.5" strokeDasharray="2 4" />
+
         {/* L’Arbois center — double pulse ring + glow */}
         <g>
           <circle className="aol-villa-ring" cx={VILLA_X} cy={VILLA_Y} r="9" fill="none" stroke="#b8935a" strokeOpacity="0.35" />
@@ -155,14 +159,22 @@ export default function POIMap({ pois, active, onSelect }: Props) {
                 r="12"
                 fill="transparent"
               />
-              {isActive && (
-                <g transform={`translate(${poi.mapX + 12}, ${poi.mapY + 2})`}>
-                  <rect x="-3" y="-12" width={poi.name.length * 4.7 + 14} height="18" fill="#0a0a0a" fillOpacity="0.85" stroke="#b8935a" strokeOpacity="0.5" strokeWidth="0.5" />
-                  <text x="4" y="1" fill="#c9a97a" fontSize="8" letterSpacing="2" fontFamily="Satoshi, sans-serif">
-                    {poi.name}
-                  </text>
-                </g>
-              )}
+              {isActive && (() => {
+                const labelWidth = Math.max(poi.name.length, poi.distance.length) * 4.7 + 18;
+                const offsetRight = poi.mapX + labelWidth + 14 < 400;
+                const tx = offsetRight ? poi.mapX + 12 : poi.mapX - labelWidth - 12;
+                return (
+                  <g transform={`translate(${tx}, ${poi.mapY + 2})`}>
+                    <rect x="-3" y="-14" width={labelWidth} height="32" fill="#0a0a0a" fillOpacity="0.9" stroke="#b8935a" strokeOpacity="0.6" strokeWidth="0.5" />
+                    <text x="4" y="-2" fill="#f7f5f0" fontSize="8.5" letterSpacing="1.5" fontFamily="Gambarino, serif" fontStyle="italic">
+                      {poi.name}
+                    </text>
+                    <text x="4" y="11" fill="#c9a97a" fontSize="6.5" letterSpacing="2" fontFamily="Satoshi, sans-serif" opacity="0.85">
+                      {poi.distance.toUpperCase()}
+                    </text>
+                  </g>
+                );
+              })()}
             </g>
           );
         })}
@@ -172,6 +184,27 @@ export default function POIMap({ pois, active, onSelect }: Props) {
           <line x1="0" y1="-14" x2="0" y2="14" stroke="#b8935a" strokeWidth="0.5" strokeOpacity="0.6" />
           <polygon points="0,-17 -3,-9 3,-9" fill="#b8935a" opacity="0.8" />
           <text x="0" y="-21" fill="#c9a97a" fontSize="8" textAnchor="middle" letterSpacing="2">N</text>
+        </g>
+
+        {/* Legend transport */}
+        <g transform="translate(20, 235)" fontFamily="Satoshi, sans-serif" fontSize="6" letterSpacing="2" fill="#c9a97a">
+          <text y="0" opacity="0.5">LÉGENDE</text>
+          <g transform="translate(0, 12)">
+            <circle cx="3" cy="-2" r="3" fill="#c9a97a" />
+            <text x="11" y="0" opacity="0.85">À PIED</text>
+          </g>
+          <g transform="translate(0, 24)">
+            <circle cx="3" cy="-2" r="3" fill="#b8935a" />
+            <text x="11" y="0" opacity="0.85">EN BATEAU</text>
+          </g>
+          <g transform="translate(0, 36)">
+            <circle cx="3" cy="-2" r="3" fill="#8a6a3e" />
+            <text x="11" y="0" opacity="0.85">EN VOITURE</text>
+          </g>
+          <g transform="translate(0, 50)">
+            <circle cx="3" cy="-2" r="3" fill="none" stroke="#c9a97a" strokeWidth="0.5" strokeDasharray="1 1.5" />
+            <text x="11" y="0" opacity="0.7">5 / 10 MIN À PIED</text>
+          </g>
         </g>
 
         {/* Grid */}
