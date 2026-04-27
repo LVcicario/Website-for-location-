@@ -30,23 +30,23 @@ const locale = Astro.params.locale as Locale;
 const copy = getCopy(locale);
 
 const titles: Record<Locale, string> = {
-  fr: "Villa Azur — Un appartement privé à Sainte-Maxime, face à la baie de Saint-Tropez",
-  en: "Villa Azur — A private apartment in Sainte-Maxime, facing the bay of Saint-Tropez",
-  it: "Villa Azur — Un appartamento privato a Sainte-Maxime, di fronte alla baia di Saint-Tropez",
-  de: "Villa Azur — Ein privates Apartment in Sainte-Maxime, gegenüber der Bucht von Saint-Tropez",
-  es: "Villa Azur — Un apartamento privado en Sainte-Maxime, frente a la bahía de Saint-Tropez",
-  ru: "Villa Azur — Частные апартаменты в Сент-Максим, напротив бухты Сен-Тропе",
-  ar: "Villa Azur — شقة خاصة في سانت ماكسيم، مقابل خليج سان تروبيه",
+  fr: "L'Arbois · Location appartement de luxe à Sainte-Maxime, face à Saint-Tropez",
+  en: "L'Arbois · Luxury apartment rental in Sainte-Maxime, facing Saint-Tropez",
+  it: "L'Arbois · Affitto appartamento di lusso a Sainte-Maxime, di fronte a Saint-Tropez",
+  de: "L'Arbois · Luxus-Ferienwohnung in Sainte-Maxime, gegenüber Saint-Tropez",
+  es: "L'Arbois · Alquiler de apartamento de lujo en Sainte-Maxime, frente a Saint-Tropez",
+  ru: "L'Arbois · Аренда люкс-апартамента в Сент-Максим, напротив Сен-Тропе",
+  ar: "L'Arbois · إيجار شقة فاخرة في سانت ماكسيم، مقابل سان تروبيه",
 };
 
 const descriptions: Record<Locale, string> = {
-  fr: "Un appartement d'exception à Sainte-Maxime, face à Saint-Tropez. Trois chambres, vue baie, pour quelques semaines choisies.",
-  en: "An exceptional apartment in Sainte-Maxime, facing Saint-Tropez. Three bedrooms, bay view, for a few chosen weeks.",
-  it: "Un appartamento eccezionale a Sainte-Maxime, di fronte a Saint-Tropez. Tre camere, vista sulla baia.",
-  de: "Ein außergewöhnliches Apartment in Sainte-Maxime, gegenüber von Saint-Tropez. Drei Schlafzimmer, Blick auf die Bucht.",
-  es: "Un apartamento excepcional en Sainte-Maxime, frente a Saint-Tropez. Tres habitaciones, vista a la bahía.",
-  ru: "Исключительные апартаменты в Сент-Максим, напротив Сен-Тропе. Три спальни, вид на бухту.",
-  ar: "شقة استثنائية في سانت ماكسيم، مقابل سان تروبيه. ثلاث غرف نوم، إطلالة على الخليج.",
+  fr: "Location de l'appartement L'Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
+  en: "Rent L'Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
+  it: "Affitto dell'appartamento L'Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
+  de: "Mieten Sie L'Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
+  es: "Alquila L'Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
+  ru: "Аренда апартамента L'Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
+  ar: "إيجار شقة L'Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
 };
 ---
 

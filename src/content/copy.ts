@@ -173,24 +173,24 @@ const fr: ChapterCopy = {
     eyebrow: "Sainte-Maxime · Golfe de Saint-Tropez",
     title_line_1: "Face",
     title_line_2: "à Saint-Tropez",
-    baseline: "Un appartement privé à Sainte-Maxime, de l'autre côté de la baie.",
+    baseline: "Un appartement privé à Sainte-Maxime, face à Saint-Tropez.",
   },
   prologue: {
     index: "I",
     eyebrow: "Prologue",
     text:
-      "On vient ici pour regarder Saint-Tropez changer d'heure en heure, depuis l'autre rive. Un silence de pierre blanche, la lumière de cinq heures, l'air qui sent le pin et l'iode. Sainte-Maxime tient la meilleure place de la baie.",
-    signature: "Villa Azur",
+      "On vient ici pour regarder Saint-Tropez changer d'heure en heure, depuis Sainte-Maxime. Un silence de pierre blanche, la lumière de cinq heures, l'air qui sent le pin et l'iode. Sainte-Maxime tient la meilleure place de la baie.",
+    signature: "L'Arbois",
   },
   the_place: {
     index: "II",
     eyebrow: "Chapitre II — Le lieu",
-    title: "De l'autre côté du golfe, la meilleure place",
+    title: "Face à Saint-Tropez, la meilleure place",
     body:
-      "Sainte-Maxime, rive nord du golfe. L'appartement ouvre ses terrasses plein sud. De l'autre côté de l'eau, Saint-Tropez tient la lumière du matin au soir. Les navettes Bateaux Verts partent à deux cents mètres à pied, toutes les trente minutes en haute saison — quinze minutes de traversée, la baie franchie.",
+      "Sainte-Maxime, rive nord du golfe. L'appartement ouvre ses terrasses plein sud, face à Saint-Tropez qui tient la lumière du matin au soir. Les navettes Bateaux Verts partent à deux cents mètres à pied — quinze minutes de traversée, la baie franchie.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
-      villa: "Villa Azur · L'Arbois",
+      villa: "L'Arbois",
       dock: "Jetée · Bateaux Verts · 200 m à pied",
       twin: "Latitude 43 · le jumeau paquebot",
       boat: "15 min · bateau",
@@ -223,15 +223,15 @@ const fr: ChapterCopy = {
   the_apartment: {
     index: "IV",
     eyebrow: "Chapitre IV — L'appartement",
-    title: "Trois chambres, un salon, une vue",
+    title: "Deux chambres, un salon, une vue",
     intro:
       "Murs blancs, parquet bois chaud, meubles bleu marine, éclairages dorés. Une écriture contemporaine, retenue, tenue par les matières.",
     rooms: [
       { label: "Entrée", title: "Le seuil", body: "Un couloir clair, une console de laiton, une sculpture discrète. Le ton est donné avant même d'avoir posé ses bagages." },
       { label: "Salon", title: "Le grand volume", body: "Des canapés bleu marine faits sur mesure, un tapis de laine écrue, une cheminée de marbre. La baie est toujours au fond, comme un tableau qui change d'heure en heure." },
-      { label: "Cuisine", title: "La table de famille", body: "Marbre blanc veiné, robinetterie dorée, four professionnel. De quoi recevoir six convives comme on reçoit à la maison — avec simplicité." },
+      { label: "Cuisine", title: "La table de famille", body: "Marbre blanc veiné, robinetterie dorée, four professionnel. De quoi recevoir comme on reçoit à la maison — avec simplicité." },
       { label: "Chambre principale", title: "La chambre d'honneur", body: "Lit king-size, tête de lit capitonnée bleu nuit, dressing attenant, salle de bain en marbre. Les volets s'ouvrent plein sud, sur la baie." },
-      { label: "Chambres d'hôtes", title: "Deux chambres d'hôtes", body: "Chacune avec sa salle de bain privative, son linge de maison en lin lavé, son calme. Pour ceux qu'on aime, rien de moins." },
+      { label: "Chambre d'hôtes", title: "Une chambre d'hôtes", body: "Sa salle de bain privative, son linge de maison en lin lavé, son calme. Pour ceux qu'on aime, rien de moins." },
       { label: "Terrasse", title: "La terrasse sud", body: "Une grande table en teck, des bains de soleil, un coin d'ombre. Saint-Tropez en filigrane toute la journée, ses lampes qui s'allument à la nuit. Les soirées s'éternisent." },
     ],
   },
@@ -308,7 +308,7 @@ const fr: ChapterCopy = {
         name: "Sénéquier · Saint-Tropez",
         kind: "Café iconique du port",
         distance: "15 min en bateau",
-        access: "Navettes Bateaux Verts depuis la jetée de Sainte-Maxime (200 m à pied de L'Arbois). Toutes les 30 min en haute saison. Ou taxi-boat privé sur demande de la conciergerie.",
+        access: "Navettes Bateaux Verts depuis la jetée de Sainte-Maxime (200 m à pied de L'Arbois) — horaires saisonniers. Ou taxi-boat privé sur demande de la conciergerie.",
         activities: "Institution depuis 1887. Terrasse rouge vif sur le port, petit-déjeuner matinal, apéritif au coucher du soleil, le meilleur poste d'observation des yachts.",
         transport: "boat",
         mapX: 210,
@@ -350,18 +350,18 @@ const fr: ChapterCopy = {
     index: "VII",
     eyebrow: "Chapitre VII — Équipements & services",
     title: "Ce qui est compris, ce qui se demande",
-    intro: "Trois chambres, six voyageurs, ce qu'il faut pour recevoir — et ce qui se dit à l'oreille de la conciergerie.",
+    intro: "Deux chambres, quatre voyageurs, ce qu'il faut pour recevoir — et ce qui se dit à l'oreille de la conciergerie.",
     capacity: {
-      rooms: "3 chambres",
-      guests: "6 voyageurs",
-      beds: "1 king-size · 2 lits jumeaux · 2 lits jumeaux",
-      baths: "2 salles de bain",
+      rooms: "2 chambres",
+      guests: "4 voyageurs",
+      beds: "1 king-size · 2 lits simples",
+      baths: "2 salles de bain + WC séparé",
       min_stay: "7 nuits minimum",
     },
     stat_bar: [
-      { value: "3", label: "chambres" },
-      { value: "6", label: "voyageurs" },
-      { value: "2", label: "salles de bain" },
+      { value: "2", label: "chambres" },
+      { value: "4", label: "voyageurs" },
+      { value: "2,5", label: "salles de bain" },
       { value: "7", label: "nuits min" },
     ],
     equipment_label: "Équipements",
@@ -402,11 +402,11 @@ const fr: ChapterCopy = {
     title: "Quatre saisons, quatre atmosphères",
     intro:
       "La haute saison brille, les entre-saisons appartiennent aux initiés. Tarifs indicatifs, sur la base de la semaine.",
-    minimum_stay: "Séjour minimum : 7 nuits.",
+    minimum_stay: "Séjour minimum : 7 nuits. — 20 % de réduction au-delà de 7 nuits.",
     items: [
-      { label: "Printemps", window: "Avril — Juin", note: "Mimosa, mistral doux, village encore calme.", price: "3 500 € – 5 500 € / semaine", image: "terrace-view" },
-      { label: "Été", window: "Juillet — Août", note: "Haute saison, yachts dans la baie, Pampelonne à son apogée.", price: "9 500 € – 15 000 € / semaine", image: "dining-view" },
-      { label: "Arrière-saison", window: "Septembre", note: "Voiles de Saint-Tropez, lumière dorée, eau encore chaude.", price: "5 500 € – 8 500 € / semaine", image: "salon-window" },
+      { label: "Printemps", window: "Avril — Juin", note: "Mimosa, mistral doux, village encore calme.", price: "À partir de 348 € / nuit (frais Airbnb inclus)", image: "terrace-view" },
+      { label: "Été", window: "Juillet — Août", note: "Haute saison, yachts dans la baie, Pampelonne à son apogée.", price: "Sur demande", image: "dining-view" },
+      { label: "Arrière-saison", window: "Septembre", note: "Voiles de Saint-Tropez, lumière dorée, eau encore chaude.", price: "Sur demande", image: "salon-window" },
       { label: "Hiver", window: "Octobre — Mars", note: "Sur demande, pour les séjours privés.", price: "Sur demande", image: "building-exterior" },
     ],
   },
@@ -430,15 +430,15 @@ const fr: ChapterCopy = {
     body:
       "La réservation se fait sur Airbnb, ou directement auprès de notre conciergerie privée pour les séjours sur mesure.",
     stats: [
-      { value: "3", label: "chambres" },
-      { value: "6", label: "voyageurs" },
+      { value: "2", label: "chambres" },
+      { value: "4", label: "voyageurs" },
       { value: "180°", label: "de baie" },
       { value: "15′", label: "de St-Tropez en bateau" },
     ],
   },
   breath_1: "Elle brille aussi,<br/><em>quand on ne la regarde pas.</em>",
   breath_2: "Ici, on <em>regarde</em>.<br/>On n'est pas regardé.",
-  signature: "— Villa Azur",
+  signature: "— L'Arbois",
 };
 
 const en: ChapterCopy = {
@@ -446,24 +446,24 @@ const en: ChapterCopy = {
     eyebrow: "Sainte-Maxime · Gulf of Saint-Tropez",
     title_line_1: "Across",
     title_line_2: "from Saint-Tropez",
-    baseline: "A private apartment in Sainte-Maxime, on the quieter side of the bay.",
+    baseline: "A private apartment in Sainte-Maxime, facing Saint-Tropez.",
   },
   prologue: {
     index: "I",
     eyebrow: "Prologue",
     text:
-      "One comes here to watch Saint-Tropez change hour by hour, from the other shore. The silence of white stone, the slow five o'clock light, air scented with pine and salt. Sainte-Maxime holds the finest seat in the bay.",
-    signature: "Villa Azur",
+      "One comes here to watch Saint-Tropez change hour by hour, from Sainte-Maxime. The silence of white stone, the slow five o'clock light, air scented with pine and salt. Sainte-Maxime holds the finest seat in the bay.",
+    signature: "L'Arbois",
   },
   the_place: {
     index: "II",
     eyebrow: "Chapter II — The place",
-    title: "Across the gulf, the finest seat",
+    title: "Facing Saint-Tropez, the finest seat",
     body:
-      "Sainte-Maxime, northern shore of the gulf. The apartment's terraces face due south. Across the water, Saint-Tropez catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, two hundred metres on foot, every thirty minutes in high season — a fifteen-minute crossing.",
+      "Sainte-Maxime, northern shore of the gulf. The apartment's terraces face due south, towards Saint-Tropez, which catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, two hundred metres on foot — a fifteen-minute crossing.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
-      villa: "Villa Azur · L'Arbois",
+      villa: "L'Arbois",
       dock: "Jetty · Bateaux Verts · 200 m walk",
       twin: "Latitude 43 · the ocean-liner twin",
       boat: "15 min · by boat",
@@ -479,7 +479,7 @@ const en: ChapterCopy = {
     body_2:
       "Across the water, Saint-Tropez, 1932. Georges-Henri Pingusson had delivered, a year earlier, the Latitude 43 — a beached ocean-liner of a hundred metres, a hundred rooms, a casino, a pool. L'Arbois was very likely drawn in reply: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
     body_3:
-      "After the war, the two ocean-liners became residences. They still face each other across the gulf, witnesses to a Riviera that has never finished dreaming itself. L'Arbois is today listed as Architecture Contemporaine Remarquable.",
+      "After the war, the two ocean-liners became residences. They still face each other across the bay, witnesses to a Riviera that has never finished dreaming itself. L'Arbois is today listed as Architecture Contemporaine Remarquable.",
     quote: "They have been looking at each other for a century.",
     labels: {
       architect: "Architect · René Darde (1933)",
@@ -496,16 +496,16 @@ const en: ChapterCopy = {
   the_apartment: {
     index: "IV",
     eyebrow: "Chapter IV — The apartment",
-    title: "Three bedrooms, one living room, one view",
+    title: "Two bedrooms, one living room, one view",
     intro:
       "White walls, warm wooden floors, deep navy furniture, gilded light. A quiet contemporary hand, held by its materials.",
     rooms: [
       { label: "Entrance", title: "The threshold", body: "A bright hallway, a brass console, a discreet sculpture. The tone is set before you have even set down your bags." },
       { label: "Living room", title: "The open volume", body: "Custom navy sofas, a cream wool rug, a marble fireplace. The bay is always there at the back, changing with the hours." },
-      { label: "Kitchen", title: "The family table", body: "Veined white marble, brass fittings, professional oven. Enough to host six guests as one would at home — with quiet generosity." },
+      { label: "Kitchen", title: "The family table", body: "Veined white marble, brass fittings, professional oven. Enough to host as one would at home — with quiet generosity." },
       { label: "Primary bedroom", title: "The principal suite", body: "King-size bed, navy upholstered headboard, adjoining dressing room, marble bathroom. The shutters open due south, onto the bay." },
-      { label: "Guest bedrooms", title: "Two guest rooms", body: "Each with its own bathroom, washed linen sheets, its own quiet. For those you love, nothing less." },
-      { label: "Terrace", title: "The south terrace", body: "A long teak table, sun loungers, a shaded corner. Saint-Tropez traced across the water all day long, its lamps lighting up at dusk. Evenings last until the night." },
+      { label: "Guest bedroom", title: "A guest room", body: "Its own bathroom, washed linen sheets, its own quiet. For those you love, nothing less." },
+      { label: "Terrace", title: "The south terrace", body: "A long teak table, sun loungers, a shaded corner. Saint-Tropez in view all day long, its lamps lighting up at dusk. Evenings last until the night." },
     ],
   },
   materials: {
@@ -541,7 +541,7 @@ const en: ChapterCopy = {
       { name: "Nartelle beach", kind: "White sand, steps from the water", distance: "7 min walk", access: "Walk east along the seafront then the coastal path. Free shuttle in summer.", activities: "Fine sand, calm water (ideal for children), beach clubs (Mahi Plage, La Gaillarde), paddle, loungers, lunch on the sand.", transport: "foot", mapX: 295, mapY: 163 },
       { name: "Covered market", kind: "Provence produce · Tue & Sat", distance: "5 min walk", access: "Via Rue Gabriel Péri, behind the church. Tuesday & Saturday mornings, 7–13h.", activities: "Farm cheeses, morning-catch fish, seasonal fruit, flowers, local olive oil, tapenades, rosé.", transport: "foot", mapX: 155, mapY: 108 },
       { name: "Le Sémaphore", kind: "Viewpoint over the entire gulf", distance: "20 min walk", access: "Coastal path above Nartelle. Wear closed shoes.", activities: "Full panorama of the gulf, the finest sunsets, picnic area.", transport: "foot", mapX: 320, mapY: 90 },
-      { name: "Sénéquier · Saint-Tropez", kind: "Iconic café on the port", distance: "15 min by boat", access: "Bateaux Verts from the Sainte-Maxime jetty (200 m walk from L'Arbois). Every 30 min in high season. Or private taxi-boat through the concierge.", activities: "Institution since 1887. Vivid red terrace on the port, early breakfast, sunset apéritif, the finest yacht-watching seat.", transport: "boat", mapX: 210, mapY: 365 },
+      { name: "Sénéquier · Saint-Tropez", kind: "Iconic café on the port", distance: "15 min by boat", access: "Bateaux Verts from the Sainte-Maxime jetty (200 m walk from L'Arbois) — seasonal schedule. Or private taxi-boat through the concierge.", activities: "Institution since 1887. Vivid red terrace on the port, early breakfast, sunset apéritif, the finest yacht-watching seat.", transport: "boat", mapX: 210, mapY: 365 },
       { name: "Place des Lices", kind: "Pétanque, plane trees, market", distance: "15 min boat + 3 min walk", access: "Off the Bateaux Verts at the port, 300 m up Rue Gambetta. Market Tuesday & Saturday.", activities: "Pétanque under centennial plane trees, Provence market, shaded terraces, Le Café (historic brasserie), designer shops.", transport: "boat", mapX: 195, mapY: 395 },
       { name: "Pampelonne beach", kind: "Club 55, Loulou, La Réserve, Nikki Beach", distance: "25 min boat or 40 min drive", access: "Private taxi-boat to Club 55 or Loulou pontoon (concierge booking). Or by car via Ramatuelle.", activities: "Long lunches at Club 55, loungers at Loulou, cocktails at Nikki Beach. Turquoise water, tender rides, water-skiing.", transport: "boat", mapX: 360, mapY: 430 },
       { name: "Ramatuelle & Gassin", kind: "Hilltop villages, vineyards", distance: "30 min drive", access: "Car via D61 through Port Grimaud and La Foux. Parking at village entrance.", activities: "Medieval villages, shaded lanes, vineyards (Château Minuty, Domaines Ott), restaurants with view. Tastings by appointment.", transport: "car", mapX: 305, mapY: 455 },
@@ -551,18 +551,18 @@ const en: ChapterCopy = {
     index: "VII",
     eyebrow: "Chapter VII — Amenities & services",
     title: "What's included, what's on request",
-    intro: "Three bedrooms, six guests, everything needed to host — and what can be whispered to the concierge.",
+    intro: "Two bedrooms, four guests, everything needed to host — and what can be whispered to the concierge.",
     capacity: {
-      rooms: "3 bedrooms",
-      guests: "6 guests",
-      beds: "1 king · 2 twin · 2 twin",
-      baths: "2 bathrooms",
+      rooms: "2 bedrooms",
+      guests: "4 guests",
+      beds: "1 king · 2 singles",
+      baths: "2 bathrooms + separate WC",
       min_stay: "7 nights minimum",
     },
     stat_bar: [
-      { value: "3", label: "bedrooms" },
-      { value: "6", label: "guests" },
-      { value: "2", label: "bathrooms" },
+      { value: "2", label: "bedrooms" },
+      { value: "4", label: "guests" },
+      { value: "2.5", label: "bathrooms" },
       { value: "7", label: "nights min" },
     ],
     equipment_label: "Equipment",
@@ -603,11 +603,11 @@ const en: ChapterCopy = {
     title: "Four seasons, four atmospheres",
     intro:
       "The high season shines, the shoulder seasons belong to those in the know. Indicative rates, per week.",
-    minimum_stay: "Minimum stay: 7 nights.",
+    minimum_stay: "Minimum stay: 7 nights. — 20% off beyond 7 nights.",
     items: [
-      { label: "Spring", window: "April — June", note: "Mimosa, gentle mistral, the village still quiet.", price: "€3,500 – €5,500 / week", image: "terrace-view" },
-      { label: "Summer", window: "July — August", note: "High season, yachts in the bay, Pampelonne at its peak.", price: "€9,500 – €15,000 / week", image: "dining-view" },
-      { label: "Late season", window: "September", note: "Voiles de Saint-Tropez, golden light, water still warm.", price: "€5,500 – €8,500 / week", image: "salon-window" },
+      { label: "Spring", window: "April — June", note: "Mimosa, gentle mistral, the village still quiet.", price: "From €348 / night (Airbnb fees included)", image: "terrace-view" },
+      { label: "Summer", window: "July — August", note: "High season, yachts in the bay, Pampelonne at its peak.", price: "On request", image: "dining-view" },
+      { label: "Late season", window: "September", note: "Voiles de Saint-Tropez, golden light, water still warm.", price: "On request", image: "salon-window" },
       { label: "Winter", window: "October — March", note: "On request, for private stays.", price: "On request", image: "building-exterior" },
     ],
   },
@@ -631,15 +631,15 @@ const en: ChapterCopy = {
     body:
       "Book on Airbnb, or reach our private concierge directly for bespoke stays.",
     stats: [
-      { value: "3", label: "bedrooms" },
-      { value: "6", label: "guests" },
+      { value: "2", label: "bedrooms" },
+      { value: "4", label: "guests" },
       { value: "180°", label: "of bay" },
       { value: "15′", label: "from St-Tropez by boat" },
     ],
   },
   breath_1: "She shines also,<br/><em>when no one is looking.</em>",
   breath_2: "Here, you <em>look</em>.<br/>You are not looked at.",
-  signature: "— Villa Azur",
+  signature: "— L'Arbois",
 };
 
 export const copy: Record<Locale, ChapterCopy> = {

@@ -11,7 +11,7 @@ interface Props {
   ogImage?: string;
 }
 
-const { locale, title, description, ogImage = "/og.jpg" } = Astro.props;
+const { locale, title, description, ogImage = "/og.svg" } = Astro.props;
 const dir = getDir(locale);
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 

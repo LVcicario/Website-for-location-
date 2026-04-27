@@ -1,5 +1,5 @@
 {
-  "name": "villa-azur",
+  "name": "larbois",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -15,7 +15,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^4.2.1",
     "@astrojs/sitemap": "^3.7.2",
-    "@astrojs/vercel": "^10.0.4",
+    "@astrojs/vercel": "^8.2.11",
     "@tailwindcss/vite": "^4.0.0",
     "astro": "^5.1.1",
     "gsap": "^3.12.5",

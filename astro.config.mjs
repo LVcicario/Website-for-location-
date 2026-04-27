@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import { LOCALES, DEFAULT_LOCALE } from "./src/i18n/config";
 
 export default defineConfig({
-  site: "https://villa-azur.example",
+  site: "https://larbois.example",
   output: "static",
   adapter: vercel(),
   integrations: [

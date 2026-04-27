@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode, type JSX } from "react";
 
 interface Props {
   children: ReactNode;
@@ -81,12 +81,11 @@ export default function ChapterReveal({
     };
   }, [delay, stagger, y]);
 
+  const Component = Tag as keyof JSX.IntrinsicElements;
   return (
-    <Tag
-      ref={ref as never}
-      className={className}
-    >
+    // @ts-expect-error — Tag is dynamic (keyof JSX.IntrinsicElements), TS can't narrow ref type
+    <Component ref={ref} className={className}>
       {children}
-    </Tag>
+    </Component>
   );
 }

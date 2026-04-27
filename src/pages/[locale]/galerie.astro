@@ -13,25 +13,60 @@ export function getStaticPaths() {
 
 const locale = Astro.params.locale as Locale;
 
+const labelsByLocale: Record<Locale, Record<string, string>> = {
+  fr: {
+    "dining-view": "Salle à manger · vue baie · L'Arbois Sainte-Maxime",
+    "salon-view": "Salon · L'Arbois Sainte-Maxime",
+    "salon-window": "Salon vue mer · face à Saint-Tropez",
+    "salon-art": "Salon · détails décoration",
+    "kitchen-navy": "Cuisine équipée bleu marine · L'Arbois",
+    "terrace-view": "Terrasse vue baie · face à Saint-Tropez",
+    "primary-bedroom": "Chambre principale · lit king-size",
+    "primary-bathroom": "Salle de bain en marbre",
+    "bathroom-gold": "Salle de bain · laiton brossé",
+    "guest-bedroom-a": "Chambre d'hôtes · 2 lits simples",
+    "guest-bedroom-b": "Chambre d'hôtes · vue cour",
+    "guest-bedroom-c": "Chambre d'hôtes · prête",
+    "powder-room": "WC séparé",
+    "dresser-mirror": "Détail · console laiton",
+    "building-exterior": "L'Arbois · immeuble Art Déco 1933",
+    "building-facade": "Façade Art Déco · René Darde 1933",
+    "building-stairs": "Entrée Art Déco · hall historique",
+  },
+  en: {
+    "dining-view": "Dining room · bay view · L'Arbois Sainte-Maxime",
+    "salon-view": "Living room · L'Arbois Sainte-Maxime",
+    "salon-window": "Living room sea view · facing Saint-Tropez",
+    "salon-art": "Living room · décor details",
+    "kitchen-navy": "Navy blue fitted kitchen · L'Arbois",
+    "terrace-view": "Bay-view terrace · facing Saint-Tropez",
+    "primary-bedroom": "Primary bedroom · king-size bed",
+    "primary-bathroom": "Marble bathroom",
+    "bathroom-gold": "Bathroom · brushed brass",
+    "guest-bedroom-a": "Guest bedroom · 2 single beds",
+    "guest-bedroom-b": "Guest bedroom · courtyard view",
+    "guest-bedroom-c": "Guest bedroom · ready",
+    "powder-room": "Separate WC",
+    "dresser-mirror": "Detail · brass console",
+    "building-exterior": "L'Arbois · 1933 Art Déco building",
+    "building-facade": "Art Déco façade · René Darde 1933",
+    "building-stairs": "Art Déco entrance · historical hall",
+  },
+  it: {} as Record<string, string>,
+  de: {} as Record<string, string>,
+  es: {} as Record<string, string>,
+  ru: {} as Record<string, string>,
+  ar: {} as Record<string, string>,
+};
+const galleryLabels = Object.keys(labelsByLocale[locale]).length
+  ? labelsByLocale[locale]
+  : labelsByLocale.en;
 const galleryKeys = [
-  { key: "dining-view", label: "Salle à manger · vue baie" },
-  { key: "salon-view", label: "Salon" },
-  { key: "salon-window", label: "Salon · vue mer" },
-  { key: "salon-art", label: "Salon · détails" },
-  { key: "kitchen-navy", label: "Cuisine" },
-  { key: "terrace-view", label: "Terrasse" },
-  { key: "primary-bedroom", label: "Chambre principale" },
-  { key: "primary-bathroom", label: "Salle de bain · marbre" },
-  { key: "bathroom-gold", label: "Salle de bain · laiton" },
-  { key: "guest-bedroom-a", label: "Chambre d'hôtes" },
-  { key: "guest-bedroom-b", label: "Chambre d'hôtes · alt" },
-  { key: "guest-bedroom-c", label: "Chambre d'hôtes · prête" },
-  { key: "powder-room", label: "WC" },
-  { key: "dresser-mirror", label: "Détail · console" },
-  { key: "building-exterior", label: "L'immeuble" },
-  { key: "building-facade", label: "Façade art déco" },
-  { key: "building-stairs", label: "Entrée" },
-];
+  "dining-view", "salon-view", "salon-window", "salon-art", "kitchen-navy",
+  "terrace-view", "primary-bedroom", "primary-bathroom", "bathroom-gold",
+  "guest-bedroom-a", "guest-bedroom-b", "guest-bedroom-c", "powder-room",
+  "dresser-mirror", "building-exterior", "building-facade", "building-stairs",
+].map((key) => ({ key, label: galleryLabels[key] ?? key }));
 
 const imagesMap = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*.jpg");
 
@@ -63,9 +98,28 @@ const items: LightboxImage[] = (
     }),
   )
 ).filter((x): x is LightboxImage => x !== null);
+
+const galleryTitles: Record<Locale, string> = {
+  fr: "Galerie photos · L'Arbois, appartement Sainte-Maxime face à Saint-Tropez",
+  en: "Photo gallery · L'Arbois, apartment in Sainte-Maxime facing Saint-Tropez",
+  it: "Galleria foto · L'Arbois, appartamento a Sainte-Maxime di fronte a Saint-Tropez",
+  de: "Bildergalerie · L'Arbois, Apartment in Sainte-Maxime gegenüber Saint-Tropez",
+  es: "Galería de fotos · L'Arbois, apartamento en Sainte-Maxime frente a Saint-Tropez",
+  ru: "Фотогалерея · L'Arbois, апартамент в Сент-Максим напротив Сен-Тропе",
+  ar: "معرض الصور · L'Arbois، شقة في سانت ماكسيم مقابل سان تروبيه",
+};
+const galleryDescs: Record<Locale, string> = {
+  fr: "Découvrez en images L'Arbois : salon, cuisine, chambres, terrasse vue baie. Appartement Art Déco de 1933 à Sainte-Maxime, face à Saint-Tropez.",
+  en: "Discover L'Arbois in pictures: living room, kitchen, bedrooms, bay-view terrace. 1933 Art Déco apartment in Sainte-Maxime, facing Saint-Tropez.",
+  it: "Scopri L'Arbois in immagini: salone, cucina, camere, terrazza vista baia. Appartamento Art Déco del 1933 a Sainte-Maxime, di fronte a Saint-Tropez.",
+  de: "Entdecken Sie L'Arbois in Bildern: Wohnzimmer, Küche, Schlafzimmer, Terrasse mit Buchtblick. Art-Déco-Apartment von 1933 in Sainte-Maxime.",
+  es: "Descubra L'Arbois en imágenes: salón, cocina, dormitorios, terraza con vista a la bahía. Apartamento Art Déco de 1933 en Sainte-Maxime.",
+  ru: "L'Arbois в фотографиях: гостиная, кухня, спальни, терраса с видом на бухту. Ар-деко апартамент 1933 года в Сент-Максим.",
+  ar: "اكتشف L'Arbois بالصور: الصالون والمطبخ وغرف النوم والشرفة المطلة على الخليج. شقة آرت ديكو من 1933 في سانت ماكسيم.",
+};
 ---
 
-<Base locale={locale} title="Galerie — Villa Azur" description="Une promenade visuelle à travers l'appartement.">
+<Base locale={locale} title={galleryTitles[locale]} description={galleryDescs[locale]}>
   <Nav locale={locale} />
   <main id="main" class="px-[var(--gutter)] pt-36 pb-24">
     <header class="mx-auto max-w-[var(--content-max)] mb-16">

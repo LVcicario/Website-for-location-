@@ -10,7 +10,8 @@ interface Props {
 
 const { locale, variant = "primary", class: className = "" } = Astro.props;
 const strings = t(locale);
-const url = import.meta.env.PUBLIC_AIRBNB_URL || "https://www.airbnb.com/";
+const AIRBNB_LISTING_URL = "https://www.airbnb.fr/rooms/1162242524645326844";
+const url = import.meta.env.PUBLIC_AIRBNB_URL || AIRBNB_LISTING_URL;
 const btnClass = variant === "primary" ? "btn btn--primary" : "btn";
 ---
 

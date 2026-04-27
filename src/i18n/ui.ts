@@ -62,7 +62,7 @@ const fr: UIStrings = {
     tagline: "Sainte-Maxime · face à Saint-Tropez — une adresse confidentielle.",
     legal: "Mentions légales",
     contact: "Contact",
-    credits: "© Villa Azur",
+    credits: "© L'Arbois",
   },
   concierge: {
     title: "Conciergerie privée",
@@ -106,7 +106,7 @@ const en: UIStrings = {
     tagline: "Sainte-Maxime · facing Saint-Tropez — a private address.",
     legal: "Legal",
     contact: "Contact",
-    credits: "© Villa Azur",
+    credits: "© L'Arbois",
   },
   concierge: {
     title: "Private concierge",

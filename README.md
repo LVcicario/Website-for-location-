@@ -1,6 +1,6 @@
-# Villa Azur
+# L'Arbois
 
-Site vitrine pour la location d'un appartement d'exception à **Saint-Tropez**, vue baie.
+Site vitrine pour la location d'un appartement d'exception à **Sainte-Maxime**, face à Saint-Tropez.
 Direction artistique cinématique immersive, pour une clientèle UHNW internationale.
 Réservation via **Airbnb** (CTA principal) + conciergerie privée (secondaire).
 
@@ -74,7 +74,7 @@ Créer un `.env` à la racine :
 ```bash
 PUBLIC_AIRBNB_URL=https://www.airbnb.com/rooms/XXXXXXX   # URL Airbnb réelle du listing
 RESEND_API_KEY=re_xxx                                    # pour le formulaire conciergerie (phase 2)
-CONCIERGE_TO_EMAIL=contact@villa-azur.example            # destinataire
+CONCIERGE_TO_EMAIL=contact@larbois.example            # destinataire
 ```
 
 ## À produire avant le vrai lancement
@@ -86,7 +86,7 @@ Le dev peut avancer avec des placeholders, mais ces éléments sont des **prére
 3. **Copywriting** FR + EN par un rédacteur de marque (ton sobre, évocateur, 40-60 mots par chapitre). Sources : `src/content/copy.ts`.
 4. **Traductions pro** IT/DE/ES/RU/AR (ajouter les objets dans `copy.ts` + `ui.ts` — actuellement fallback EN).
 5. **URL Airbnb** finale (variable `PUBLIC_AIRBNB_URL`).
-6. **Branding** : nom définitif (placeholder *Villa Azur*) + éventuel monogramme doré pour le favicon.
+6. **Branding** : nom définitif *L'Arbois* + éventuel monogramme doré pour le favicon.
 
 ## Phasage
 

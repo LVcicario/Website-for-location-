@@ -64,7 +64,7 @@ export default function POIMap({ pois, active, onSelect }: Props) {
         />
         <text x="220" y="475" fill="#c9a97a" fontSize="10" letterSpacing="5" fontFamily="Satoshi, sans-serif" opacity="0.5">SAINT-TROPEZ</text>
 
-        {/* Permanent ferry route — Villa Azur → St-Tropez port */}
+        {/* Permanent ferry route — L'Arbois → St-Tropez port */}
         <path
           className="aol-boat-path"
           d={`M${VILLA_X},${VILLA_Y + 8} Q225,250 ${FERRY_X},${FERRY_Y}`}
@@ -76,7 +76,7 @@ export default function POIMap({ pois, active, onSelect }: Props) {
         />
         <text x="250" y="265" fill="#c9a97a" fontSize="7" letterSpacing="4" fontFamily="Satoshi, sans-serif" opacity="0.6">15′ · BATEAU</text>
 
-        {/* Link line from Villa Azur to active POI */}
+        {/* Link line from L'Arbois to active POI */}
         {active !== null && pois[active] && (
           <line
             key={`link-${active}`}
@@ -93,7 +93,7 @@ export default function POIMap({ pois, active, onSelect }: Props) {
           />
         )}
 
-        {/* Villa Azur center — double pulse ring + glow */}
+        {/* L'Arbois center — double pulse ring + glow */}
         <g>
           <circle className="aol-villa-ring" cx={VILLA_X} cy={VILLA_Y} r="9" fill="none" stroke="#b8935a" strokeOpacity="0.35" />
           <circle className="aol-villa-ring aol-villa-ring--b" cx={VILLA_X} cy={VILLA_Y} r="9" fill="none" stroke="#b8935a" strokeOpacity="0.35" />
@@ -102,8 +102,8 @@ export default function POIMap({ pois, active, onSelect }: Props) {
           <circle cx={VILLA_X} cy={VILLA_Y} r="5" fill="#b8935a" />
           <circle cx={VILLA_X} cy={VILLA_Y} r="1.8" fill="#f7f5f0" />
         </g>
-        <text x={VILLA_X + 12} y={VILLA_Y - 3} fill="#c9a97a" fontSize="9" letterSpacing="3" fontFamily="Gambarino, serif" fontStyle="italic">Villa Azur</text>
-        <text x={VILLA_X + 12} y={VILLA_Y + 8} fill="#c9a97a" fontSize="6" letterSpacing="3" fontFamily="Satoshi, sans-serif" opacity="0.7">L'ARBOIS</text>
+        <text x={VILLA_X + 12} y={VILLA_Y - 3} fill="#c9a97a" fontSize="9" letterSpacing="3" fontFamily="Gambarino, serif" fontStyle="italic">L'Arbois</text>
+        <text x={VILLA_X + 12} y={VILLA_Y + 8} fill="#c9a97a" fontSize="6" letterSpacing="3" fontFamily="Satoshi, sans-serif" opacity="0.7">SAINTE-MAXIME</text>
 
         {/* POI markers */}
         {pois.map((poi, i) => {

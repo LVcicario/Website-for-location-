@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="0.5" stop-color="#11202e"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8935a"/>
+      <stop offset="0.5" stop-color="#e6c98a"/>
+      <stop offset="1" stop-color="#b8935a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="120" y1="120" x2="1080" y2="120" stroke="url(#gold)" stroke-width="1" opacity="0.6"/>
+  <line x1="120" y1="510" x2="1080" y2="510" stroke="url(#gold)" stroke-width="1" opacity="0.6"/>
+  <text x="600" y="180" text-anchor="middle" fill="#c9a97a" font-family="Georgia, serif" font-size="22" letter-spacing="8">SAINTE-MAXIME · GOLFE DE SAINT-TROPEZ</text>
+  <text x="600" y="340" text-anchor="middle" fill="#f7f5f0" font-family="Georgia, serif" font-style="italic" font-size="120" letter-spacing="2">L'Arbois</text>
+  <text x="600" y="430" text-anchor="middle" fill="#c9a97a" font-family="Georgia, serif" font-size="28" letter-spacing="4">Face à Saint-Tropez · depuis 1933</text>
+  <text x="600" y="570" text-anchor="middle" fill="#c9a97a" font-family="Georgia, serif" font-size="18" letter-spacing="6" opacity="0.7">DEUX CHAMBRES · VUE BAIE · ART DÉCO</text>
+</svg>

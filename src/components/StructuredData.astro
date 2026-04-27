@@ -8,19 +8,19 @@ interface Props {
 const { locale } = Astro.props;
 
 const descriptions: Record<Locale, string> = {
-  fr: "Un appartement privé à Sainte-Maxime, face à Saint-Tropez. Trois chambres, vue baie, pour quelques semaines choisies.",
-  en: "A private apartment in Sainte-Maxime, facing Saint-Tropez. Three bedrooms, bay view, for a few chosen weeks.",
-  it: "Un appartamento privato a Sainte-Maxime, di fronte a Saint-Tropez.",
-  de: "Ein privates Apartment in Sainte-Maxime, gegenüber Saint-Tropez.",
-  es: "Un apartamento privado en Sainte-Maxime, frente a Saint-Tropez.",
-  ru: "Частные апартаменты в Сент-Максим, напротив Сен-Тропе.",
-  ar: "شقة خاصة في سانت ماكسيم، مقابل سان تروبيه.",
+  fr: "Location de l'appartement L'Arbois à Sainte-Maxime, face à Saint-Tropez. Immeuble Art Déco de 1933, deux chambres, vue baie, séjour dès 7 nuits.",
+  en: "Rent L'Arbois, a private apartment in Sainte-Maxime facing Saint-Tropez. 1933 Art Déco landmark, two bedrooms, bay view, stays from 7 nights.",
+  it: "Affitto dell'appartamento L'Arbois a Sainte-Maxime, di fronte a Saint-Tropez. Edificio Art Déco del 1933, due camere, vista sulla baia, da 7 notti.",
+  de: "Mieten Sie L'Arbois, ein Apartment in Sainte-Maxime gegenüber Saint-Tropez. Art-Déco-Gebäude von 1933, zwei Schlafzimmer, Buchtblick, ab 7 Nächten.",
+  es: "Alquila L'Arbois, un apartamento en Sainte-Maxime frente a Saint-Tropez. Edificio Art Déco de 1933, dos habitaciones, vista a la bahía, desde 7 noches.",
+  ru: "Аренда апартамента L'Arbois в Сент-Максим, напротив Сен-Тропе. Здание ар-деко 1933 года, две спальни, вид на бухту, от 7 ночей.",
+  ar: "إيجار شقة L'Arbois في سانت ماكسيم، مقابل سان تروبيه. مبنى آرت ديكو من عام 1933، غرفتا نوم، إطلالة على الخليج، من 7 ليالٍ.",
 };
 
 const data = {
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
-  "name": "Villa Azur",
+  "name": "L'Arbois",
   "description": descriptions[locale],
   "url": Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : Astro.url.toString(),
   "address": {
@@ -35,9 +35,17 @@ const data = {
     "latitude": 43.31,
     "longitude": 6.64,
   },
-  "numberOfRooms": 3,
-  "maximumAttendeeCapacity": 6,
+  "numberOfRooms": 2,
+  "numberOfBedrooms": 2,
+  "numberOfBathroomsTotal": 2,
+  "maximumAttendeeCapacity": 4,
+  "petsAllowed": false,
+  "smokingAllowed": false,
   "priceRange": "€€€€",
+  "containedInPlace": {
+    "@type": "Place",
+    "name": "Golfe de Saint-Tropez, Côte d'Azur",
+  },
   "amenityFeature": [
     { "@type": "LocationFeatureSpecification", "name": "WiFi" },
     { "@type": "LocationFeatureSpecification", "name": "Air conditioning" },
@@ -48,7 +56,7 @@ const data = {
     { "@type": "LocationFeatureSpecification", "name": "Dishwasher" },
     { "@type": "LocationFeatureSpecification", "name": "Kitchen" },
   ],
-  "image": Astro.site ? [new URL("/og.jpg", Astro.site).toString()] : [],
+  "image": Astro.site ? [new URL("/og.svg", Astro.site).toString()] : [],
 };
 ---
 

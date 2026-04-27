@@ -29,11 +29,11 @@ export default function ConciergeForm({ locale }: Props) {
     };
 
     if (!endpoint) {
-      const subject = encodeURIComponent(`Villa Azur — ${payload.name}`);
+      const subject = encodeURIComponent(`L'Arbois — ${payload.name}`);
       const body = encodeURIComponent(
         `Name: ${payload.name}\nEmail: ${payload.email}\nDates: ${payload.dates}\n\n${payload.message}`,
       );
-      window.location.href = `mailto:concierge@villa-azur.example?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:concierge@larbois.example?subject=${subject}&body=${body}`;
       setStatus("success");
       form.reset();
       return;

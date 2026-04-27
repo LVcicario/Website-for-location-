@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture as AstroPicture } from "astro:assets";
 import type { ImageMetadata } from "astro";
 import { getImageMeta } from "~/content/images";
 
@@ -51,7 +51,7 @@ const style = styleParts.join("; ");
 ---
 
 {image ? (
-  <Image
+  <AstroPicture
     src={image}
     alt={alt}
     widths={widths}

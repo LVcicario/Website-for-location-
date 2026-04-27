@@ -1,0 +1,23 @@
+---
+import Base from "~/layouts/Base.astro";
+import { DEFAULT_LOCALE } from "~/i18n/config";
+---
+
+<Base
+  locale={DEFAULT_LOCALE}
+  title="Page introuvable · L'Arbois"
+  description="Cette page n'existe pas ou plus."
+>
+  <main id="main" class="min-h-screen flex flex-col items-center justify-center px-[var(--gutter)] text-center">
+    <p class="eyebrow">404</p>
+    <h1 class="display mt-6">Page introuvable</h1>
+    <hr class="rule-gold mx-auto" />
+    <p class="lede mt-8 max-w-[44ch] mx-auto">
+      Cette page n'existe pas ou plus. Revenez à l'accueil pour redécouvrir l'appartement.
+    </p>
+    <a href={`/${DEFAULT_LOCALE}/`} class="btn btn--primary mt-12" data-magnetic>
+      <span>Retour à l'accueil</span>
+      <span aria-hidden="true" class="btn__arrow">→</span>
+    </a>
+  </main>
+</Base>

@@ -1,4 +1,4 @@
-# Villa Azur — Plan de route ultra-poussé
+# L'Arbois — Plan de route ultra-poussé
 
 ## Pourquoi ce site existe
 
@@ -136,7 +136,7 @@ Ce qu'on ne voit pas mais qui fait qu'on nous prend au sérieux.
 | D9 | **Image pipeline pro** — AVIF + WebP + blurhash placeholders + preloading intelligent + lazy-loading sur everything below-the-fold | `src/components/Picture.astro` wrapper autour d'Astro `<Image>` |
 | D10 | **Audit performance Lighthouse CI** dans le pipeline de build | `package.json` scripts, GitHub Action |
 | D11 | **Adaptateur Vercel ou Cloudflare Pages** + déploiement automatique sur push main | `astro.config.mjs`, `vercel.json` ou `wrangler.toml` |
-| D12 | **Domaine custom + email pro** — ex. `villa-azur.com`, `concierge@villa-azur.com` via Google Workspace | Externe, pas de code |
+| D12 | **Domaine custom + email pro** — ex. `larbois.com`, `concierge@larbois.com` via Google Workspace | Externe, pas de code |
 
 ---
 
