@@ -15,7 +15,6 @@ type UIStrings = {
   };
   footer: {
     tagline: string;
-    legal: string;
     credits: string;
   };
   chapters: {
@@ -45,7 +44,6 @@ const fr: UIStrings = {
   },
   footer: {
     tagline: "Sainte-Maxime · face à Saint-Tropez — une adresse confidentielle.",
-    legal: "Mentions légales",
     credits: "© L’Arbois",
   },
   chapters: {
@@ -75,7 +73,6 @@ const en: UIStrings = {
   },
   footer: {
     tagline: "Sainte-Maxime · facing Saint-Tropez — a private address.",
-    legal: "Legal",
     credits: "© L’Arbois",
   },
   chapters: {
