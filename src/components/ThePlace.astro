@@ -69,30 +69,40 @@ const { the_place } = getCopy(locale);
               <path d="M0,300 Q100,295 200,300 T400,300" />
             </g>
 
-            <!-- Ste-Maxime land (top) -->
+            <!-- Ste-Maxime peninsula (north) — Cap des Sardinaux at ~(327, 46) -->
             <path
-              d="M0,0 L400,0 L400,130 C340,135 290,175 230,185 C170,195 110,170 40,185 L0,185 Z"
+              d="M0,0 L400,0 L400,30 C390,35 365,38 340,42 C328,48 325,62 332,72 C320,85 290,98 250,108 C220,115 195,118 170,115 C140,114 110,116 80,118 C50,120 25,121 0,122 Z"
               fill="url(#land)"
               stroke="#b8935a"
               stroke-opacity="0.55"
               stroke-width="0.7"
             />
-            <text x="60" y="40" fill="#c9a97a" font-size="10" letter-spacing="5" font-family="Satoshi, sans-serif" opacity="0.5">SAINTE-MAXIME</text>
+            <text x="58" y="32" fill="#c9a97a" font-size="10" letter-spacing="5" font-family="Satoshi, sans-serif" opacity="0.5">SAINTE-MAXIME</text>
+            <text x="332" y="36" fill="#c9a97a" font-size="6" letter-spacing="2" font-family="Satoshi, sans-serif" opacity="0.55">CAP DES SARDINAUX</text>
 
-            <!-- St-Tropez peninsula (bottom) -->
+            <!-- Mainland west (Cogolin / interior) -->
             <path
-              d="M0,500 L400,500 L400,385 C360,372 320,350 280,345 C240,340 200,360 160,370 C120,380 80,372 40,385 L0,390 Z"
+              d="M0,120 C25,150 45,180 60,210 C75,240 90,265 100,290 L0,300 Z"
+              fill="url(#land)"
+              stroke="#b8935a"
+              stroke-opacity="0.4"
+              stroke-width="0.6"
+            />
+
+            <!-- St-Tropez peninsula (south) — port at (215, 242) -->
+            <path
+              d="M0,500 L400,500 L400,395 C385,400 360,418 332,425 C302,440 280,452 263,460 C240,470 215,468 188,460 C160,452 135,445 110,448 C82,455 52,462 25,460 L0,452 L0,330 C28,318 60,308 90,295 C115,285 140,270 165,260 C190,250 215,240 230,235 C220,230 200,228 178,238 C145,250 110,265 80,275 C50,285 25,290 0,290 Z"
               fill="url(#land)"
               stroke="#b8935a"
               stroke-opacity="0.55"
               stroke-width="0.7"
             />
-            <text x="220" y="475" fill="#c9a97a" font-size="10" letter-spacing="5" font-family="Satoshi, sans-serif" opacity="0.5">SAINT-TROPEZ</text>
+            <text x="190" y="478" fill="#c9a97a" font-size="10" letter-spacing="5" font-family="Satoshi, sans-serif" opacity="0.5">SAINT-TROPEZ</text>
 
-            <!-- Boat route animated -->
+            <!-- Boat route animated : L’Arbois (230,99) -> port St-Tropez (215,242) -->
             <path
               class="boat-path"
-              d="M200,155 Q220,200 228,260 Q232,315 235,355"
+              d="M230,108 Q240,170 215,242"
               stroke="#b8935a"
               stroke-opacity="0.7"
               stroke-width="1"
@@ -100,36 +110,35 @@ const { the_place } = getCopy(locale);
               stroke-dasharray="3 5"
             />
 
-            <!-- L’Arbois — main marker with pulse -->
+            <!-- L’Arbois — main marker with pulse · 24 av Gén Leclerc, Sainte-Maxime -->
             <g class="marker marker--primary">
-              <circle class="marker__ring-far" cx="200" cy="150" r="36" fill="none" stroke="#b8935a" stroke-opacity="0.15" />
-              <circle class="marker__ring-mid" cx="200" cy="150" r="20" fill="none" stroke="#b8935a" stroke-opacity="0.35" />
-              <circle class="marker__pulse" cx="200" cy="150" r="8" fill="url(#glow)" />
-              <circle cx="200" cy="150" r="5" fill="#b8935a" />
-              <circle cx="200" cy="150" r="2" fill="#f7f5f0" />
+              <circle class="marker__ring-far" cx="230" cy="99" r="36" fill="none" stroke="#b8935a" stroke-opacity="0.15" />
+              <circle class="marker__ring-mid" cx="230" cy="99" r="20" fill="none" stroke="#b8935a" stroke-opacity="0.35" />
+              <circle class="marker__pulse" cx="230" cy="99" r="8" fill="url(#glow)" />
+              <circle cx="230" cy="99" r="5" fill="#b8935a" />
+              <circle cx="230" cy="99" r="2" fill="#f7f5f0" />
             </g>
-            <text x="212" y="146" fill="#c9a97a" font-size="11" letter-spacing="3" font-family="Gambarino, Fraunces, serif" font-style="italic">L’Arbois</text>
-            <text x="212" y="160" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.7">SAINTE-MAXIME · 1933</text>
+            <text x="242" y="95" fill="#c9a97a" font-size="11" letter-spacing="3" font-family="Gambarino, Fraunces, serif" font-style="italic">L’Arbois</text>
+            <text x="242" y="109" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.7">SAINTE-MAXIME · 1933</text>
 
-            <!-- Bateaux Verts dock -->
+            <!-- Jetée Olivier Bausset (Bateaux Verts) — 5 min à pied · (209, 103) -->
             <g class="marker marker--dock">
-              <line x1="180" y1="177" x2="180" y2="192" stroke="#c9a97a" stroke-opacity="0.7" stroke-width="1" />
-              <circle cx="180" cy="192" r="2.5" fill="#c9a97a" opacity="0.75" />
+              <line x1="209" y1="115" x2="209" y2="128" stroke="#c9a97a" stroke-opacity="0.7" stroke-width="1" />
+              <circle cx="209" cy="128" r="2.5" fill="#c9a97a" opacity="0.75" />
             </g>
-            <text x="88" y="206" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.7">JETÉE · BATEAUX VERTS · 200 M</text>
+            <text x="115" y="138" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.7">JETÉE OLIVIER BAUSSET · BATEAUX VERTS</text>
 
-            <!-- Latitude 43 marker (the twin) across the bay -->
+            <!-- Latitude 43 marker (le jumeau) — Saint-Tropez (187, 264) -->
             <g class="marker marker--twin">
-              <circle cx="235" cy="360" r="4" fill="none" stroke="#c9a97a" stroke-width="1.2" />
-              <circle cx="235" cy="360" r="1.5" fill="#c9a97a" opacity="0.8" />
+              <circle cx="187" cy="264" r="4" fill="none" stroke="#c9a97a" stroke-width="1.2" />
+              <circle cx="187" cy="264" r="1.5" fill="#c9a97a" opacity="0.8" />
             </g>
-            <text x="245" y="356" fill="#c9a97a" font-size="9" letter-spacing="3" font-family="Gambarino, Fraunces, serif" font-style="italic" opacity="0.9">Latitude 43</text>
-            <text x="245" y="368" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.6">PINGUSSON · 1932</text>
+            <text x="125" y="278" fill="#c9a97a" font-size="9" letter-spacing="3" font-family="Gambarino, Fraunces, serif" font-style="italic" opacity="0.9">Latitude 43</text>
+            <text x="125" y="290" fill="#c9a97a" font-size="7" letter-spacing="3" font-family="Satoshi, sans-serif" opacity="0.6">PINGUSSON · 1932</text>
 
             <!-- Boat travel time -->
-            <g transform="translate(244, 250)">
-              <line x1="0" y1="0" x2="0" y2="50" stroke="#b8935a" stroke-opacity="0.3" stroke-width="0.4" stroke-dasharray="1 2" />
-              <text x="6" y="28" fill="#c9a97a" font-size="7" letter-spacing="4" font-family="Satoshi, sans-serif" opacity="0.7">15′ · BATEAU</text>
+            <g transform="translate(248, 168)">
+              <text x="0" y="0" fill="#c9a97a" font-size="7" letter-spacing="4" font-family="Satoshi, sans-serif" opacity="0.7">15′ · BATEAU</text>
             </g>
 
             <!-- Compass -->
