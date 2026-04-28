@@ -1,0 +1,114 @@
+{
+  "L'Arbois": {
+    "lat": 43.3065159,
+    "lng": 6.6451895,
+    "x": 239,
+    "y": 137,
+    "display": "Avenue du Général Leclerc, Sainte-Maxime, Draguignan, Var, Provence-Alpes-Côte d"
+  },
+  "Le Sémaphore": {
+    "lat": 43.315945,
+    "lng": 6.6478535,
+    "x": 246,
+    "y": 104,
+    "display": "Sémaphore, Boulevard des Grands Horizons, Gauthier-Haut, Sainte-Maxime, Draguign"
+  },
+  "La Croisette": {
+    "lat": 43.3046996,
+    "lng": 6.631074,
+    "x": 203,
+    "y": 144,
+    "display": "Pointe de la Croisette, Sainte-Maxime, Draguignan, Var, Provence-Alpes-Côte d'Az"
+  },
+  "Plage de la Nartelle": {
+    "lat": 43.3214292,
+    "lng": 6.6650621,
+    "x": 291,
+    "y": 84,
+    "display": "Plage de la Nartelle, Chataigne, Sainte-Maxime, Draguignan, Var, Provence-Alpes-"
+  },
+  "Le Prao": {
+    "lat": 43.3143506,
+    "lng": 6.6690668,
+    "x": 302,
+    "y": 109,
+    "display": "Avenue du General Touzet du Vigier, Sainte-Maxime, Draguignan, Var, Provence-Alp"
+  },
+  "Sénéquier": {
+    "lat": 43.2722131,
+    "lng": 6.6391243,
+    "x": 224,
+    "y": 260,
+    "display": "Senequier, 29, Quai Jean Jaurès, Saint-Tropez, Draguignan, Var, Provence-Alpes-C"
+  },
+  "Place des Lices": {
+    "lat": 43.2700291,
+    "lng": 6.6412522,
+    "x": 229,
+    "y": 268,
+    "display": "Place des Lices, Saint-Tropez, Draguignan, Var, Provence-Alpes-Côte d'Azur, Fran"
+  },
+  "Ramatuelle": {
+    "lat": 43.2151616,
+    "lng": 6.6120401,
+    "x": 153,
+    "y": 464,
+    "display": "Place de l'Ormeau, Ramatuelle, Draguignan, Var, Provence-Alpes-Côte d'Azur, Fran"
+  },
+  "Gassin": {
+    "lat": 43.2279322,
+    "lng": 6.5860104,
+    "x": 86,
+    "y": 418,
+    "display": "Place Deï Barri, Gassin, Cambon, Gassin, Draguignan, Var, Provence-Alpes-Côte d'"
+  },
+  "La Gaudina": {
+    "lat": 43.3075288,
+    "lng": 6.6344132,
+    "x": 211,
+    "y": 134,
+    "display": "Avenue De Lattre de Tassigny, La Croisette, Gauthier-Haut, Sainte-Maxime, Dragui"
+  },
+  "La Vague d'Or": {
+    "lat": 43.2662294,
+    "lng": 6.6248643,
+    "x": 187,
+    "y": 281,
+    "display": "Plage de la Bouillabaisse, Saint-Tropez, Draguignan, Var, Provence-Alpes-Côte d'"
+  },
+  "Latitude 43": {
+    "lat": 43.2681177,
+    "lng": 6.6389085,
+    "x": 223,
+    "y": 275,
+    "display": "Avenue Paul Roussel, Saint-Tropez, Draguignan, Var, Provence-Alpes-Côte d'Azur, "
+  },
+  "Plage de Pampelonne": {
+    "lat": 43.2281776,
+    "lng": 6.6622992,
+    "x": 284,
+    "y": 417,
+    "display": "Plage de Pampelonne, Ramatuelle, Draguignan, Var, Provence-Alpes-Côte d'Azur, Fr"
+  },
+  "La Voile": {
+    "lat": 43.216,
+    "lng": 6.628,
+    "x": 195,
+    "y": 461,
+    "display": "manual fallback (Google Maps)"
+  },
+  "Marché couvert": {
+    "lat": 43.3092,
+    "lng": 6.6376,
+    "x": 220,
+    "y": 128,
+    "display": "manual (Google Maps)"
+  },
+  "Jetée Olivier Bausset": {
+    "lat": 43.3085,
+    "lng": 6.6385,
+    "x": 222,
+    "y": 130,
+    "display": "manual (Google Maps)"
+  }
+}
