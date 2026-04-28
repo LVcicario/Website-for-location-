@@ -12,14 +12,49 @@ const { prologue } = getCopy(locale);
 
 <section id="prologue" class="chapter chapter--dense">
   <div class="chapter__inner">
-    <ChapterReveal client:visible stagger as="div" className="max-w-[64ch] mx-auto text-center">
+    <ChapterReveal client:visible stagger as="div" className="max-w-[52ch] mx-auto text-center">
       <p data-reveal-child class="eyebrow">
         <span class="chapter-index mr-4">{prologue.index}</span>
         {prologue.eyebrow}
       </p>
       <hr data-reveal-child class="rule-gold mx-auto" />
-      <p data-reveal-child class="text-left lede mx-auto text-[var(--color-bone)] drop-cap" set:html={prologue.text}></p>
-      <p data-reveal-child class="signature mt-10 text-center">— {prologue.signature}</p>
+      <blockquote data-reveal-child class="prologue-quote mt-8">
+        <p>{prologue.text}</p>
+      </blockquote>
+      <p data-reveal-child class="signature mt-8 text-center text-[var(--color-gold-deep)]">— {prologue.signature}</p>
     </ChapterReveal>
   </div>
 </section>
+
+<style>
+  .prologue-quote {
+    position: relative;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: var(--color-bone);
+    padding-inline: clamp(1rem, 4vw, 2.5rem);
+  }
+  .prologue-quote::before,
+  .prologue-quote::after {
+    color: var(--color-gold);
+    font-family: var(--font-display);
+    font-size: 1.6em;
+    line-height: 0;
+    opacity: 0.7;
+    position: absolute;
+  }
+  .prologue-quote::before {
+    content: "«";
+    left: 0;
+    top: 0.45em;
+  }
+  .prologue-quote::after {
+    content: "»";
+    right: 0;
+    bottom: 0;
+  }
+</style>
