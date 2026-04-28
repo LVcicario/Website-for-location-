@@ -529,14 +529,14 @@ const en: ChapterCopy = {
     eyebrow: "Chapter IV — The apartment",
     title: "Two bedrooms, one living room, one view",
     intro:
-      "White walls, warm wooden floors, deep navy furniture, gilded light. A quiet contemporary hand, held by its materials.",
+      "White walls, warm wooden floors, pearl-grey and deep-navy furniture, gilded light. A quiet contemporary hand, carried by its materials.",
     rooms: [
       { label: "Entrance", title: "The threshold", body: "A bright hallway, a brass console, a discreet sculpture. The tone is set before you have even set down your bags." },
-      { label: "Living room", title: "The open volume", body: "Custom navy sofas, a cream wool rug, a marble fireplace. The bay is always there at the back, changing with the hours." },
+      { label: "Living room", title: "The open volume", body: "Custom pearl-grey sofas, a cream wool rug, a marble fireplace. The bay is always there at the back, changing with the hours." },
       { label: "Kitchen", title: "The family table", body: "Veined white marble, brass fittings, professional oven. Enough to host as one would at home — with quiet generosity." },
       { label: "Primary bedroom", title: "The principal suite", body: "King-size bed, navy upholstered headboard, adjoining dressing room, marble bathroom. The shutters open due south, onto the bay." },
       { label: "Guest bedroom", title: "A guest room", body: "Its own bathroom, washed linen sheets, its own quiet. For those you love, nothing less." },
-      { label: "Terrace", title: "The south terrace", body: "A long teak table, sun loungers, a shaded corner. Saint-Tropez in view all day long, its lamps lighting up at dusk. Evenings last until the night." },
+      { label: "Terrace", title: "The south terrace", body: "A long teak table, sun loungers, a shaded corner. Saint-Tropez in view all day long, its lamps lighting up at nightfall. Evenings stretch on." },
     ],
   },
   materials: {
@@ -544,12 +544,12 @@ const en: ChapterCopy = {
     eyebrow: "Chapter V — Materials",
     title: "The grammar of the place",
     intro:
-      "Four materials, held by a single palette: white, gold, navy, wood. Nothing more, nothing less.",
+      "Four materials, held by a single palette: white, gold, grey, deep navy, wood. Nothing more, nothing less.",
     items: [
       { label: "Veined white marble", note: "Kitchen, bathrooms, fireplace.", image: "primary-bathroom" },
       { label: "Brushed brass", note: "Fittings, lighting, matte patinas.", image: "bathroom-gold" },
       { label: "Solid oak parquet", note: "Wide planks, herringbone, natural oil.", image: "salon-window" },
-      { label: "Navy velvet", note: "Sofas, headboards — made to measure.", image: "guest-bedroom-b" },
+      { label: "Bespoke velvet", note: "Pearl-grey for sofas, deep navy for headboards.", image: "guest-bedroom-b" },
       { label: "Lime-washed walls", note: "Walls that breathe the coast light.", image: "salon-view" },
       { label: "Granite & chessboard", note: "The Art Déco hall of the building.", image: "building-stairs" },
     ],

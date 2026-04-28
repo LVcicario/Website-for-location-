@@ -10,7 +10,6 @@ type UIStrings = {
   cta: {
     book_airbnb: string;
     book_airbnb_aria: string;
-    concierge: string;
     scroll_to_explore: string;
     discover_more: string;
   };
@@ -19,18 +18,6 @@ type UIStrings = {
     legal: string;
     contact: string;
     credits: string;
-  };
-  concierge: {
-    title: string;
-    subtitle: string;
-    name: string;
-    email: string;
-    dates: string;
-    message: string;
-    submit: string;
-    sending: string;
-    success: string;
-    error: string;
   };
   chapters: {
     opening: string;
@@ -54,7 +41,6 @@ const fr: UIStrings = {
   cta: {
     book_airbnb: "Réserver sur Airbnb",
     book_airbnb_aria: "Réserver cet appartement sur Airbnb — ouvre dans un nouvel onglet",
-    concierge: "Conciergerie privée",
     scroll_to_explore: "Laissez-vous porter",
     discover_more: "Découvrir",
   },
@@ -63,18 +49,6 @@ const fr: UIStrings = {
     legal: "Mentions légales",
     contact: "Contact",
     credits: "© L’Arbois",
-  },
-  concierge: {
-    title: "Conciergerie privée",
-    subtitle: "Pour une demande discrète, un séjour sur mesure.",
-    name: "Nom",
-    email: "Adresse email",
-    dates: "Dates souhaitées",
-    message: "Votre message",
-    submit: "Envoyer",
-    sending: "Envoi…",
-    success: "Merci. Nous vous recontactons sous 24 heures.",
-    error: "Une erreur est survenue. Merci de réessayer.",
   },
   chapters: {
     opening: "Ouverture",
@@ -98,7 +72,6 @@ const en: UIStrings = {
   cta: {
     book_airbnb: "Book on Airbnb",
     book_airbnb_aria: "Book this apartment on Airbnb — opens in a new tab",
-    concierge: "Private concierge",
     scroll_to_explore: "Let yourself in",
     discover_more: "Discover",
   },
@@ -107,18 +80,6 @@ const en: UIStrings = {
     legal: "Legal",
     contact: "Contact",
     credits: "© L’Arbois",
-  },
-  concierge: {
-    title: "Private concierge",
-    subtitle: "For a discreet request, a bespoke stay.",
-    name: "Name",
-    email: "Email",
-    dates: "Preferred dates",
-    message: "Your message",
-    submit: "Send",
-    sending: "Sending…",
-    success: "Thank you. We will be in touch within 24 hours.",
-    error: "Something went wrong. Please try again.",
   },
   chapters: {
     opening: "Overture",
