@@ -179,8 +179,8 @@ const fr: ChapterCopy = {
     index: "I",
     eyebrow: "Prologue",
     text:
-      "On vient ici pour regarder Saint-Tropez changer d’heure en heure, depuis Sainte-Maxime. Un silence de pierre blanche, la lumière de cinq heures, l’air qui sent le pin et l’iode. Sainte-Maxime tient la meilleure place de la baie.",
-    signature: "L’Arbois",
+      "Saint-Tropez est mon enfance, ma jeunesse, ma liberté.",
+    signature: "Brigitte Bardot",
   },
   the_place: {
     index: "II",
@@ -447,7 +447,7 @@ const fr: ChapterCopy = {
     title: "Saint-Tropez en quelques mots",
     intro: "Trois citations de Brigitte Bardot, qui depuis La Madrague raconte la baie depuis soixante ans.",
     testimonials: [
-      { quote: "Saint-Tropez est mon enfance, ma jeunesse, ma liberté.", author: "Brigitte Bardot" },
+      { quote: "Je suis Tropézienne avant d’être française.", author: "Brigitte Bardot" },
       { quote: "Je vis à Saint-Tropez parce que c’est le seul endroit au monde où je peux respirer.", author: "Brigitte Bardot" },
       { quote: "La Madrague, c’est mon paradis.", author: "Brigitte Bardot — La Madrague" },
     ],
@@ -483,8 +483,8 @@ const en: ChapterCopy = {
     index: "I",
     eyebrow: "Prologue",
     text:
-      "One comes here to watch Saint-Tropez change hour by hour, from Sainte-Maxime. The silence of white stone, the slow five o’clock light, air scented with pine and salt. Sainte-Maxime holds the finest seat in the bay.",
-    signature: "L’Arbois",
+      "Saint-Tropez is my childhood, my youth, my freedom.",
+    signature: "Brigitte Bardot",
   },
   the_place: {
     index: "II",
@@ -643,7 +643,7 @@ const en: ChapterCopy = {
     title: "Saint-Tropez in a few words",
     intro: "Three quotes from Brigitte Bardot, who has chronicled the bay from La Madrague for sixty years.",
     testimonials: [
-      { quote: "Saint-Tropez is my childhood, my youth, my freedom.", author: "Brigitte Bardot" },
+      { quote: "I am Tropezian before I am French.", author: "Brigitte Bardot" },
       { quote: "I live in Saint-Tropez because it is the only place in the world where I can breathe.", author: "Brigitte Bardot" },
       { quote: "La Madrague is my paradise.", author: "Brigitte Bardot — La Madrague" },
     ],
