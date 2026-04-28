@@ -180,14 +180,14 @@ const fr: ChapterCopy = {
     eyebrow: "Prologue",
     text:
       "Saint-Tropez est mon enfance, ma jeunesse, ma liberté.",
-    signature: "Brigitte Bardot",
+    signature: "Brigitte Bardot · depuis La Madrague, l’autre rive du golfe.",
   },
   the_place: {
     index: "II",
     eyebrow: "Chapitre II — Le lieu",
     title: "Face à Saint-Tropez, la meilleure place",
     body:
-      "Sainte-Maxime, rive nord du golfe. L’appartement ouvre ses terrasses plein sud, face à Saint-Tropez qui tient la lumière du matin au soir. Les navettes Bateaux Verts partent à cinq minutes à pied — quinze minutes de traversée, la baie franchie.",
+      "Sainte-Maxime, rive nord du golfe de Saint-Tropez. L’appartement ouvre ses terrasses plein sud, face à Saint-Tropez qui tient la lumière du matin au soir. Les navettes Bateaux Verts partent à cinq minutes à pied — quinze minutes de traversée, la baie franchie.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
       villa: "L’Arbois",
@@ -204,9 +204,9 @@ const fr: ChapterCopy = {
     body_1:
       "Sainte-Maxime, janvier 1933. Jean Gianotti, Parisien, commande à René Darde — architecte-urbaniste de la ville — un hôtel d’une autre espèce. L’Arbois ouvre en 1935 : façade courbe, balcons filants, verticalité d’un seul trait de béton. Le Grand Hôtel et son restaurant, La Tartane, deviennent une adresse.",
     body_2:
-      "En face, Saint-Tropez, 14 juillet 1932. Georges-Henri Pingusson inaugure le Latitude 43 — un paquebot moderniste construit en six mois : cent dix chambres, un casino, des piscines, des courts de tennis. L’Arbois a probablement été dessiné en écho : plus compact, plus retenu, mais du même mouvement moderne. L’un a inspiré l’autre ; ils se regardent.",
+      "En face, Saint-Tropez, 14 juillet 1932. Georges-Henri Pingusson inaugure le Latitude 43 — un paquebot moderniste construit en six mois : cent dix chambres, un casino, des piscines, des courts de tennis. L’Arbois lui répond : plus compact, plus retenu, mais du même mouvement moderne. L’un a inspiré l’autre ; ils se regardent.",
     body_3:
-      "Après la guerre, les deux paquebots deviennent des résidences. Ils continuent à se faire face à travers le golfe, témoins d’une Côte d’Azur qui n’a jamais fini de se rêver. L’Arbois est aujourd’hui labellisé Architecture Contemporaine Remarquable.",
+      "Après la guerre, les deux paquebots deviennent des résidences. Ils continuent à se faire face à travers le golfe, témoins d’une Côte d’Azur qui n’a jamais fini de se rêver. L’Arbois est aujourd’hui labellisé Architecture Contemporaine Remarquable — distinction du ministère de la Culture pour le patrimoine architectural du XXᵉ siècle.",
     quote: "Elles se regardent depuis un siècle.",
     labels: {
       architect: "Architecte · René Darde (1933)",
@@ -240,7 +240,7 @@ const fr: ChapterCopy = {
     eyebrow: "Chapitre V — Matières",
     title: "La grammaire du lieu",
     intro:
-      "Quatre matières, tenues par une palette : blanc, or, gris, bleu nuit, bois. Rien de plus, rien de moins.",
+      "Six matières, une palette : blanc, or, gris, bleu nuit, bois. Une grammaire restreinte, tenue.",
     items: [
       { label: "Marbre blanc veiné", note: "Cuisine, salles de bain, cheminée.", image: "primary-bathroom" },
       { label: "Laiton brossé doré", note: "Robinetterie, luminaires, patines mates.", image: "bathroom-gold" },
@@ -268,7 +268,7 @@ const fr: ChapterCopy = {
         name: "La Croisette",
         kind: "Promenade Aymeric Simon-Lorière · front de mer",
         distance: "Sur le pas de la porte",
-        access: "L’Arbois donne directement sur la promenade Aymeric Simon-Lorière. À droite : le port, le centre-ville, la Pointe de la Croisette. À gauche : le Cap des Sardinaux.",
+        access: "L’Arbois donne directement sur la promenade Aymeric Simon-Lorière. Vers l’ouest : le port, le centre-ville, la Pointe de la Croisette. Vers l’est : le Cap des Sardinaux.",
         activities: "Promenade sous les pins parasols, port de plaisance à 5 min, terrasses de café, glaciers, bars à cocktails au crépuscule.",
         transport: "foot",
         mapX: 203, mapY: 144,
@@ -376,8 +376,8 @@ const fr: ChapterCopy = {
   },
 amenities: {
     index: "VII",
-    eyebrow: "Chapitre VII — Équipements & services",
-    title: "Ce qui est compris, ce qui se demande",
+    eyebrow: "Chapitre VII — Équipements",
+    title: "Tout ce qui est compris dans le séjour",
     intro: "Deux chambres, quatre voyageurs, ce qu’il faut pour recevoir.",
     capacity: {
       rooms: "2 chambres",
@@ -393,7 +393,7 @@ amenities: {
       { value: "3", label: "nuits min" },
     ],
     equipment_label: "Équipements",
-    services_included_label: "Inclus",
+    services_included_label: "Le séjour comprend",
     services_on_demand_label: "",
     included: [
       { label: "WiFi fibre haut débit", icon: "wifi" },
@@ -424,16 +424,16 @@ amenities: {
     minimum_stay: "Séjour minimum : 3 nuits. — 20 % de réduction à partir de 7 nuits.",
     items: [
       { label: "Printemps", window: "Avril — Juin", note: "Mimosa, mistral doux, village encore calme.", price: "À partir de 348 € / nuit (frais Airbnb inclus)", image: "terrace-view" },
-      { label: "Été", window: "Juillet — Août", note: "Haute saison, yachts dans la baie, Pampelonne à son apogée.", price: "Tarifs sur Airbnb", image: "dining-view" },
-      { label: "Arrière-saison", window: "Septembre", note: "Voiles de Saint-Tropez, lumière dorée, eau encore chaude.", price: "Tarifs sur Airbnb", image: "salon-window" },
-      { label: "Hiver", window: "Octobre — Mars", note: "Voir Airbnb pour les disponibilités.", price: "Tarifs sur Airbnb", image: "building-exterior" },
+      { label: "Été", window: "Juillet — Août", note: "Haute saison, yachts dans la baie, Pampelonne à son apogée.", price: "Calendrier en temps réel sur Airbnb", image: "dining-view" },
+      { label: "Arrière-saison", window: "Septembre", note: "Voiles de Saint-Tropez, lumière dorée, eau encore chaude.", price: "Calendrier en temps réel sur Airbnb", image: "salon-window" },
+      { label: "Hiver", window: "Octobre — Mars", note: "Voir Airbnb pour les disponibilités.", price: "Calendrier en temps réel sur Airbnb", image: "building-exterior" },
     ],
   },
   voices: {
     index: "IX",
     eyebrow: "Chapitre IX — Voix",
-    title: "Saint-Tropez en quelques mots",
-    intro: "Trois citations de Brigitte Bardot, qui depuis La Madrague raconte la baie depuis 1958.",
+    title: "Saint-Tropez en héritage",
+    intro: "Trois citations de Brigitte Bardot, depuis La Madrague — l’autre rive du golfe que L’Arbois regarde chaque jour.",
     testimonials: [
       { quote: "Je suis Tropézienne avant d’être française.", author: "Brigitte Bardot" },
       { quote: "Je vis à Saint-Tropez parce que c’est le seul endroit au monde où je peux respirer.", author: "Brigitte Bardot" },
@@ -472,14 +472,14 @@ const en: ChapterCopy = {
     eyebrow: "Prologue",
     text:
       "Saint-Tropez is my childhood, my youth, my freedom.",
-    signature: "Brigitte Bardot",
+    signature: "Brigitte Bardot · from La Madrague, the other shore of the gulf.",
   },
   the_place: {
     index: "II",
     eyebrow: "Chapter II — The place",
     title: "Facing Saint-Tropez, the finest seat",
     body:
-      "Sainte-Maxime, northern shore of the gulf. The apartment’s terraces face due south, towards Saint-Tropez, which catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, a five-minute walk — a fifteen-minute crossing.",
+      "Sainte-Maxime, northern shore of the Gulf of Saint-Tropez. The apartment’s terraces face due south, towards Saint-Tropez, which catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, a five-minute walk — a fifteen-minute crossing.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
       villa: "L’Arbois",
@@ -496,9 +496,9 @@ const en: ChapterCopy = {
     body_1:
       "Sainte-Maxime, January 1933. Jean Gianotti, a Parisian patron, commissions from René Darde — the town’s architect-urbanist — a hotel of another kind. L’Arbois opens in 1935: curved façade, ribbon balconies, the whole vertical held by a single stroke of concrete. The Grand Hôtel and its restaurant, La Tartane, become an address.",
     body_2:
-      "Across the water, Saint-Tropez, 14 July 1932. Georges-Henri Pingusson inaugurates the Latitude 43 — a modernist ocean-liner built in six months: one hundred and ten rooms, a casino, pools, tennis courts. L’Arbois was very likely drawn in reply: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
+      "Across the water, Saint-Tropez, 14 July 1932. Georges-Henri Pingusson inaugurates the Latitude 43 — a modernist ocean-liner built in six months: one hundred and ten rooms, a casino, pools, tennis courts. L’Arbois answers it: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
     body_3:
-      "After the war, the two ocean-liners became residences. They still face each other across the bay, witnesses to a Riviera that has never finished dreaming itself. L’Arbois is today listed as Architecture Contemporaine Remarquable.",
+      "After the war, the two ocean-liners became residences. They still face each other across the bay, witnesses to a Riviera that has never finished dreaming itself. L’Arbois is today listed as Architecture Contemporaine Remarquable — a French Ministry of Culture distinction for 20th-century architectural heritage.",
     quote: "They have been looking at each other for a century.",
     labels: {
       architect: "Architect · René Darde (1933)",
@@ -532,7 +532,7 @@ const en: ChapterCopy = {
     eyebrow: "Chapter V — Materials",
     title: "The grammar of the place",
     intro:
-      "Four materials, held by a single palette: white, gold, grey, deep navy, wood. Nothing more, nothing less.",
+      "Six materials, one palette: white, gold, grey, deep navy, wood. A restrained grammar, held.",
     items: [
       { label: "Veined white marble", note: "Kitchen, bathrooms, fireplace.", image: "primary-bathroom" },
       { label: "Brushed brass", note: "Fittings, lighting, matte patinas.", image: "bathroom-gold" },
@@ -556,7 +556,7 @@ const en: ChapterCopy = {
       by_car: "By car",
     },
     pois: [
-      { name: "La Croisette", kind: "Promenade Aymeric Simon-Lorière · seafront", distance: "On the doorstep", access: "L’Arbois opens directly onto the Aymeric Simon-Lorière seafront. To the right: the harbour, the town centre, Pointe de la Croisette. To the left: Cap des Sardinaux.", activities: "Promenade under umbrella pines, marina 5 min away, café terraces, ice cream, sunset cocktail bars.", transport: "foot", mapX: 203, mapY: 144 },
+      { name: "La Croisette", kind: "Promenade Aymeric Simon-Lorière · seafront", distance: "On the doorstep", access: "L’Arbois opens directly onto the Aymeric Simon-Lorière seafront. To the west: the harbour, the town centre, Pointe de la Croisette. To the east: Cap des Sardinaux.", activities: "Promenade under umbrella pines, marina 5 min away, café terraces, ice cream, sunset cocktail bars.", transport: "foot", mapX: 203, mapY: 144 },
       { name: "Covered market", kind: "Place du Marché · Rue Fernand Bessy", distance: "5 min walk", access: "Through the old town lanes, behind the church. Covered market: Tue-Sun 8am-2pm. Provençal open-air market: Thursday morning across the adjoining squares.", activities: "Bakery, fresh produce, morning-catch fish, cheese, fine grocery, florist. The whole Var terroir under one roof.", transport: "foot", mapX: 220, mapY: 128 },
       { name: "La Gaudina", kind: "Restaurant & private beach · town centre", distance: "10 min walk", access: "Via the seafront, past the harbour. Avenue de Lattre de Tassigny, on the town-centre beach.", activities: "Mediterranean cuisine, terrace facing the gulf, loungers on the sand. Lunch and dinner.", transport: "foot", mapX: 211, mapY: 134 },
       { name: "Le Sémaphore", kind: "Viewpoint · 127 m altitude", distance: "45 min uphill walk", access: "Trail from Pointe de la Croisette, via the Préconil. Marked loop. Wear closed shoes and bring water.", activities: "Full panorama of the gulf of Saint-Tropez, the Maures massif, the Hyères islands beyond. Striking sunsets.", transport: "foot", mapX: 246, mapY: 104 },
@@ -572,7 +572,7 @@ const en: ChapterCopy = {
   },
   amenities: {
     index: "VII",
-    eyebrow: "Chapter VII — Amenities & services",
+    eyebrow: "Chapter VII — Amenities",
     title: "What’s included, what’s on request",
     intro: "Two bedrooms, four guests, everything needed to host.",
     capacity: {
@@ -589,7 +589,7 @@ const en: ChapterCopy = {
       { value: "3", label: "nights min" },
     ],
     equipment_label: "Equipment",
-    services_included_label: "Included",
+    services_included_label: "The stay includes",
     services_on_demand_label: "",
     included: [
       { label: "Fibre WiFi", icon: "wifi" },
@@ -620,16 +620,16 @@ const en: ChapterCopy = {
     minimum_stay: "Minimum stay: 3 nights. — 20% off from 7 nights.",
     items: [
       { label: "Spring", window: "April — June", note: "Mimosa, gentle mistral, the village still quiet.", price: "From €348 / night (Airbnb fees included)", image: "terrace-view" },
-      { label: "Summer", window: "July — August", note: "High season, yachts in the bay, Pampelonne at its peak.", price: "Rates on Airbnb", image: "dining-view" },
-      { label: "Late season", window: "September", note: "Voiles de Saint-Tropez, golden light, water still warm.", price: "Rates on Airbnb", image: "salon-window" },
-      { label: "Winter", window: "October — March", note: "See Airbnb for availability.", price: "Rates on Airbnb", image: "building-exterior" },
+      { label: "Summer", window: "July — August", note: "High season, yachts in the bay, Pampelonne at its peak.", price: "Live calendar on Airbnb", image: "dining-view" },
+      { label: "Late season", window: "September", note: "Voiles de Saint-Tropez, golden light, water still warm.", price: "Live calendar on Airbnb", image: "salon-window" },
+      { label: "Winter", window: "October — March", note: "See Airbnb for availability.", price: "Live calendar on Airbnb", image: "building-exterior" },
     ],
   },
   voices: {
     index: "IX",
     eyebrow: "Chapter IX — Voices",
-    title: "Saint-Tropez in a few words",
-    intro: "Three quotes from Brigitte Bardot, who has chronicled the bay from La Madrague since 1958.",
+    title: "Saint-Tropez as legacy",
+    intro: "Three quotes from Brigitte Bardot, from La Madrague — the other shore of the gulf that L’Arbois faces each day.",
     testimonials: [
       { quote: "I am Tropezian before I am French.", author: "Brigitte Bardot" },
       { quote: "I live in Saint-Tropez because it is the only place in the world where I can breathe.", author: "Brigitte Bardot" },
