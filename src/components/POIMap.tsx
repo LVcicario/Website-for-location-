@@ -245,17 +245,47 @@ export default function POIMap({ pois, active, onSelect }: Props) {
                 fill="transparent"
               />
               {isActive && (() => {
-                const labelWidth = Math.max(poi.name.length, poi.distance.length) * 4.7 + 18;
-                const offsetRight = poi.mapX + labelWidth + 14 < 400;
-                const tx = offsetRight ? poi.mapX + 12 : poi.mapX - labelWidth - 12;
+                const distText = poi.distance.toUpperCase();
+                const w = Math.max(poi.name.length * 5.4, distText.length * 4.6) + 20;
+                const right = poi.mapX + w + 16 < 400;
+                const tx = right ? poi.mapX + 10 : poi.mapX - w - 10;
+                const ty = poi.mapY;
+                const anchor = right ? "start" : "end";
+                const textX = right ? tx + 6 : tx + w - 6;
+                const lineX1 = right ? poi.mapX + 4 : tx + w;
+                const lineX2 = right ? tx : poi.mapX - 4;
                 return (
-                  <g transform={`translate(${tx}, ${poi.mapY + 2})`}>
-                    <rect x="-3" y="-14" width={labelWidth} height="32" fill="#0a0a0a" fillOpacity="0.9" stroke="#b8935a" strokeOpacity="0.6" strokeWidth="0.5" />
-                    <text x="4" y="-2" fill="#f7f5f0" fontSize="8.5" letterSpacing="1.5" fontFamily="Gambarino, serif" fontStyle="italic">
+                  <g className="aol-poi-label" pointerEvents="none">
+                    {/* Connector hairline du marker au label */}
+                    <line
+                      x1={lineX1} y1={ty}
+                      x2={lineX2} y2={ty}
+                      stroke="#c9a97a" strokeOpacity="0.45" strokeWidth="0.4"
+                      strokeDasharray="1.5 1.5"
+                    />
+                    {/* Filet doré vertical (accent) */}
+                    <line
+                      x1={right ? tx : tx + w} y1={ty - 11}
+                      x2={right ? tx : tx + w} y2={ty + 11}
+                      stroke="#c9a97a" strokeOpacity="0.85" strokeWidth="0.7"
+                    />
+                    {/* Nom — Gambarino italique */}
+                    <text
+                      x={textX} y={ty - 1}
+                      fill="#f7f5f0" fontSize="9" letterSpacing="0.3"
+                      fontFamily="Gambarino, Fraunces, serif" fontStyle="italic"
+                      textAnchor={anchor}
+                    >
                       {poi.name}
                     </text>
-                    <text x="4" y="11" fill="#c9a97a" fontSize="6.5" letterSpacing="2" fontFamily="Satoshi, sans-serif" opacity="0.85">
-                      {poi.distance.toUpperCase()}
+                    {/* Distance — eyebrow tracking large */}
+                    <text
+                      x={textX} y={ty + 9}
+                      fill="#c9a97a" fontSize="5.5" letterSpacing="2.5"
+                      fontFamily="Satoshi, sans-serif" opacity="0.8"
+                      textAnchor={anchor}
+                    >
+                      {distText}
                     </text>
                   </g>
                 );
