@@ -173,7 +173,7 @@ const fr: ChapterCopy = {
     eyebrow: "Sainte-Maxime · Golfe de Saint-Tropez",
     title_line_1: "Face",
     title_line_2: "à Saint-Tropez",
-    baseline: "Un appartement privé à Sainte-Maxime, face à Saint-Tropez.",
+    baseline: "Un appartement privé sur la rive nord du golfe.",
   },
   prologue: {
     index: "I",
@@ -204,7 +204,7 @@ const fr: ChapterCopy = {
     body_1:
       "Sainte-Maxime, janvier 1933. Jean Gianotti, Parisien, commande à René Darde — architecte-urbaniste de la ville — un hôtel d’une autre espèce. L’Arbois ouvre en 1935 : façade courbe, balcons filants, verticalité d’un seul trait de béton. Le Grand Hôtel et son restaurant, La Tartane, deviennent une adresse.",
     body_2:
-      "En face, Saint-Tropez, 14 juillet 1932. Georges-Henri Pingusson inaugure le Latitude 43 — un paquebot moderniste construit en six mois : cent dix chambres, un casino, des piscines, des courts de tennis. L’Arbois lui répond : plus compact, plus retenu, mais du même mouvement moderne. L’un a inspiré l’autre ; ils se regardent.",
+      "En face, Saint-Tropez, 14 juillet 1932. Georges-Henri Pingusson inaugure le Latitude 43 — un paquebot moderniste construit en six mois : cent dix chambres, un casino, des piscines, des courts de tennis. L’Arbois lui répond : plus compact, plus retenu, du même mouvement moderne. Ils se regardent.",
     body_3:
       "Après la guerre, les deux paquebots deviennent des résidences. Ils continuent à se faire face à travers le golfe, témoins d’une Côte d’Azur qui n’a jamais fini de se rêver. L’Arbois est aujourd’hui labellisé Architecture Contemporaine Remarquable — distinction du ministère de la Culture pour le patrimoine architectural du XXᵉ siècle.",
     quote: "Elles se regardent depuis un siècle.",
@@ -255,7 +255,7 @@ const fr: ChapterCopy = {
     eyebrow: "Chapitre VI — L’art de vivre",
     title: "À pied, en bateau, en voiture",
     intro:
-      "La vie de Sainte-Maxime à quelques pas, Saint-Tropez à un quart d’heure de bateau, l’arrière-pays à vingt minutes. Cliquez chaque adresse — sur la carte ou dans la liste — pour savoir comment y aller, quoi y faire.",
+      "La vie de Sainte-Maxime à quelques pas, Saint-Tropez à un quart d’heure de bateau, l’arrière-pays à trente minutes en voiture. Cliquez chaque adresse — sur la carte ou dans la liste — pour savoir comment y aller, quoi y faire.",
     labels: {
       access: "Comment y aller",
       activities: "Quoi y faire",
@@ -420,8 +420,8 @@ amenities: {
     eyebrow: "Chapitre VIII — Saisons & tarifs",
     title: "Quatre saisons, quatre atmosphères",
     intro:
-      "La haute saison brille, les entre-saisons appartiennent aux initiés. Tarifs indicatifs, sur la base de la semaine.",
-    minimum_stay: "Séjour minimum : 3 nuits. — 20 % de réduction à partir de 7 nuits.",
+      "La haute saison brille, les entre-saisons appartiennent aux initiés. Tarifs en direct sur Airbnb, calendrier en temps réel.",
+    minimum_stay: "Séjour minimum : 3 nuits. — 20 % de réduction sur la durée totale à partir de 7 nuits.",
     items: [
       { label: "Printemps", window: "Avril — Juin", note: "Mimosa, mistral doux, village encore calme.", price: "À partir de 348 € / nuit (frais Airbnb inclus)", image: "terrace-view" },
       { label: "Été", window: "Juillet — Août", note: "Haute saison, yachts dans la baie, Pampelonne à son apogée.", price: "Calendrier en temps réel sur Airbnb", image: "dining-view" },
@@ -465,7 +465,7 @@ const en: ChapterCopy = {
     eyebrow: "Sainte-Maxime · Gulf of Saint-Tropez",
     title_line_1: "Across",
     title_line_2: "from Saint-Tropez",
-    baseline: "A private apartment in Sainte-Maxime, facing Saint-Tropez.",
+    baseline: "A private apartment on the northern shore of the gulf.",
   },
   prologue: {
     index: "I",
@@ -496,7 +496,7 @@ const en: ChapterCopy = {
     body_1:
       "Sainte-Maxime, January 1933. Jean Gianotti, a Parisian patron, commissions from René Darde — the town’s architect-urbanist — a hotel of another kind. L’Arbois opens in 1935: curved façade, ribbon balconies, the whole vertical held by a single stroke of concrete. The Grand Hôtel and its restaurant, La Tartane, become an address.",
     body_2:
-      "Across the water, Saint-Tropez, 14 July 1932. Georges-Henri Pingusson inaugurates the Latitude 43 — a modernist ocean-liner built in six months: one hundred and ten rooms, a casino, pools, tennis courts. L’Arbois answers it: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
+      "Across the water, Saint-Tropez, 14 July 1932. Georges-Henri Pingusson inaugurates the Latitude 43 — a modernist ocean-liner built in six months: one hundred and ten rooms, a casino, pools, tennis courts. L’Arbois answers it: more compact, more restrained, of the same Modern Movement. They face each other.",
     body_3:
       "After the war, the two ocean-liners became residences. They still face each other across the bay, witnesses to a Riviera that has never finished dreaming itself. L’Arbois is today listed as Architecture Contemporaine Remarquable — a French Ministry of Culture distinction for 20th-century architectural heritage.",
     quote: "They have been looking at each other for a century.",
@@ -547,7 +547,7 @@ const en: ChapterCopy = {
     eyebrow: "Chapter VI — Art of living",
     title: "On foot, by boat, by car",
     intro:
-      "Life in Sainte-Maxime a few steps away, Saint-Tropez fifteen minutes by boat, the hinterland twenty minutes inland. Click each address — on the map or in the list — for how to get there and what to do.",
+      "Life in Sainte-Maxime a few steps away, Saint-Tropez fifteen minutes by boat, the hinterland thirty minutes by car. Click each address — on the map or in the list — for how to get there and what to do.",
     labels: {
       access: "Getting there",
       activities: "What to do",
@@ -616,8 +616,8 @@ const en: ChapterCopy = {
     eyebrow: "Chapter VIII — Seasons & rates",
     title: "Four seasons, four atmospheres",
     intro:
-      "The high season shines, the shoulder seasons belong to those in the know. Indicative rates, per week.",
-    minimum_stay: "Minimum stay: 3 nights. — 20% off from 7 nights.",
+      "The high season shines, the shoulder seasons belong to those in the know. Live rates on Airbnb, real-time calendar.",
+    minimum_stay: "Minimum stay: 3 nights. — 20% off the total stay from 7 nights.",
     items: [
       { label: "Spring", window: "April — June", note: "Mimosa, gentle mistral, the village still quiet.", price: "From €348 / night (Airbnb fees included)", image: "terrace-view" },
       { label: "Summer", window: "July — August", note: "High season, yachts in the bay, Pampelonne at its peak.", price: "Live calendar on Airbnb", image: "dining-view" },
