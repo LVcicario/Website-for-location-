@@ -6,15 +6,15 @@ interface Props {
   onSelect: (index: number | null) => void;
 }
 
-// Real geographic projection
-// Bounds: N=43.335 / S=43.205 / W=6.575 / E=6.690
-// scaleX = 2812.9 (cos(43°) corrected), scaleY = 3846.2, x_margin = 38.3
-// L'Arbois: 24 av Général Leclerc, Sainte-Maxime (43.3093°N, 6.6432°E)
-const VILLA_X = 230;
-const VILLA_Y = 99;
-// Port de Saint-Tropez (Sénéquier, quai Jean-Jaurès, 43.2722°N, 6.6378°E)
+// Logical editorial cartography:
+// - relations géographiques préservées (Ste-Maxime nord, St-Tropez sud, Pampelonne sud-est, etc.)
+// - étalement visuel sur le canvas pour lisibilité
+// - L'Arbois ancré au centre-haut
+const VILLA_X = 200;
+const VILLA_Y = 135;
+// Port de Saint-Tropez (Sénéquier)
 const FERRY_X = 215;
-const FERRY_Y = 242;
+const FERRY_Y = 285;
 
 export default function POIMap({ pois, active, onSelect }: Props) {
   return (
@@ -49,49 +49,47 @@ export default function POIMap({ pois, active, onSelect }: Props) {
           <path className="aol-tide aol-tide--c" d="M0,320 Q100,315 200,320 T400,320" />
         </g>
 
-        {/* Ste-Maxime peninsula (north) — Cap des Sardinaux bulge east at ~(327, 46) */}
+        {/* Ste-Maxime peninsula (north) — Cap des Sardinaux à l'est */}
         <path
-          d="M0,0 L400,0 L400,30 C390,35 365,38 340,42 C328,48 325,62 332,72 C320,85 290,98 250,108 C220,115 195,118 170,115 C140,114 110,116 80,118 C50,120 25,121 0,122 Z"
+          d="M0,0 L400,0 L400,55 C385,75 365,90 345,90 C320,85 320,110 335,125 C300,150 250,175 200,180 C150,182 100,178 60,180 C30,180 10,180 0,180 Z"
           fill="url(#aol-land)"
           stroke="#b8935a"
           strokeOpacity="0.55"
           strokeWidth="0.7"
         />
-        <text x="58" y="32" fill="#c9a97a" fontSize="10" letterSpacing="5" fontFamily="Satoshi, sans-serif" opacity="0.5">SAINTE-MAXIME</text>
-        <text x="332" y="36" fill="#c9a97a" fontSize="6" letterSpacing="2" fontFamily="Satoshi, sans-serif" opacity="0.55">CAP DES SARDINAUX</text>
+        <text x="55" y="40" fill="#c9a97a" fontSize="10" letterSpacing="5" fontFamily="Satoshi, sans-serif" opacity="0.5">SAINTE-MAXIME</text>
+        <text x="335" y="68" fill="#c9a97a" fontSize="6" letterSpacing="2" fontFamily="Satoshi, sans-serif" opacity="0.55">CAP DES SARDINAUX</text>
 
-        {/* Mainland west (Cogolin / interior) — connects Ste-Maxime to St-Tropez peninsula */}
+        {/* Mainland west (Cogolin / intérieur) — bande terrestre douce */}
         <path
-          d="M0,120 C25,150 45,180 60,210 C75,240 90,265 100,290 L0,300 Z"
+          d="M0,180 C20,210 35,245 30,280 L0,290 Z"
           fill="url(#aol-land)"
           stroke="#b8935a"
-          strokeOpacity="0.4"
-          strokeWidth="0.6"
+          strokeOpacity="0.35"
+          strokeWidth="0.5"
         />
 
-        {/* St-Tropez peninsula (south) — port at (215, 242), Pampelonne east coast at (259, 412), Ramatuelle inland (109, 442) */}
+        {/* St-Tropez peninsula (south) — port nord, Pampelonne est, Ramatuelle sud-ouest */}
         <path
-          d="M0,500 L400,500 L400,395 C385,400 360,418 332,425 C302,440 280,452 263,460 C240,470 215,468 188,460 C160,452 135,445 110,448 C82,455 52,462 25,460 L0,452 L0,330 C28,318 60,308 90,295 C115,285 140,270 165,260 C190,250 215,240 230,235 C220,230 200,228 178,238 C145,250 110,265 80,275 C50,285 25,290 0,290 Z"
+          d="M0,500 L400,500 L400,355 C385,365 360,395 330,420 C300,440 270,455 235,465 C195,468 155,460 115,455 C75,455 35,455 10,460 L0,455 L0,260 C30,275 70,295 130,310 C195,318 240,290 260,265 C220,275 175,280 135,275 C95,272 50,275 0,275 Z"
           fill="url(#aol-land)"
           stroke="#b8935a"
           strokeOpacity="0.55"
           strokeWidth="0.7"
         />
-        <text x="190" y="478" fill="#c9a97a" fontSize="10" letterSpacing="5" fontFamily="Satoshi, sans-serif" opacity="0.5">SAINT-TROPEZ</text>
-        <text x="58" y="468" fill="#c9a97a" fontSize="6" letterSpacing="2" fontFamily="Satoshi, sans-serif" opacity="0.5">RAMATUELLE</text>
-        <text x="290" y="425" fill="#c9a97a" fontSize="6" letterSpacing="2" fontFamily="Satoshi, sans-serif" opacity="0.5">PAMPELONNE</text>
+        <text x="190" y="490" fill="#c9a97a" fontSize="10" letterSpacing="5" fontFamily="Satoshi, sans-serif" opacity="0.5">SAINT-TROPEZ</text>
 
         {/* Permanent ferry route — L’Arbois → St-Tropez port */}
         <path
           className="aol-boat-path"
-          d={`M${VILLA_X},${VILLA_Y + 8} Q240,170 ${FERRY_X},${FERRY_Y}`}
+          d={`M${VILLA_X},${VILLA_Y + 8} Q220,210 ${FERRY_X},${FERRY_Y}`}
           stroke="#b8935a"
           strokeOpacity="0.5"
           strokeWidth="0.9"
           fill="none"
           strokeDasharray="3 6"
         />
-        <text x="248" y="172" fill="#c9a97a" fontSize="7" letterSpacing="4" fontFamily="Satoshi, sans-serif" opacity="0.6">15′ · BATEAU</text>
+        <text x="232" y="215" fill="#c9a97a" fontSize="7" letterSpacing="4" fontFamily="Satoshi, sans-serif" opacity="0.6">15′ · BATEAU</text>
 
         {/* Link line from L’Arbois to active POI */}
         {active !== null && pois[active] && (

@@ -28,12 +28,14 @@ const { voices } = getCopy(locale);
     ))}
   </ul>
 
-  <div class="mt-20 pt-10 border-t border-[var(--color-gold)]/15">
-    <p class="eyebrow text-center mb-6">{voices.press_label}</p>
-    <ul class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60">
-      {voices.press_items.map((p) => (
-        <li class="font-[family-name:var(--font-display)] italic text-lg md:text-xl tracking-wide">{p}</li>
-      ))}
-    </ul>
-  </div>
+  {voices.press_items.length > 0 && (
+    <div class="mt-20 pt-10 border-t border-[var(--color-gold)]/15">
+      <p class="eyebrow text-center mb-6">{voices.press_label}</p>
+      <ul class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60">
+        {voices.press_items.map((pp) => (
+          <li class="font-[family-name:var(--font-display)] italic text-lg md:text-xl tracking-wide">{pp}</li>
+        ))}
+      </ul>
+    </div>
+  )}
 </Chapter>

@@ -187,11 +187,11 @@ const fr: ChapterCopy = {
     eyebrow: "Chapitre II — Le lieu",
     title: "Face à Saint-Tropez, la meilleure place",
     body:
-      "Sainte-Maxime, rive nord du golfe. L’appartement ouvre ses terrasses plein sud, face à Saint-Tropez qui tient la lumière du matin au soir. Les navettes Bateaux Verts partent à deux cents mètres à pied — quinze minutes de traversée, la baie franchie.",
+      "Sainte-Maxime, rive nord du golfe. L’appartement ouvre ses terrasses plein sud, face à Saint-Tropez qui tient la lumière du matin au soir. Les navettes Bateaux Verts partent à cinq minutes à pied — quinze minutes de traversée, la baie franchie.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
       villa: "L’Arbois",
-      dock: "Jetée · Bateaux Verts · 200 m à pied",
+      dock: "Jetée · Bateaux Verts · 5 min à pied",
       twin: "Latitude 43 · le jumeau paquebot",
       boat: "15 min · bateau",
     },
@@ -204,7 +204,7 @@ const fr: ChapterCopy = {
     body_1:
       "Sainte-Maxime, janvier 1933. Jean Gianotti, Parisien, commande à René Darde — architecte-urbaniste de la ville — un hôtel d’une autre espèce. L’Arbois ouvre en 1935 : façade courbe, balcons filants, verticalité d’un seul trait de béton. Le Grand Hôtel et son restaurant, La Tartane, deviennent une adresse.",
     body_2:
-      "En face, Saint-Tropez, 1932. Georges-Henri Pingusson a livré un an plus tôt le Latitude 43 — un paquebot échoué de cent mètres, cent chambres, un casino, une piscine. L’Arbois a probablement été dessiné en écho : plus compact, plus retenu, mais du même mouvement moderne. L’un a inspiré l’autre ; ils se regardent.",
+      "En face, Saint-Tropez, 14 juillet 1932. Georges-Henri Pingusson inaugure le Latitude 43 — un paquebot moderniste construit en six mois : cent dix chambres, un casino, des piscines, des courts de tennis. L’Arbois a probablement été dessiné en écho : plus compact, plus retenu, mais du même mouvement moderne. L’un a inspiré l’autre ; ils se regardent.",
     body_3:
       "Après la guerre, les deux paquebots deviennent des résidences. Ils continuent à se faire face à travers le golfe, témoins d’une Côte d’Azur qui n’a jamais fini de se rêver. L’Arbois est aujourd’hui labellisé Architecture Contemporaine Remarquable.",
     quote: "Elles se regardent depuis un siècle.",
@@ -271,7 +271,7 @@ const fr: ChapterCopy = {
         access: "L’Arbois donne directement sur la promenade. À gauche : le port et la plage du centre. À droite : la Pointe de la Croisette.",
         activities: "Promenade sous les pins parasols, port de plaisance à 5 min, terrasses de café, glaciers, bars à cocktails au crépuscule.",
         transport: "foot",
-        mapX: 249, mapY: 96,
+        mapX: 250, mapY: 130,
       },
       {
         name: "Marché couvert",
@@ -280,7 +280,7 @@ const fr: ChapterCopy = {
         access: "Par les ruelles du centre, derrière l’église. Marché couvert : mardi-dimanche 8h-14h. Marché forain provençal : jeudi matin sur les places adjacentes.",
         activities: "Boulangerie, primeurs, poissonnier du matin, fromagerie, épicerie fine, fleuriste. Tout le terroir varois sous une halle.",
         transport: "foot",
-        mapX: 211, mapY: 97,
+        mapX: 175, mapY: 70,
       },
       {
         name: "La Gaudina",
@@ -289,7 +289,7 @@ const fr: ChapterCopy = {
         access: "Par la promenade, en passant le port. Avenue de Lattre de Tassigny, sur la plage du centre-ville.",
         activities: "Cuisine méditerranéenne, terrasse face au golfe, transats sur le sable. Déjeuner et dîner.",
         transport: "foot",
-        mapX: 203, mapY: 103,
+        mapX: 140, mapY: 145,
       },
       {
         name: "Le Sémaphore",
@@ -298,7 +298,7 @@ const fr: ChapterCopy = {
         access: "Sentier depuis la Pointe de la Croisette, par le Préconil. Boucle balisée. Prévoir des chaussures fermées et de l’eau.",
         activities: "Panorama complet sur le golfe de Saint-Tropez, le massif des Maures, les îles d’Hyères au loin. Couchers de soleil saisissants.",
         transport: "foot",
-        mapX: 218, mapY: 50,
+        mapX: 210, mapY: 30,
       },
       {
         name: "Plage de la Nartelle",
@@ -307,7 +307,7 @@ const fr: ChapterCopy = {
         access: "Accessible uniquement en voiture. 3 km à l’est par l’avenue Romée de Villeneuve (D559) — 5 min en basse saison, jusqu’à 10 min en haute saison. Parking sur la plage.",
         activities: "Sable fin, eau calme (idéale enfants), paillotes (Mahi Plage, La Gaillarde, Havana), paddle, transats, déjeuner les pieds dans le sable.",
         transport: "car",
-        mapX: 321, mapY: 63,
+        mapX: 335, mapY: 95,
       },
       {
         name: "Le Prao",
@@ -316,7 +316,7 @@ const fr: ChapterCopy = {
         access: "Accessible uniquement en voiture. 39 avenue du Général Touzet du Vigier, sur la plage de la Nartelle. Voiturier l’été.",
         activities: "Une des plus anciennes plages privées de la Riviera. Restaurant méditerranéen, lounge bar, transats face à la mer.",
         transport: "car",
-        mapX: 311, mapY: 67,
+        mapX: 345, mapY: 115,
       },
       {
         name: "Sénéquier",
@@ -325,7 +325,7 @@ const fr: ChapterCopy = {
         access: "Navettes Bateaux Verts depuis la Jetée Olivier Bausset (5 min à pied de L’Arbois). 1 à 4 rotations par heure, 7 j/7, dix mois sur douze.",
         activities: "Institution depuis 1887. Terrasse rouge vif sur le port, petit-déjeuner matinal, apéritif au coucher du soleil, le meilleur poste d’observation des yachts.",
         transport: "boat",
-        mapX: 215, mapY: 242,
+        mapX: 215, mapY: 285,
       },
       {
         name: "Place des Lices",
@@ -334,7 +334,7 @@ const fr: ChapterCopy = {
         access: "Descendez du bateau au port, remontez la rue Gambetta sur 300 m. Marché les mardi & samedi matin (8h-13h).",
         activities: "Pétanque sous les platanes centenaires, marché des producteurs, terrasses ombragées, Le Café (brasserie historique), boutiques de créateurs.",
         transport: "boat",
-        mapX: 222, mapY: 248,
+        mapX: 240, mapY: 310,
       },
       {
         name: "La Vague d’Or · Cheval Blanc",
@@ -343,7 +343,7 @@ const fr: ChapterCopy = {
         access: "Bateaux Verts jusqu’au port, puis traversée à pied vers la plage de la Bouillabaisse. Hôtel Cheval Blanc Saint-Tropez.",
         activities: "Cuisine méditerranéenne du chef Arnaud Donckele. Vue mer panoramique, jardins, service d’exception. Réservation longtemps à l’avance.",
         transport: "boat",
-        mapX: 166, mapY: 262,
+        mapX: 135, mapY: 280,
       },
       {
         name: "La Voile · La Réserve Ramatuelle",
@@ -352,7 +352,7 @@ const fr: ChapterCopy = {
         access: "Par le chemin des Tournels via Ramatuelle. Hôtel La Réserve Ramatuelle, sur les hauteurs.",
         activities: "Cuisine méditerranéenne du chef Eric Canino, autour des herbes du jardin et des poissons de petits bateaux. Vue plongeante sur la baie de Pampelonne.",
         transport: "car",
-        mapX: 234, mapY: 457,
+        mapX: 250, mapY: 440,
       },
       {
         name: "Plage de Pampelonne",
@@ -361,7 +361,7 @@ const fr: ChapterCopy = {
         access: "Route des plages via Ramatuelle. Parking voiturier dans chaque club. Possibilité de taxi-boat privé jusqu’aux pontons.",
         activities: "Déjeuners longs au Club 55, transats Loulou, cocktails Verde Beach. Eau turquoise, sortie en annexe, ski nautique.",
         transport: "car",
-        mapX: 259, mapY: 412,
+        mapX: 335, mapY: 410,
       },
       {
         name: "Ramatuelle & Gassin",
@@ -370,7 +370,7 @@ const fr: ChapterCopy = {
         access: "Par la D61 via Port Grimaud et La Foux. Stationnement en bas des villages, montée à pied.",
         activities: "Villages médiévaux, ruelles ombragées, vignobles (Château Minuty, Domaines Ott, Tropez). Dégustations sur réservation.",
         transport: "car",
-        mapX: 109, mapY: 442,
+        mapX: 140, mapY: 430,
       },
     ],
   },
@@ -433,14 +433,14 @@ amenities: {
     index: "IX",
     eyebrow: "Chapitre IX — Voix",
     title: "Saint-Tropez en quelques mots",
-    intro: "Trois citations de Brigitte Bardot, qui depuis La Madrague raconte la baie depuis soixante ans.",
+    intro: "Trois citations de Brigitte Bardot, qui depuis La Madrague raconte la baie depuis 1958.",
     testimonials: [
       { quote: "Je suis Tropézienne avant d’être française.", author: "Brigitte Bardot" },
       { quote: "Je vis à Saint-Tropez parce que c’est le seul endroit au monde où je peux respirer.", author: "Brigitte Bardot" },
       { quote: "La Madrague, c’est mon paradis.", author: "Brigitte Bardot — La Madrague" },
     ],
-    press_label: "Tel que vu dans",
-    press_items: ["AD France", "Vogue Living", "The Socialite Family", "Cabana Magazine"],
+    press_label: "",
+    press_items: [],
   },
   reserve: {
     index: "X",
@@ -479,11 +479,11 @@ const en: ChapterCopy = {
     eyebrow: "Chapter II — The place",
     title: "Facing Saint-Tropez, the finest seat",
     body:
-      "Sainte-Maxime, northern shore of the gulf. The apartment’s terraces face due south, towards Saint-Tropez, which catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, two hundred metres on foot — a fifteen-minute crossing.",
+      "Sainte-Maxime, northern shore of the gulf. The apartment’s terraces face due south, towards Saint-Tropez, which catches the light from morning to nightfall. The Bateaux Verts shuttles leave from the jetty, a five-minute walk — a fifteen-minute crossing.",
     coordinates: "43.31° N · 6.64° E",
     landmarks: {
       villa: "L’Arbois",
-      dock: "Jetty · Bateaux Verts · 200 m walk",
+      dock: "Jetty · Bateaux Verts · 5 min walk",
       twin: "Latitude 43 · the ocean-liner twin",
       boat: "15 min · by boat",
     },
@@ -496,7 +496,7 @@ const en: ChapterCopy = {
     body_1:
       "Sainte-Maxime, January 1933. Jean Gianotti, a Parisian patron, commissions from René Darde — the town’s architect-urbanist — a hotel of another kind. L’Arbois opens in 1935: curved façade, ribbon balconies, the whole vertical held by a single stroke of concrete. The Grand Hôtel and its restaurant, La Tartane, become an address.",
     body_2:
-      "Across the water, Saint-Tropez, 1932. Georges-Henri Pingusson had delivered, a year earlier, the Latitude 43 — a beached ocean-liner of a hundred metres, a hundred rooms, a casino, a pool. L’Arbois was very likely drawn in reply: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
+      "Across the water, Saint-Tropez, 14 July 1932. Georges-Henri Pingusson inaugurates the Latitude 43 — a modernist ocean-liner built in six months: one hundred and ten rooms, a casino, pools, tennis courts. L’Arbois was very likely drawn in reply: more compact, more restrained, but of the same Modern Movement. One inspired the other; they face each other.",
     body_3:
       "After the war, the two ocean-liners became residences. They still face each other across the bay, witnesses to a Riviera that has never finished dreaming itself. L’Arbois is today listed as Architecture Contemporaine Remarquable.",
     quote: "They have been looking at each other for a century.",
@@ -556,18 +556,18 @@ const en: ChapterCopy = {
       by_car: "By car",
     },
     pois: [
-      { name: "La Croisette", kind: "Promenade Aymeric Simon-Lorière · seafront", distance: "On the doorstep", access: "L’Arbois opens directly onto the seafront promenade. To the left: the harbour and the town beach. To the right: Pointe de la Croisette.", activities: "Promenade under umbrella pines, marina 5 min away, café terraces, ice cream, sunset cocktail bars.", transport: "foot", mapX: 249, mapY: 96 },
-      { name: "Covered market", kind: "Place du Marché · Rue Fernand Bessy", distance: "5 min walk", access: "Through the old town lanes, behind the church. Covered market: Tue-Sun 8am-2pm. Provençal open-air market: Thursday morning across the adjoining squares.", activities: "Bakery, fresh produce, morning-catch fish, cheese, fine grocery, florist. The whole Var terroir under one roof.", transport: "foot", mapX: 211, mapY: 97 },
-      { name: "La Gaudina", kind: "Restaurant & private beach · town centre", distance: "10 min walk", access: "Via the seafront, past the harbour. Avenue de Lattre de Tassigny, on the town-centre beach.", activities: "Mediterranean cuisine, terrace facing the gulf, loungers on the sand. Lunch and dinner.", transport: "foot", mapX: 203, mapY: 103 },
-      { name: "Le Sémaphore", kind: "Viewpoint · 127 m altitude", distance: "45 min uphill walk", access: "Trail from Pointe de la Croisette, via the Préconil. Marked loop. Wear closed shoes and bring water.", activities: "Full panorama of the gulf of Saint-Tropez, the Maures massif, the Hyères islands beyond. Striking sunsets.", transport: "foot", mapX: 218, mapY: 50 },
-      { name: "Nartelle beach", kind: "Fine sand · 1 km of shoreline", distance: "5–10 min by car", access: "Reachable by car only. 3 km east via Avenue Romée de Villeneuve (D559) — 5 min in low season, up to 10 min in high season. Beach parking.", activities: "Fine sand, calm water (ideal for children), beach clubs (Mahi Plage, La Gaillarde, Havana), paddle, loungers, lunch on the sand.", transport: "car", mapX: 321, mapY: 63 },
-      { name: "Le Prao", kind: "Restaurant & private beach · La Nartelle", distance: "5–10 min by car", access: "Reachable by car only. 39 Avenue du Général Touzet du Vigier, on Nartelle beach. Valet parking in summer.", activities: "One of the oldest private beaches on the Riviera. Mediterranean restaurant, lounge bar, loungers facing the sea.", transport: "car", mapX: 311, mapY: 67 },
-      { name: "Sénéquier", kind: "Iconic harbour café · Saint-Tropez", distance: "15 min by boat", access: "Bateaux Verts shuttles from Jetée Olivier Bausset (5 min walk from L’Arbois). 1 to 4 rotations per hour, 7 days a week, ten months a year.", activities: "Institution since 1887. Vivid red terrace on the harbour, early breakfast, sunset apéritif, the finest yacht-watching seat.", transport: "boat", mapX: 215, mapY: 242 },
-      { name: "Place des Lices", kind: "Pétanque, plane trees, Provençal market", distance: "15 min boat + 5 min walk", access: "Off the boat at the harbour, 300 m up Rue Gambetta. Market Tuesday & Saturday morning (8am-1pm).", activities: "Pétanque under centennial plane trees, growers’ market, shaded terraces, Le Café (historic brasserie), designer shops.", transport: "boat", mapX: 222, mapY: 248 },
-      { name: "La Vague d’Or · Cheval Blanc", kind: "Gastronomic · 3 Michelin stars", distance: "15 min boat + 7 min walk", access: "Bateaux Verts to the harbour, then walk along the Bouillabaisse beach. Cheval Blanc Saint-Tropez hotel.", activities: "Mediterranean cuisine by chef Arnaud Donckele. Panoramic sea view, gardens, exceptional service. Booking far in advance.", transport: "boat", mapX: 166, mapY: 262 },
-      { name: "La Voile · La Réserve Ramatuelle", kind: "Gastronomic · 2 Michelin stars", distance: "30 min by car", access: "Via Chemin des Tournels through Ramatuelle. La Réserve Ramatuelle hotel, on the heights.", activities: "Mediterranean cuisine by chef Eric Canino, around garden herbs and small-boat fish. Sweeping view over Pampelonne bay.", transport: "car", mapX: 234, mapY: 457 },
-      { name: "Pampelonne beach", kind: "Club 55, Loulou, Verde Beach, La Réserve", distance: "30 min by car", access: "Route des plages via Ramatuelle. Valet parking at every club. Private taxi-boat to club pontoons also possible.", activities: "Long lunches at Club 55, loungers at Loulou, cocktails at Verde Beach. Turquoise water, tender rides, water-skiing.", transport: "car", mapX: 259, mapY: 412 },
-      { name: "Ramatuelle & Gassin", kind: "Hilltop villages, vineyards", distance: "30 min by car", access: "D61 via Port Grimaud and La Foux. Park at village entrance, then walk up.", activities: "Medieval villages, shaded lanes, vineyards (Château Minuty, Domaines Ott, Tropez). Tastings by appointment.", transport: "car", mapX: 109, mapY: 442 },
+      { name: "La Croisette", kind: "Promenade Aymeric Simon-Lorière · seafront", distance: "On the doorstep", access: "L’Arbois opens directly onto the seafront promenade. To the left: the harbour and the town beach. To the right: Pointe de la Croisette.", activities: "Promenade under umbrella pines, marina 5 min away, café terraces, ice cream, sunset cocktail bars.", transport: "foot", mapX: 250, mapY: 130 },
+      { name: "Covered market", kind: "Place du Marché · Rue Fernand Bessy", distance: "5 min walk", access: "Through the old town lanes, behind the church. Covered market: Tue-Sun 8am-2pm. Provençal open-air market: Thursday morning across the adjoining squares.", activities: "Bakery, fresh produce, morning-catch fish, cheese, fine grocery, florist. The whole Var terroir under one roof.", transport: "foot", mapX: 175, mapY: 70 },
+      { name: "La Gaudina", kind: "Restaurant & private beach · town centre", distance: "10 min walk", access: "Via the seafront, past the harbour. Avenue de Lattre de Tassigny, on the town-centre beach.", activities: "Mediterranean cuisine, terrace facing the gulf, loungers on the sand. Lunch and dinner.", transport: "foot", mapX: 140, mapY: 145 },
+      { name: "Le Sémaphore", kind: "Viewpoint · 127 m altitude", distance: "45 min uphill walk", access: "Trail from Pointe de la Croisette, via the Préconil. Marked loop. Wear closed shoes and bring water.", activities: "Full panorama of the gulf of Saint-Tropez, the Maures massif, the Hyères islands beyond. Striking sunsets.", transport: "foot", mapX: 210, mapY: 30 },
+      { name: "Nartelle beach", kind: "Fine sand · 1 km of shoreline", distance: "5–10 min by car", access: "Reachable by car only. 3 km east via Avenue Romée de Villeneuve (D559) — 5 min in low season, up to 10 min in high season. Beach parking.", activities: "Fine sand, calm water (ideal for children), beach clubs (Mahi Plage, La Gaillarde, Havana), paddle, loungers, lunch on the sand.", transport: "car", mapX: 335, mapY: 95 },
+      { name: "Le Prao", kind: "Restaurant & private beach · La Nartelle", distance: "5–10 min by car", access: "Reachable by car only. 39 Avenue du Général Touzet du Vigier, on Nartelle beach. Valet parking in summer.", activities: "One of the oldest private beaches on the Riviera. Mediterranean restaurant, lounge bar, loungers facing the sea.", transport: "car", mapX: 345, mapY: 115 },
+      { name: "Sénéquier", kind: "Iconic harbour café · Saint-Tropez", distance: "15 min by boat", access: "Bateaux Verts shuttles from Jetée Olivier Bausset (5 min walk from L’Arbois). 1 to 4 rotations per hour, 7 days a week, ten months a year.", activities: "Institution since 1887. Vivid red terrace on the harbour, early breakfast, sunset apéritif, the finest yacht-watching seat.", transport: "boat", mapX: 215, mapY: 285 },
+      { name: "Place des Lices", kind: "Pétanque, plane trees, Provençal market", distance: "15 min boat + 5 min walk", access: "Off the boat at the harbour, 300 m up Rue Gambetta. Market Tuesday & Saturday morning (8am-1pm).", activities: "Pétanque under centennial plane trees, growers’ market, shaded terraces, Le Café (historic brasserie), designer shops.", transport: "boat", mapX: 240, mapY: 310 },
+      { name: "La Vague d’Or · Cheval Blanc", kind: "Gastronomic · 3 Michelin stars", distance: "15 min boat + 7 min walk", access: "Bateaux Verts to the harbour, then walk along the Bouillabaisse beach. Cheval Blanc Saint-Tropez hotel.", activities: "Mediterranean cuisine by chef Arnaud Donckele. Panoramic sea view, gardens, exceptional service. Booking far in advance.", transport: "boat", mapX: 135, mapY: 280 },
+      { name: "La Voile · La Réserve Ramatuelle", kind: "Gastronomic · 2 Michelin stars", distance: "30 min by car", access: "Via Chemin des Tournels through Ramatuelle. La Réserve Ramatuelle hotel, on the heights.", activities: "Mediterranean cuisine by chef Eric Canino, around garden herbs and small-boat fish. Sweeping view over Pampelonne bay.", transport: "car", mapX: 250, mapY: 440 },
+      { name: "Pampelonne beach", kind: "Club 55, Loulou, Verde Beach, La Réserve", distance: "30 min by car", access: "Route des plages via Ramatuelle. Valet parking at every club. Private taxi-boat to club pontoons also possible.", activities: "Long lunches at Club 55, loungers at Loulou, cocktails at Verde Beach. Turquoise water, tender rides, water-skiing.", transport: "car", mapX: 335, mapY: 410 },
+      { name: "Ramatuelle & Gassin", kind: "Hilltop villages, vineyards", distance: "30 min by car", access: "D61 via Port Grimaud and La Foux. Park at village entrance, then walk up.", activities: "Medieval villages, shaded lanes, vineyards (Château Minuty, Domaines Ott, Tropez). Tastings by appointment.", transport: "car", mapX: 140, mapY: 430 },
     ],
   },
   amenities: {
@@ -629,14 +629,14 @@ const en: ChapterCopy = {
     index: "IX",
     eyebrow: "Chapter IX — Voices",
     title: "Saint-Tropez in a few words",
-    intro: "Three quotes from Brigitte Bardot, who has chronicled the bay from La Madrague for sixty years.",
+    intro: "Three quotes from Brigitte Bardot, who has chronicled the bay from La Madrague since 1958.",
     testimonials: [
       { quote: "I am Tropezian before I am French.", author: "Brigitte Bardot" },
       { quote: "I live in Saint-Tropez because it is the only place in the world where I can breathe.", author: "Brigitte Bardot" },
       { quote: "La Madrague is my paradise.", author: "Brigitte Bardot — La Madrague" },
     ],
-    press_label: "As seen in",
-    press_items: ["AD France", "Vogue Living", "The Socialite Family", "Cabana Magazine"],
+    press_label: "",
+    press_items: [],
   },
   reserve: {
     index: "X",
