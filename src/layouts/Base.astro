@@ -99,7 +99,9 @@ function altFor(loc: Locale): string {
 
     <script>
       import { initMagnetic } from "~/lib/magnetic";
+      import { inject } from "@vercel/analytics";
       initMagnetic();
+      inject();
       document.addEventListener("astro:page-load", initMagnetic);
     </script>
   </body>
